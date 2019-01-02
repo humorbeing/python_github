@@ -79,9 +79,19 @@ Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 
 
-No name list
+# No name list
 - uu.py
 - abc.py
 - util.py
 - pytorch.py: no obvious .py names
 - /pytorch: no obvious directory names
+
+# gitignore everything but the folder
+- In the target folder, create a .gitignore file
+    - touch .gitignore
+- put this in it.
+    ```text
+    *
+    */
+    !.gitignore
+    ```
