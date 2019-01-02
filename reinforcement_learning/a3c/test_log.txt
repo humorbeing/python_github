@@ -1,0 +1,12 @@
+Time 00h 00m 10s, num steps 2931, FPS 290, episode reward -21.0, episode length 1027
+Time 00h 00m 24s, num steps 8186, FPS 334, episode reward -21.0, episode length 1035
+Time 00h 00m 39s, num steps 13742, FPS 346, episode reward -21.0, episode length 1027
+Time 00h 00m 56s, num steps 19577, FPS 349, episode reward -21.0, episode length 1022
+Time 00h 01m 12s, num steps 25208, FPS 349, episode reward -21.0, episode length 1012
+Time 00h 01m 28s, num steps 30536, FPS 346, episode reward -21.0, episode length 1016
+Time 00h 01m 42s, num steps 35622, FPS 347, episode reward -21.0, episode length 1014
+Time 00h 01m 58s, num steps 41249, FPS 348, episode reward -21.0, episode length 1024
+Time 00h 02m 14s, num steps 46957, FPS 349, episode reward -21.0, episode length 1026
+Time 00h 02m 30s, num steps 52880, FPS 351, episode reward -21.0, episode length 1017
+Time 00h 02m 45s, num steps 58184, FPS 352, episode reward -21.0, episode length 1028
+Time 00h 03m 01s, num steps 64090, FPS 352, episode reward -20.0, episode length 1117
