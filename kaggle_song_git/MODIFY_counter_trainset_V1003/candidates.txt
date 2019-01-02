@@ -1,0 +1,84 @@
+                      membership_days:  0.518020750052
+
+                       ISCZ_isrc_rest:  0.518213616979
+
+                     ISC_top3_in_song:  0.524206569763
+
+                         ISC_language:  0.524767621195
+
+             // ISCZ_song_country_log10:  0.526155821048
+
+                  ISC_song_country_ln:  0.526184562009
+
+                     ISC_top1_in_song:  0.526218173781
+
+                  //      ISC_genre_ids:  0.52736185413
+
+                    song_length_log10:  0.527400763551
+
+                 ISCZ_genre_ids_log10:  0.527563227322
+
+                     ISC_top2_in_song:  0.528210374046
+
+                   ISC_lyricist_log10:  0.531618369673
+
+                     //   ISCZ_lyricist:  0.5316974855
+
+                        // ISC_composer:  0.537224682105
+
+                  ISCZ_composer_log10:  0.537357554901
+
+                       //ISCZ_song_year:  0.538055387574
+
+                            song_year:  0.538060446124
+
+                        ISC_song_year:  0.538077328194
+
+                  //   ISCZ_artist_name:  0.54006905136
+
+                ISC_artist_name_log10:  0.540129338866
+
+                    //        ISC_rc_ln:  0.542071898261
+
+                              ISCZ_rc:  0.542473145051
+
+
+'target',
+'msno',
+'song_id',
+'source_system_tab',
+'source_screen_name',
+'source_type',
+'artist_name',
+'song_year',
+'ITC_song_id_log10_1',
+'ITC_msno_log10_1',
+'top2_in_song',
+'top3_in_song',
+'language',
+'song_year_int'
+composer
+lyricist
+
+
+
+/liked
+# fake_liked_member_count
+language
+
+
+
+/counts
+# 'artist_name',
+    # 'top1_in_song',
+    # 'top2_in_song',
+    # 'top3_in_song',
+    # 'language',
+    # 'song_year',
+    composer
+lyricist
+language
+sst
+ssn
+st
+/counts

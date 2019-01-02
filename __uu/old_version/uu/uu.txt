@@ -1,0 +1,378 @@
+stitch_up_stitch__[]_all__.csv
+4 days ago by Ray
+
+my first ride. not to bad. i will be back, maybe tomorrow.
+0.69428
+0.69354
+[]_all_cat__1513612545.csv
+4 days ago by Ray
+
+interesting journy.
+0.68993
+0.68919
+[]_all_cat__1513612277.csv
+4 days ago by Ray
+
+hmm
+0.68978
+0.68903
+[]_all_cat__1513612012.csv
+4 days ago by Ray
+
+lvl7 i guess overfit.
+0.68991
+0.68918
+[]_lgbt_40_cat__1513505034.csv
+4 days ago by Ray
+
+so
+0.68932
+0.68841
+[]_lgbt_40_cat__1513468404.csv
+5 days ago by Ray
+
+what ever
+0.69002
+0.68929
+[]_lgbt_40_cat__1513467661.csv
+5 days ago by Ray
+
+damn it..what a wast of time
+0.69094
+0.69038
+[]_lgbt_40_cat__1513467380.csv
+5 days ago by Ray
+
+stacked 2nd
+0.69026
+0.68964
+[]_lgbt_40_cat__1513466450.csv
+5 days ago by Ray
+
+stacked up. 1st
+0.69023
+0.68961
+[]_CatR_top2_2_cat__1513441146.csv
+5 days ago by Ray
+
+dam it..cat
+0.68837
+0.68762
+[]_CatR_top2_2_cat__1513440769.csv
+5 days ago by Ray
+
+cat, bad idead
+NULL
+Error
+stitch_up_0.69411_0.68993_.csv
+6 days ago by Ray
+
+stitch up, need fill up today
+0.69458
+0.69383
+[]_6360_cat__1513461458.csv
+6 days ago by Ray
+
+hmm, cat isn't really working.
+0.69058
+0.68993
+[]_6360_cat__1513450257.csv
+6 days ago by Ray
+
+k 3 cv on cat
+0.68828
+0.68740
+stitch_up_0.69411_[0.6815_.csv
+7 days ago by Ray
+
+fill up today.
+0.69017
+0.68957
+stitch_up_0.6904_[0.681_.csv
+7 days ago by Ray
+
+fill up today
+0.69498
+0.69411
+[]_0.6887_cat__1513383800.csv
+7 days ago by Ray
+
+from E, first one.
+0.68423
+0.68402
+[]_0.6925_cat__1513283740.csv
+7 days ago by Ray
+
+catboost one.
+0.68184
+0.68151
+[]_0.6887_cat__1513270302.csv
+7 days ago by Ray
+
+chek
+0.67023
+0.66977
+[]_0.0001_Light_gbdt_1513260394.csv
+8 days ago by Ray
+
+checking new trainer.
+0.66111
+0.66056
+stitch_up_0.6891_0.6889_0.6877_.csv
+8 days ago by Ray
+
+un weigthed ave
+0.69176
+0.69048
+weighted_stitch_up_0.6891_0.6889_0.6877_.csv
+8 days ago by Ray
+
+weighted ave
+0.69176
+0.69048
+no_save.csv
+8 days ago by Ray
+
+from D;i am tired.
+0.69043
+0.68898
+no_save.csv
+8 days ago by Ray
+
+oh. lets see
+0.69040
+0.68911
+no_save.csv
+9 days ago by Ray
+
+finally get it worked
+0.69028
+0.68875
+stitch_up_0.6869_0.6862_0.6875_.csv
+9 days ago by Ray
+
+now, i must stop this.
+0.68909
+0.68775
+stitch_up_0.6869_0.6862_0.6836_.csv
+9 days ago by Ray
+
+top3 , what a sorry ass am i...
+0.68891
+0.68750
+stitch_up_0.6862_0.6836_.csv
+9 days ago by Ray
+
+two my best
+0.68832
+0.68676
+no_save.csv
+10 days ago by Ray
+
+is it right?
+0.66308
+0.65962
+svm.csv
+12 days ago by Ray
+
+random forest from scikit laern
+0.62478
+0.62245
+[]_0.82_Light_gbdt_1512869647.csv
+13 days ago by Ray
+
+something is wrong 2
+0.68004
+0.67905
+[]_0.8148_Light_gbdt_1512868103.csv
+13 days ago by Ray
+
+something is wrong
+0.68082
+0.67978
+[]_0.6246_Light_gbdt_1512859793.csv
+13 days ago by Ray
+
+song member count
+0.62290
+0.62259
+[0.67982]_0.6788_Light_gbdt_1512750240.csv
+14 days ago by Ray
+
+maybe compression is bugged?
+0.68061
+0.67982
+[0.67982]_0.6788_Light_gbdt_1512750240.csv.tar.gz
+14 days ago by Ray
+
+checking same model running twice
+NULL
+Error
+1512753513_submission_[]_0.6788_Light_gbdt_1512750240.csv.gz
+14 days ago by Ray
+
+new start
+0.68061
+0.67982
+submission_model_V1001_1512288537.csv.gz
+18 days ago by Ray
+
+300
+0.68777
+0.68624
+submission_model_V1001_1512287814.csv.gz
+18 days ago by Ray
+
+song year
+0.68774
+0.68617
+submission_model_V1001_1512254056.csv.gz
+19 days ago by Ray
+
+511
+0.68772
+0.68641
+submission_model_V1001_1512212430.csv.gz
+19 days ago by Ray
+
+another new feature
+0.68806
+0.68679
+submission_model_V1001_1512206897.csv.gz
+19 days ago by Ray
+
+new feature?
+0.68544
+0.68369
+submission_model_V1001_1512168034.csv.gz
+20 days ago by Ray
+
+according to random
+0.67607
+0.67462
+submission_model_V1001_1512096801.csv.gz
+20 days ago by Ray
+
+80 iteration.
+0.63545
+0.63451
+submission_model_V1001_1512096377.csv.gz
+20 days ago by Ray
+
+what a bull. i gotta call the bluff
+0.63580
+0.63453
+submission_model_V1001_1512080522.csv.gz
+21 days ago by Ray
+
+bluffing again.
+0.67441
+0.67263
+submission_model_V1001_1512074809.csv.gz
+21 days ago by Ray
+
+with three
+0.67169
+0.66978
+submission_model_V1001_1511984173.csv.gz
+22 days ago by Ray
+
+maybe .lets see 61146
+0.59800
+0.59680
+submission_model_V1001_1511916604.csv.gz
+23 days ago by Ray
+
+0.05, i had to call the bluff
+0.59847
+0.59775
+submission_lgbm_avg.csv.gz
+23 days ago by Ray
+
+nothing. baseline
+0.61059
+0.61189
+submission_lgbm_avg.csv.gz
+25 days ago by Ray
+
+early stop with l2 reg..
+0.66733
+0.66443
+submission_lgbm_avg.csv.gz
+25 days ago by Ray
+
+67 to 500
+0.67589
+0.67341
+submission_lgbm_avg.csv.gz
+25 days ago by Ray
+
+0.01 lr, 99 train
+0.65753
+0.65248
+submission_lgbm_avg.csv.gz
+a month ago by Ray
+
+300, no counts
+0.67366
+0.67083
+submission_lgbm_avg.csv.gz
+a month ago by Ray
+
+200 run
+0.63039
+0.63011
+submission_lgbm_avg.csv
+a month ago by Ray
+
+lgbm feature engineer
+0.62865
+0.62854
+s_receive_D_V1002_V1004.csv
+a month ago by Ray
+
+D section 0 testing
+0.65759
+0.65333
+s_receive_D_V1002_V1003.csv
+a month ago by Ray
+
+D section 1 testing
+0.65536
+0.65162
+s_receive_A_V1003_V1003.csv
+a month ago by Ray
+
+1 0 testing
+0.59757
+0.59796
+sdab_receive_C_V1002_V1003.csv
+a month ago by Ray
+
+just checking
+0.62465
+0.62598
+LGBM_test_A_section_SVD_V1001.csv
+a month ago by Ray
+
+LGBM test + section A SVD V1001
+0.63763
+0.63807
+submission.csv
+a month ago by Ray
+
+LGBM testing. pandas 0.20.3 V1001
+0.65911
+0.65552
+submission_from_fkk_cf(svd)_V1001.csv
+a month ago by Ray
+
+testing surprise package V1001
+0.62402
+0.62638
+sample_submission.csv
+a month ago by Ray
+
+testing
+0.50000
+0.50000
