@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c92e74d0-6915-4daa-bc65-7c3cd6b88b9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/__uu/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/__uu/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="c92e74d0-6915-4daa-bc65-7c3cd6b88b9a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +55,8 @@
         <entry file="file://$PROJECT_DIR$/__uu/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="585">
-                <caret line="89" column="32" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
+              <first_editor relative-caret-position="513">
+                <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
               </first_editor>
               <second_editor />
             </state>
@@ -130,32 +128,6 @@
             <path>
               <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_github" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="__uu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="ignore_this" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="master-thesis-project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="new_setup_check" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="new_setup_check" type="462c0819:PsiDirectoryNode" />
-              <item name="gym_check" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -327,16 +299,15 @@
       <workItem from="1546360581004" duration="1434000" />
       <workItem from="1546370913022" duration="1534000" />
       <workItem from="1546430811248" duration="244000" />
-      <workItem from="1546433338947" duration="3559000" />
+      <workItem from="1546433338947" duration="3985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9213000" />
+    <option name="totallyTimeSpent" value="9639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1204" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20453289" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -487,8 +458,8 @@
     <entry file="file://$PROJECT_DIR$/__uu/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="585">
-            <caret line="89" column="32" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
+          <first_editor relative-caret-position="513">
+            <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
           </first_editor>
           <second_editor />
         </state>
