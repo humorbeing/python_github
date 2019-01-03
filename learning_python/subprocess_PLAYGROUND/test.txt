@@ -1,0 +1,4 @@
+total 1
+-rwxrwxrwx 1 ray ray 365 10월 30 15:44 sendbox.py
+-rwxrwxrwx 1 ray ray 251 10월 30 13:23 sentdex.py
+-rwxrwxrwx 1 ray ray   0 10월 30 15:44 test.txt

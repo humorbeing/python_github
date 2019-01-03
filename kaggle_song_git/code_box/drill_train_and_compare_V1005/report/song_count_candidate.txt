@@ -1,0 +1,32 @@
+ISC_rc_ln                 54214397067
+ISCZ_artist_name          54055033529
+ISC_song_year             538077461366
+song_year                 53806045281
+
+ISC_composer              53731602596
+ISC_lyricist_log10        531707440591
+song_length_log10         531174076926
+ISC_top2_in_song          528383803801
+
+ISCZ_genre_ids_log10      527690851179
+ISC_top1_in_song          526216813637
+ISCZ_song_country_log10   526204438216
+ISC_language              524767621195
+
+ISC_top3_in_song          524209242714
+ISCZ_isrc_rest            519601095544
+ISC_name_log10            510486215639
+
+
+
+ISCZ_rc                   541931933803
+ISC_artist_name_log10     540350746139
+ISCZ_song_year            538055228378
+ISCZ_composer_log10       537262118627
+
+ISCZ_lyricist             531704068301
+ISC_genre_ids             52762699931
+ISC_song_country_ln       526186418173
+ISC_isrc_rest_log10       518991746193
+
+ISCZ_name_ln              510287486507
