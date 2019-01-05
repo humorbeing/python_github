@@ -79,6 +79,16 @@
               <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_github" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="ignore_this" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="SSSSTTTTOOOORRRREEEE" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -93,11 +103,12 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ignore_this" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/__uu" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SSSSTTTTOOOORRRREEEE" />
+      <recent name="$PROJECT_DIR$/ignore_this" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -250,17 +261,17 @@
       <workItem from="1546370913022" duration="1534000" />
       <workItem from="1546430811248" duration="244000" />
       <workItem from="1546433338947" duration="3985000" />
-      <workItem from="1546546882774" duration="1923000" />
+      <workItem from="1546546882774" duration="2547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11562000" />
+    <option name="totallyTimeSpent" value="12186000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1212" extended-state="6" />
+    <frame x="201" y="88" width="1398" height="992" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20674406" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2766272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -406,6 +417,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSSSTTTTOOOORRRREEEE/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
