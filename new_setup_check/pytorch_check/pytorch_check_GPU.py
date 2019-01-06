@@ -72,5 +72,5 @@ while True:
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
-
+    print('running')
 

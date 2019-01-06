@@ -42,7 +42,8 @@ class test_model(torch.nn.Module):
 
 is_cuda = False
 batch = 100
-input_size = 100000
+# input_size = 100000
+input_size = 1000
 output_size = 10
 x = np.random.randn(batch, input_size)
 y = np.random.randn(batch, output_size)
@@ -72,5 +73,6 @@ while True:
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
+    print('running')
 
 

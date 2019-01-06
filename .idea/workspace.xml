@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c92e74d0-6915-4daa-bc65-7c3cd6b88b9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_GPU.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/CartPole/1st_tutorial_V1001.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/CartPole/1st_tutorial_V1001.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/CartPole/1st_tutorial_V1002.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/CartPole/1st_tutorial_V1002.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/CartPole/1st_tutorial_V1002a.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/CartPole/1st_tutorial_V1002a.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/CartPole/1st_tutorial_V1003.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/CartPole/1st_tutorial_V1003.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/CartPole/1st_tutorial_V1004.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/CartPole/1st_tutorial_V1004.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/CartPole/dryfeet_V1001.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/CartPole/dryfeet_V1001.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/dryfeet_V1001.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/dryfeet_V1001.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/dryfeet_V1002.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/dryfeet_V1002.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/dryfeet_V1003.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/dryfeet_V1003.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/dryfeet_V1004.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/dryfeet_V1004.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/dryfeet_V1005.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/dryfeet_V1005.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/dryfeet_V1006.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/dryfeet_V1006.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/dryfeet_V1007.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/dryfeet_V1007.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/dryfeet_V1008.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/dryfeet_V1008.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai_NAME/gym/dryfeet_V1009.py" beforeDir="false" afterPath="$PROJECT_DIR$/openai_NAME/gym_NAME/dryfeet_V1009.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_GPU.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_GPU.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,27 +13,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/python_github$pytorch_check_CPU.coverage" NAME="pytorch_check_CPU Coverage Results" MODIFIED="1546721757534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/pytorch_check" />
+    <SUITE FILE_PATH="coverage/python_github$pytorch_check_CPU.coverage" NAME="pytorch_check_CPU Coverage Results" MODIFIED="1546807235411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/pytorch_check" />
     <SUITE FILE_PATH="coverage/python_github$check_out.coverage" NAME="check_out Coverage Results" MODIFIED="1546434810214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
     <SUITE FILE_PATH="coverage/python_github$uu__1_.coverage" NAME="uu (1) Coverage Results" MODIFIED="1546434703296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
     <SUITE FILE_PATH="coverage/python_github$aabbcc.coverage" NAME="aabbcc Coverage Results" MODIFIED="1546434677760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
     <SUITE FILE_PATH="coverage/python_github$uu__3_.coverage" NAME="uu (3) Coverage Results" MODIFIED="1546434777076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check/uu_error" />
     <SUITE FILE_PATH="coverage/python_github$uu__2_.coverage" NAME="uu (2) Coverage Results" MODIFIED="1546434341230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check" />
+    <SUITE FILE_PATH="coverage/python_github$tensorflow_check.coverage" NAME="tensorflow_check Coverage Results" MODIFIED="1546807249722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/tensorflow_check" />
     <SUITE FILE_PATH="coverage/python_github$uu.coverage" NAME="uu Coverage Results" MODIFIED="1546434717399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
     <SUITE FILE_PATH="coverage/python_github$hahaha.coverage" NAME="hahaha Coverage Results" MODIFIED="1546430892695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_github$not_working.coverage" NAME="not_working Coverage Results" MODIFIED="1546434780018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check/uu_error" />
     <SUITE FILE_PATH="coverage/python_github$dfgdfasfg.coverage" NAME="dfgdfasfg Coverage Results" MODIFIED="1546436164657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
+    <SUITE FILE_PATH="coverage/python_github$not_working.coverage" NAME="not_working Coverage Results" MODIFIED="1546434780018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check/uu_error" />
     <SUITE FILE_PATH="coverage/python_github$ss.coverage" NAME="ss Coverage Results" MODIFIED="1546434815792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
-    <SUITE FILE_PATH="coverage/python_github$pytorch_check_uu.coverage" NAME="pytorch_check_uu Coverage Results" MODIFIED="1546719834681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/pytorch_check" />
-    <SUITE FILE_PATH="coverage/python_github$gym_check.coverage" NAME="gym_check Coverage Results" MODIFIED="1546717003022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check" />
+    <SUITE FILE_PATH="coverage/python_github$pytorch_check_uu.coverage" NAME="pytorch_check_uu Coverage Results" MODIFIED="1546778238320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/pytorch_check" />
+    <SUITE FILE_PATH="coverage/python_github$gym_check.coverage" NAME="gym_check Coverage Results" MODIFIED="1546806829220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_GPU.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="75" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="1536">
+              <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+              <folding>
+                <element signature="e#56#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1608">
+              <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
               <folding>
                 <element signature="e#56#68#0" expanded="true" />
               </folding>
@@ -57,10 +55,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py">
+        <entry file="file://$PROJECT_DIR$/new_setup_check/gym_check/gym_check.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            <state relative-caret-position="264">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -99,14 +97,15 @@
         <option value="$PROJECT_DIR$/__uu/README.md" />
         <option value="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_uu.py" />
         <option value="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py" />
+        <option value="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_GPU.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1204" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1857" />
+    <option name="height" value="1212" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -116,7 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,10 +122,28 @@
               <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_github" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="new_setup_check" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="new_setup_check" type="462c0819:PsiDirectoryNode" />
+              <item name="gym_check" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="new_setup_check" type="462c0819:PsiDirectoryNode" />
+              <item name="pytorch_check" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -135,7 +151,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -159,7 +175,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pytorch_check_CPU">
+  <component name="RunManager" selected="Python.tensorflow_check">
     <configuration name="dfgdfasfg" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_github" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -248,7 +264,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ss" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="tensorflow_check" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_github" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -256,12 +272,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__uu" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/new_setup_check/tensorflow_check" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__uu/ss.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_setup_check/tensorflow_check/tensorflow_check.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -272,11 +288,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tensorflow_check" />
         <item itemvalue="Python.pytorch_check_CPU" />
-        <item itemvalue="Python.pytorch_check_uu" />
         <item itemvalue="Python.gym_check" />
+        <item itemvalue="Python.pytorch_check_uu" />
         <item itemvalue="Python.dfgdfasfg" />
-        <item itemvalue="Python.ss" />
       </list>
     </recent_temporary>
   </component>
@@ -299,21 +315,29 @@
       <workItem from="1546433338947" duration="3985000" />
       <workItem from="1546546882774" duration="3192000" />
       <workItem from="1546715578278" duration="6740000" />
+      <workItem from="1546765948932" duration="4288000" />
+      <workItem from="1546776793925" duration="96000" />
+      <workItem from="1546776940970" duration="763000" />
+      <workItem from="1546777828074" duration="649000" />
+      <workItem from="1546778609701" duration="99000" />
+      <workItem from="1546805896503" duration="119000" />
+      <workItem from="1546806042696" duration="1185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19571000" />
+    <option name="totallyTimeSpent" value="26770000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1204" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1212" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2100608" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22775014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32961932" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286908" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3277623" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39925718" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -455,13 +479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/new_setup_check/gym_check/gym_check.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/master-thesis-project/world_model_attempt/playground/vae.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -486,10 +503,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/7zO85227251/setup.py" />
     <entry file="file://$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_GPU.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="1536">
+          <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
           <folding>
             <element signature="e#56#68#0" expanded="true" />
           </folding>
@@ -498,8 +516,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="1608">
+          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+          <folding>
+            <element signature="e#56#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_setup_check/gym_check/gym_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
