@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c92e74d0-6915-4daa-bc65-7c3cd6b88b9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_GPU.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_GPU.py" afterDir="false" />
-    </list>
+    <list default="true" id="c92e74d0-6915-4daa-bc65-7c3cd6b88b9a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +111,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,28 +119,10 @@
               <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_github" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="new_setup_check" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="new_setup_check" type="462c0819:PsiDirectoryNode" />
-              <item name="gym_check" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="new_setup_check" type="462c0819:PsiDirectoryNode" />
-              <item name="pytorch_check" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,17 +301,17 @@
       <workItem from="1546778609701" duration="99000" />
       <workItem from="1546805896503" duration="119000" />
       <workItem from="1546806042696" duration="1185000" />
+      <workItem from="1546928318175" duration="243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26770000" />
+    <option name="totallyTimeSpent" value="27013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1212" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22775014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2305141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
