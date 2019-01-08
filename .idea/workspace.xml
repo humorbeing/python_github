@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c92e74d0-6915-4daa-bc65-7c3cd6b88b9a" name="Default Changelist" comment="" />
+    <list default="true" id="c92e74d0-6915-4daa-bc65-7c3cd6b88b9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MASTERPIECE/delete_all_but.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__uu/DANGEROUS_CODE/delete_all_but.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__uu/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/__uu/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_in_git" beforeDir="false" afterPath="$PROJECT_DIR$/git_in_git" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_in_git/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/git_in_git/README.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,11 +20,16 @@
     <SUITE FILE_PATH="coverage/python_github$check_out.coverage" NAME="check_out Coverage Results" MODIFIED="1546434810214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
     <SUITE FILE_PATH="coverage/python_github$uu__1_.coverage" NAME="uu (1) Coverage Results" MODIFIED="1546434703296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
     <SUITE FILE_PATH="coverage/python_github$aabbcc.coverage" NAME="aabbcc Coverage Results" MODIFIED="1546434677760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
+    <SUITE FILE_PATH="coverage/python_github$delete_files__1_.coverage" NAME="delete_files (1) Coverage Results" MODIFIED="1546932861144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/attention_RL" />
+    <SUITE FILE_PATH="coverage/python_github$delete_all_but.coverage" NAME="delete_all_but Coverage Results" MODIFIED="1546933024704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu/DANGEROUS_CODE" />
     <SUITE FILE_PATH="coverage/python_github$uu__3_.coverage" NAME="uu (3) Coverage Results" MODIFIED="1546434777076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check/uu_error" />
+    <SUITE FILE_PATH="coverage/python_github$delete_all_but__1_.coverage" NAME="delete_all_but (1) Coverage Results" MODIFIED="1546933160320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
     <SUITE FILE_PATH="coverage/python_github$uu__2_.coverage" NAME="uu (2) Coverage Results" MODIFIED="1546434341230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check" />
     <SUITE FILE_PATH="coverage/python_github$tensorflow_check.coverage" NAME="tensorflow_check Coverage Results" MODIFIED="1546807249722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/tensorflow_check" />
+    <SUITE FILE_PATH="coverage/python_github$delete_all_but__2_.coverage" NAME="delete_all_but (2) Coverage Results" MODIFIED="1546933889149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MASTERPIECE" />
     <SUITE FILE_PATH="coverage/python_github$uu.coverage" NAME="uu Coverage Results" MODIFIED="1546434717399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
     <SUITE FILE_PATH="coverage/python_github$hahaha.coverage" NAME="hahaha Coverage Results" MODIFIED="1546430892695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_github$delete_files.coverage" NAME="delete_files Coverage Results" MODIFIED="1546932845694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
     <SUITE FILE_PATH="coverage/python_github$dfgdfasfg.coverage" NAME="dfgdfasfg Coverage Results" MODIFIED="1546436164657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
     <SUITE FILE_PATH="coverage/python_github$not_working.coverage" NAME="not_working Coverage Results" MODIFIED="1546434780018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check/uu_error" />
     <SUITE FILE_PATH="coverage/python_github$ss.coverage" NAME="ss Coverage Results" MODIFIED="1546434815792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
@@ -25,41 +37,7 @@
     <SUITE FILE_PATH="coverage/python_github$gym_check.coverage" NAME="gym_check Coverage Results" MODIFIED="1546806829220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_GPU.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1536">
-              <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
-              <folding>
-                <element signature="e#56#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1608">
-              <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-              <folding>
-                <element signature="e#56#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/new_setup_check/gym_check/gym_check.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -90,10 +68,15 @@
         <option value="$PROJECT_DIR$/ignore_this/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ignore_this/hi.py" />
-        <option value="$PROJECT_DIR$/__uu/README.md" />
         <option value="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_uu.py" />
         <option value="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py" />
         <option value="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_GPU.py" />
+        <option value="$PROJECT_DIR$/git_in_git/README.md" />
+        <option value="$PROJECT_DIR$/__uu/README.md" />
+        <option value="$PROJECT_DIR$/__uu/delete_files.py" />
+        <option value="$PROJECT_DIR$/__uu/DANGEROUS_CODE/delete_files.py" />
+        <option value="$PROJECT_DIR$/MASTERPIECE/delete_all_but.py" />
+        <option value="$PROJECT_DIR$/__uu/DANGEROUS_CODE/delete_all_but.py" />
       </list>
     </option>
   </component>
@@ -111,7 +94,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,10 +101,43 @@
               <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_github" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="__uu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="__uu" type="462c0819:PsiDirectoryNode" />
+              <item name="DANGEROUS_CODE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="attention_RL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="git_in_git" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="MASTERPIECE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="MASTERPIECE" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -130,16 +145,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/__uu/DANGEROUS_CODE" />
+      <recent name="$PROJECT_DIR$/__uu" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MASTERPIECE" />
+      <recent name="$PROJECT_DIR$/__uu" />
+      <recent name="$PROJECT_DIR$/attention_RL" />
       <recent name="$PROJECT_DIR$/new_setup_check/pytorch_check" />
       <recent name="$PROJECT_DIR$/SSSSTTTTOOOORRRREEEE" />
-      <recent name="$PROJECT_DIR$/ignore_this" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/__uu" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -154,8 +172,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tensorflow_check">
-    <configuration name="dfgdfasfg" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.delete_all_but (2)">
+    <configuration name="delete_all_but (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_github" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -163,12 +181,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ignore_this" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__uu" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ignore_this/dfgdfasfg.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__uu/delete_all_but.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -177,7 +195,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gym_check" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="delete_all_but (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_github" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -185,12 +203,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/new_setup_check/gym_check" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MASTERPIECE" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_setup_check/gym_check/gym_check.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MASTERPIECE/delete_all_but.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,7 +217,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytorch_check_CPU" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="delete_all_but" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_github" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -207,12 +225,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/new_setup_check/pytorch_check" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__uu/DANGEROUS_CODE" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_CPU.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__uu/DANGEROUS_CODE/delete_all_but.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -221,7 +239,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytorch_check_uu" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="delete_files (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_github" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -229,12 +247,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/new_setup_check/pytorch_check" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/attention_RL" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_setup_check/pytorch_check/pytorch_check_GPU.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_RL/delete_files.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -243,7 +261,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tensorflow_check" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="delete_files" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_github" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -251,12 +269,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/new_setup_check/tensorflow_check" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__uu" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_setup_check/tensorflow_check/tensorflow_check.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__uu/DANGEROUS_CODE/delete_files.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -267,11 +285,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tensorflow_check" />
-        <item itemvalue="Python.pytorch_check_CPU" />
-        <item itemvalue="Python.gym_check" />
-        <item itemvalue="Python.pytorch_check_uu" />
-        <item itemvalue="Python.dfgdfasfg" />
+        <item itemvalue="Python.delete_all_but (2)" />
+        <item itemvalue="Python.delete_all_but (1)" />
+        <item itemvalue="Python.delete_all_but" />
+        <item itemvalue="Python.delete_files (1)" />
+        <item itemvalue="Python.delete_files" />
       </list>
     </recent_temporary>
   </component>
@@ -301,22 +319,23 @@
       <workItem from="1546778609701" duration="99000" />
       <workItem from="1546805896503" duration="119000" />
       <workItem from="1546806042696" duration="1185000" />
-      <workItem from="1546928318175" duration="243000" />
+      <workItem from="1546928318175" duration="1620000" />
+      <workItem from="1546930694201" duration="3497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27013000" />
+    <option name="totallyTimeSpent" value="31887000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1212" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2305141" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23327805" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32961932" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3277623" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997236" visible="true" weight="0.3277623" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39925718" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -324,7 +343,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002764" side_tool="true" visible="true" weight="0.3277623" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -336,6 +355,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/MASTERPIECE/models" />
+    </ignored-roots>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Venv/3.5/lib/python3.5/site-packages/pkg_resources/__init__.py">
@@ -421,16 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__uu/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="384">
-            <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BGR_graph/showvideoonttt5_checkingcode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-415">
@@ -507,6 +521,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_in_git/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="168">
+            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__uu/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="560">
+            <caret line="115" column="28" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_RL/delete_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__uu/DANGEROUS_CODE/delete_files.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__uu/delete_all_but.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__uu/DANGEROUS_CODE/delete_all_but.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MASTERPIECE/delete_all_but.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>

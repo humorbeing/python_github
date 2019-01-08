@@ -95,3 +95,22 @@ Content in the first column | Content in the second column
     */
     !.gitignore
     ```
+
+# Delete all files in a folder EXCEPT 'pdf's.
+
+```text
+cd <the directory you want>
+find . -type f ! -iname "*.pdf" -delete
+```
+- The first command will take you to the directory in which you want to delete your files
+- The second command will delete all files except with those ending with .pdf in filename
+- ```.``` is the current directory. ```!``` means to take all files except the ones with ```.pdf``` at the end. ```-type f``` selects only files, not directories. ```-delete``` means to delete it.
+
+ **NOTE: this command will delete all files (except ```pdf``` files but including hidden files) in current directory as well as in all sub-directories. ```!``` must come before -name. simply ```-name``` will include only ```.pdf```, while ```-iname``` will include both ```.pdf``` and ```.PDF```**
+
+To delete only in current directory and not in sub-directories add ```-maxdepth 1```:
+```text
+find . -maxdepth 1 -type f ! -iname "*.pdf" -delete
+```
+- I just realized, you can't use this to exclude 2 extensions, like ```*.py``` and ```*.md```.
+I am moving to python codes.
