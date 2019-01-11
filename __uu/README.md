@@ -40,12 +40,18 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 - Or minuses
 + Or pluses
    
-   
+# add link   
 http://github.com - automatic!
 [GitHub](http://github.com)
 
+# add pic
+```text
+![hello](picture file`abc.png`)
+```
+![hello](abc.png)
 
-As Kanye West said:
+
+# As Kanye West said:
 
 > We're living the future so
 > the present is our past.
@@ -94,6 +100,25 @@ Content in the first column | Content in the second column
     *
     */
     !.gitignore
+    ```
+# git save username and password
+- commands
+    ```text
+    git config --global credential.helper store
+    git pull
+    git push
+    ```
+    - username and passwords are saved in ```~/.git-credentials``` file.
+    
+    to view: ```vi filename```. ```ESC``` and ```:q``` or ```:wq``` to quit program.
+- to undo this
+    ```text
+    git config --global --unset credential.helper
+    ```
+    then remove ```~/.git-credentials``` file.
+    
+    ```text
+    rm ~/.git-credentials
     ```
 
 # Delete all files in a folder EXCEPT 'pdf's.

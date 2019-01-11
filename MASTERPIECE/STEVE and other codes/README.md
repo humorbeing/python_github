@@ -15,5 +15,4 @@ The [tutorials folder](tutorials) is a collection of models described in the [Te
 If you want to contribute to models, be sure to review the [contribution guidelines](CONTRIBUTING.md).
 
 ## License
-
 [Apache License 2.0](LICENSE)
