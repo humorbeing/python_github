@@ -3,7 +3,9 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/MASTERPIECE/Curiosity-driven Exploration by Self-supervised Prediction" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MASTERPIECE/DQN-tensorflow" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/MASTERPIECE/WorldModelsExperiments" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MASTERPIECE/baselines" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/MASTERPIECE/large-scale-curiosity" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/git_in_git" vcs="Git" />
   </component>

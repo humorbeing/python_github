@@ -1,10 +1,12 @@
 """
 delete all but
+un-git: rm -Rf .git .gitignore
 """
 
 
 import os
-
+# from subprocess import call
+# call(["ls", "-l"])
 # for f in os.listdir('.'):
 #     # if not f.endswith('.pdf'):
 #     #     os.remove(f)
@@ -28,7 +30,13 @@ for root, dirs, files in os.walk('.'):
         else:
             target = os.path.join(root, f)
             if REAL:
-                print('deleting:', target)
-                os.remove(target)
+                # os.remove(target)
+                try:
+                    # print('deleting:', target)
+                    os.remove(target)
+                except OSError:
+                    print('FAIL to delete:', target)
+                    print("If it's a git folder, try command: [rm -Rf .git .gitignore] to un-git the folder.")
+
             else:
                 print('Would be deleting:', target)
