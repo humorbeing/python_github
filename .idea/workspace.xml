@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c92e74d0-6915-4daa-bc65-7c3cd6b88b9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MASTERPIECE/STEVE and other codes/ray_readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MASTERPIECE/DQN-tensorflow/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/MASTERPIECE/DQN-tensorflow/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MASTERPIECE/STEVE and other codes/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/MASTERPIECE/STEVE and other codes/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__uu/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/__uu/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="c92e74d0-6915-4daa-bc65-7c3cd6b88b9a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +43,45 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MASTERPIECE/delete_all_but.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="15" column="40" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/a2c/a2c.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-216">
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/a2c/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/a2c/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="312">
+                <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -161,6 +189,12 @@
               <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_github" type="462c0819:PsiDirectoryNode" />
               <item name="MASTERPIECE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="MASTERPIECE" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN-tensorflow" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -350,12 +384,12 @@
       <workItem from="1546928318175" duration="1620000" />
       <workItem from="1546930694201" duration="5149000" />
       <workItem from="1546950123310" duration="62000" />
-      <workItem from="1547210903493" duration="5731000" />
+      <workItem from="1547210903493" duration="5971000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39332000" />
+    <option name="totallyTimeSpent" value="39572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1212" extended-state="6" />
@@ -645,6 +679,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="15" column="40" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/a2c/a2c.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/a2c/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/a2c/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="312">
+            <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
