@@ -1,8 +1,16 @@
+
 def ss(s=''):
-    print('- Message -'*6)
+    print()
+    print('   ---' * 15)
+    print('   ---' * 15)
+    print()
+    # print('        >>>>>>>>>>>>>>>>>>>>                <<<<<<<<<<<<<<<<<<<<        ')
     print(s)
-    print('- End -'*10)
-    halt_massage = '*HALT* *HALT* *HALT* *HALT* *HALT* *HALT* *HALT* *HALT* from "' + __file__ +'"'
-    assert False, halt_massage
+    print()
+    print('   ---' * 15)
+    print('   ---' * 15)
+    print()
+    import sys
+    sys.exit()
 
 
