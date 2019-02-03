@@ -139,3 +139,8 @@ find . -maxdepth 1 -type f ! -iname "*.pdf" -delete
 ```
 - I just realized, you can't use this to exclude 2 extensions, like ```*.py``` and ```*.md```.
 I am moving to python codes.
+
+# `hihihi`
+- simple way of dark background color is `hihihi`.
+- ``two works as well``.
+- sure ```three also works```.
