@@ -183,7 +183,7 @@ if __name__ == "__main__":
     args = get_args()
     env = gym.make(args.env_name)
 
-    shared_model = Policy(2, action_map)
+    shared_model = RNN(2, action_map)
 
     shared_model = shared_model.share_memory()
     optimizer = SharedAdam(shared_model.parameters(), lr=args.lr)
