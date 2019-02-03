@@ -2,110 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c92e74d0-6915-4daa-bc65-7c3cd6b88b9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python_github.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_github.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c/working-on.py" beforeDir="false" afterPath="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c/working-on.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__uu/import_package.py" beforeDir="false" afterPath="$PROJECT_DIR$/__uu/import_package.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__uu/ss.py" beforeDir="false" afterPath="$PROJECT_DIR$/__uu/ss.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/python_github$working_on.coverage" NAME="working-on Coverage Results" MODIFIED="1547842478269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c" />
-    <SUITE FILE_PATH="coverage/python_github$aabbcc.coverage" NAME="aabbcc Coverage Results" MODIFIED="1546434677760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
-    <SUITE FILE_PATH="coverage/python_github$delete_files__1_.coverage" NAME="delete_files (1) Coverage Results" MODIFIED="1546932861144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/attention_RL" />
-    <SUITE FILE_PATH="coverage/python_github$uu__2_.coverage" NAME="uu (2) Coverage Results" MODIFIED="1546434341230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check" />
-    <SUITE FILE_PATH="coverage/python_github$baselines_common_cmd_util.coverage" NAME="baselines_common_cmd_util Coverage Results" MODIFIED="1547754576873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn" />
-    <SUITE FILE_PATH="coverage/python_github$tensorflow_check.coverage" NAME="tensorflow_check Coverage Results" MODIFIED="1546807249722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/tensorflow_check" />
+    <SUITE FILE_PATH="coverage/python_github$delete_all_but.coverage" NAME="delete_all_but Coverage Results" MODIFIED="1547840281883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MASTERPIECE" />
+    <SUITE FILE_PATH="coverage/python_github$delete_all_but__1_.coverage" NAME="delete_all_but (1) Coverage Results" MODIFIED="1546933160320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
+    <SUITE FILE_PATH="coverage/python_github$pytorch_check_uu.coverage" NAME="pytorch_check_uu Coverage Results" MODIFIED="1546778238320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/pytorch_check" />
+    <SUITE FILE_PATH="coverage/python_github$dfgdfasfg.coverage" NAME="dfgdfasfg Coverage Results" MODIFIED="1546436164657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
     <SUITE FILE_PATH="coverage/python_github$uu_here.coverage" NAME="uu_here Coverage Results" MODIFIED="1547754448211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn" />
+    <SUITE FILE_PATH="coverage/python_github$pytorch_check_CPU.coverage" NAME="pytorch_check_CPU Coverage Results" MODIFIED="1546807235411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/pytorch_check" />
+    <SUITE FILE_PATH="coverage/python_github$not_working.coverage" NAME="not_working Coverage Results" MODIFIED="1546434780018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check/uu_error" />
+    <SUITE FILE_PATH="coverage/python_github$import_package.coverage" NAME="import_package Coverage Results" MODIFIED="1547218987580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
     <SUITE FILE_PATH="coverage/python_github$uu.coverage" NAME="uu Coverage Results" MODIFIED="1546434717399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
+    <SUITE FILE_PATH="coverage/python_github$uu__2_.coverage" NAME="uu (2) Coverage Results" MODIFIED="1546434341230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check" />
+    <SUITE FILE_PATH="coverage/python_github$check_out.coverage" NAME="check_out Coverage Results" MODIFIED="1546434810214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
+    <SUITE FILE_PATH="coverage/python_github$delete_files__1_.coverage" NAME="delete_files (1) Coverage Results" MODIFIED="1546932861144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/attention_RL" />
+    <SUITE FILE_PATH="coverage/python_github$deepq_D.coverage" NAME="deepq_D Coverage Results" MODIFIED="1547764342900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn" />
+    <SUITE FILE_PATH="coverage/python_github$delete_all_but__2_.coverage" NAME="delete_all_but (2) Coverage Results" MODIFIED="1547216970029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MASTERPIECE" />
+    <SUITE FILE_PATH="coverage/python_github$plot_a3c_log.coverage" NAME="plot_a3c_log Coverage Results" MODIFIED="1549145253763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/master-thesis-project/playground" />
+    <SUITE FILE_PATH="coverage/python_github$working_on.coverage" NAME="working-on Coverage Results" MODIFIED="1547842478269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c" />
+    <SUITE FILE_PATH="coverage/python_github$tensorflow_check.coverage" NAME="tensorflow_check Coverage Results" MODIFIED="1546807249722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/tensorflow_check" />
+    <SUITE FILE_PATH="coverage/python_github$baselines_common_cmd_util.coverage" NAME="baselines_common_cmd_util Coverage Results" MODIFIED="1547754576873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn" />
+    <SUITE FILE_PATH="coverage/python_github$uu__1_.coverage" NAME="uu (1) Coverage Results" MODIFIED="1546434703296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
+    <SUITE FILE_PATH="coverage/python_github$gym_check.coverage" NAME="gym_check Coverage Results" MODIFIED="1548650048264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check" />
     <SUITE FILE_PATH="coverage/python_github$hahaha.coverage" NAME="hahaha Coverage Results" MODIFIED="1546430892695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_github$delete_files.coverage" NAME="delete_files Coverage Results" MODIFIED="1546932845694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
-    <SUITE FILE_PATH="coverage/python_github$dfgdfasfg.coverage" NAME="dfgdfasfg Coverage Results" MODIFIED="1546436164657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
-    <SUITE FILE_PATH="coverage/python_github$not_working.coverage" NAME="not_working Coverage Results" MODIFIED="1546434780018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check/uu_error" />
-    <SUITE FILE_PATH="coverage/python_github$gym_check.coverage" NAME="gym_check Coverage Results" MODIFIED="1546806829220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check" />
-    <SUITE FILE_PATH="coverage/python_github$pytorch_check_CPU.coverage" NAME="pytorch_check_CPU Coverage Results" MODIFIED="1546807235411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/pytorch_check" />
     <SUITE FILE_PATH="coverage/python_github$run_D.coverage" NAME="run_D Coverage Results" MODIFIED="1547802980931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn" />
-    <SUITE FILE_PATH="coverage/python_github$check_out.coverage" NAME="check_out Coverage Results" MODIFIED="1546434810214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
-    <SUITE FILE_PATH="coverage/python_github$uu__1_.coverage" NAME="uu (1) Coverage Results" MODIFIED="1546434703296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
-    <SUITE FILE_PATH="coverage/python_github$delete_all_but.coverage" NAME="delete_all_but Coverage Results" MODIFIED="1547840281883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MASTERPIECE" />
-    <SUITE FILE_PATH="coverage/python_github$uu__3_.coverage" NAME="uu (3) Coverage Results" MODIFIED="1546434777076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check/uu_error" />
-    <SUITE FILE_PATH="coverage/python_github$delete_all_but__1_.coverage" NAME="delete_all_but (1) Coverage Results" MODIFIED="1546933160320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
-    <SUITE FILE_PATH="coverage/python_github$deepq_D.coverage" NAME="deepq_D Coverage Results" MODIFIED="1547764342900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn" />
-    <SUITE FILE_PATH="coverage/python_github$import_package.coverage" NAME="import_package Coverage Results" MODIFIED="1547218987580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
-    <SUITE FILE_PATH="coverage/python_github$delete_all_but__2_.coverage" NAME="delete_all_but (2) Coverage Results" MODIFIED="1547216970029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MASTERPIECE" />
     <SUITE FILE_PATH="coverage/python_github$ss.coverage" NAME="ss Coverage Results" MODIFIED="1546434815792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/__uu" />
-    <SUITE FILE_PATH="coverage/python_github$pytorch_check_uu.coverage" NAME="pytorch_check_uu Coverage Results" MODIFIED="1546778238320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/pytorch_check" />
+    <SUITE FILE_PATH="coverage/python_github$aabbcc.coverage" NAME="aabbcc Coverage Results" MODIFIED="1546434677760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ignore_this" />
+    <SUITE FILE_PATH="coverage/python_github$uu__3_.coverage" NAME="uu (3) Coverage Results" MODIFIED="1546434777076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_setup_check/gym_check/uu_error" />
+    <SUITE FILE_PATH="coverage/python_github$plot_a3c_log__1_.coverage" NAME="plot_a3c_log (1) Coverage Results" MODIFIED="1549145383555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/master-thesis-project/log_from_pnupc/a3c_1" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.55518836">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c/working-on.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="574">
-                  <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/my_utility.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c/readme.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="72">
-                    <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/MASTERPIECE/A2C/pytorch-a2c-ppo-acktr/main.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="406">
-                  <caret line="66" lean-forward="true" selection-start-line="64" selection-start-column="4" selection-end-line="66" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/MASTERPIECE/A2C/pytorch-a2c-ppo-acktr/a2c_ppo_acktr/arguments.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-864">
-                  <caret column="15" lean-forward="true" selection-end-column="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="a3c_v0004.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/master-thesis-project/log_from_pnupc/a3c_1/a3c_v0004.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4833">
+              <caret line="117" column="20" lean-forward="true" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="a3c.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/master-thesis-project/world_model_attempt/playground/a3c.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plot_a3c_log.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/master-thesis-project/log_from_pnupc/a3c_1/plot_a3c_log.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -170,9 +144,18 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="-1204" />
+    <option name="x" value="-1855" />
+    <option name="y" value="-4" />
     <option name="width" value="1855" />
     <option name="height" value="1204" />
   </component>
@@ -191,48 +174,6 @@
             <path>
               <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_github" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="__SSSSTTTTOOOORRRREEEE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="__SSSSTTTTOOOORRRREEEE" type="462c0819:PsiDirectoryNode" />
-              <item name="pytorch-a2c" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="__uu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="MASTERPIECE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="MASTERPIECE" type="462c0819:PsiDirectoryNode" />
-              <item name="A2C" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="MASTERPIECE" type="462c0819:PsiDirectoryNode" />
-              <item name="A2C" type="462c0819:PsiDirectoryNode" />
-              <item name="pytorch-a2c-ppo-acktr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_github" type="462c0819:PsiDirectoryNode" />
-              <item name="MASTERPIECE" type="462c0819:PsiDirectoryNode" />
-              <item name="A2C" type="462c0819:PsiDirectoryNode" />
-              <item name="pytorch-a2c-ppo-acktr" type="462c0819:PsiDirectoryNode" />
-              <item name="a2c_ppo_acktr" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -272,51 +213,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.working-on">
-    <configuration name="baselines_common_cmd_util" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_github" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/baselines_common_cmd_util.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="deepq_D" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_github" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/deepq_D.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.plot_a3c_log (1)">
     <configuration name="delete_all_but" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_github" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -335,11 +232,8 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
-    <configuration name="run_D" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="gym_check" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_github" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -347,19 +241,54 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/new_setup_check/gym_check" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/run_D.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_setup_check/gym_check/gym_check.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
+    </configuration>
+    <configuration name="plot_a3c_log (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python_github" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/master-thesis-project/log_from_pnupc/a3c_1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/master-thesis-project/log_from_pnupc/a3c_1/plot_a3c_log.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="plot_a3c_log" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python_github" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/master-thesis-project/playground" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/master-thesis-project/playground/plot_a3c_log.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="working-on" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_github" />
@@ -379,17 +308,21 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.delete_all_but" />
+      <item itemvalue="Python.working-on" />
+      <item itemvalue="Python.gym_check" />
+      <item itemvalue="Python.plot_a3c_log" />
+      <item itemvalue="Python.plot_a3c_log (1)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plot_a3c_log (1)" />
+        <item itemvalue="Python.plot_a3c_log" />
+        <item itemvalue="Python.gym_check" />
         <item itemvalue="Python.working-on" />
         <item itemvalue="Python.delete_all_but" />
-        <item itemvalue="Python.run_D" />
-        <item itemvalue="Python.deepq_D" />
-        <item itemvalue="Python.baselines_common_cmd_util" />
       </list>
     </recent_temporary>
   </component>
@@ -442,34 +375,37 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-1204" width="1855" height="1204" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="-4" width="1855" height="1204" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1050304" />
+      <window_info anchor="right" id="GfmBrowser" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49968132" weight="0.32901832" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50193477" side_tool="true" weight="0.22748375" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49968132" weight="0.32901832" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49806523" visible="true" weight="0.22739981" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18021005" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" auto_hide="true" x="1125" y="173" width="596" height="1073" id="SciView" order="3" weight="0.32946378" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32961932" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49806523" visible="true" weight="0.22748375" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39925718" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49968132" weight="0.32901832" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50193477" side_tool="true" weight="0.22748375" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49968132" weight="0.32901832" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32961932" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -477,100 +413,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/__uu/DANGEROUS_CODE/delete_files.py" />
-    <entry file="file://$PROJECT_DIR$/__uu/delete_all_but.py" />
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/STEVE and other codes/research/nst_blogpost/4_Neural_Style_Transfer_with_Eager_Execution.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__uu/DANGEROUS_CODE/delete_all_but.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machine_learning_coding/SVM_V1001.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="144">
-            <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/STEVE and other codes/ray_readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="24" selection-start-column="24" selection-end-column="24" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/STEVE and other codes/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="408">
-            <caret line="17" selection-start-line="17" selection-end-line="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__uu/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-638">
-            <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/a2c/a2c.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/a2c/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/a2c/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="312">
-            <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/DQN-tensorflow/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -589,81 +431,35 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/DQN-tensorflow/dqn/agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/DQN-tensorflow/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="243">
-            <caret line="9" selection-start-line="9" selection-end-line="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/MASTERPIECE/DQN-tensorflow/README.md" />
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/DQN-tensorflow/dqn/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/DQN-tensorflow/dqn/environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/__uu/import_package.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-288" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/master-thesis-project/world_model_attempt/playground/this_utility.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="43" column="14" selection-start-line="32" selection-end-line="43" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/deepq/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/deepq/README.md" />
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/deepq/defaults.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -671,29 +467,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2760">
           <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/uu_here.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/baselines_common_cmd_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="25" selection-start-line="7" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/uu_here.py" />
+    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/baselines_common_cmd_util.py" />
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/common/atari_wrappers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -706,29 +484,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/common/math_util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1080">
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1080" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/common/distributions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1512">
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1512" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/common/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2616">
           <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,20 +506,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/defaults_D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/defaults_D.py" />
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/deepq/deepq.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3672">
           <caret line="201" column="42" selection-start-line="201" selection-start-column="42" selection-end-line="201" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -760,9 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3144">
           <caret line="131" column="20" selection-start-line="131" selection-start-column="20" selection-end-line="131" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,9 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,9 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,56 +539,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2328">
           <caret line="191" column="21" selection-start-line="191" selection-start-column="21" selection-end-line="191" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#3208#1" />
-            <element signature="e#3209#3232#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/deepq_D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4490">
-          <caret line="500" column="16" selection-start-line="500" selection-start-column="16" selection-end-line="500" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#629#2595#0" />
-            <element signature="e#2622#2935#0" />
-            <element signature="e#3081#3635#0" />
-            <element signature="e#3035#3229#0" />
-            <element signature="e#3926#4010#0" />
-            <element signature="e#4113#4993#0" />
-            <element signature="e#3925#4393#0" />
-            <element signature="e#3992#6020#0" />
-            <element signature="e#8015#9384#1" />
-            <element signature="e#8034#9119#1" />
-            <element signature="e#8150#10469#1" />
-            <element signature="e#17216#17973#0" />
-            <element signature="e#18041#18339#0" />
-            <element signature="e#18392#19118#0" />
-            <element signature="e#19176#19634#0" />
-            <element signature="e#19165#19952#0" />
-            <element signature="e#14302#14915#0" />
-            <element signature="e#14313#14650#0" />
-            <element signature="e#14323#14874#0" />
-            <element signature="e#3711#6747#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/run_D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-362">
-          <caret line="203" column="5" selection-start-line="203" selection-start-column="5" selection-end-line="203" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#418#547#0" />
-            <element signature="e#370#588#0" />
-            <element signature="e#821#1566#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/deepq_D.py" />
+    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/run_D.py" />
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/delete_all_but.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -851,43 +555,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/A2C/pytorch-a2c-ppo-acktr/setup.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/A2C/pytorch-a2c-ppo-acktr/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="72">
-            <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/A2C/pytorch-a2c-ppo-acktr/a2c_ppo_acktr/arguments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-864">
-          <caret column="15" lean-forward="true" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c/ss.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/MASTERPIECE/A2C/pytorch-a2c-ppo-acktr/README.md" />
+    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c/readme.md" />
+    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c/ss.py" />
     <entry file="file://$PROJECT_DIR$/__uu/ss.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -895,30 +571,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/my_utility.py">
+    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/baselines_dqn/my_utility.py" />
+    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c/working-on.py" />
+    <entry file="file://$PROJECT_DIR$/MASTERPIECE/A2C/pytorch-a2c-ppo-acktr/a2c_ppo_acktr/arguments.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="220">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_setup_check/gym_check/gym_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/A2C/pytorch-a2c-ppo-acktr/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="66" lean-forward="true" selection-start-line="64" selection-start-column="4" selection-end-line="66" />
+        <state relative-caret-position="3520">
+          <caret line="160" column="31" selection-start-line="160" selection-start-column="31" selection-end-line="160" selection-end-column="31" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/pytorch-a2c/working-on.py">
+    <entry file="file://$PROJECT_DIR$/reinforcement_learning/a3c/a3c_v0003.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+        <state relative-caret-position="251">
+          <caret line="346" column="40" lean-forward="true" selection-start-line="346" selection-start-column="40" selection-end-line="346" selection-end-column="40" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reinforcement_learning/a3c/plot_a3c_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master-thesis-project/playground/log.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master-thesis-project/playground/plot_a3c_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master-thesis-project/playground/CLEAN_fix_action_fix_mdn_loss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master-thesis-project/playground_modules/cuda_a3c.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master-thesis-project/playground_modules/log.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master-thesis-project/playground_modules/a3c_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master-thesis-project/log_from_pnupc/a3c_1/plot_a3c_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master-thesis-project/log_from_pnupc/a3c_1/a3c_v0004.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4833">
+          <caret line="117" column="20" lean-forward="true" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master-thesis-project/world_model_attempt/playground/a3c.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
         </state>
       </provider>
     </entry>
