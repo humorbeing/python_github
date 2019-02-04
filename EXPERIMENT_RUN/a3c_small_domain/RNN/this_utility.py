@@ -8,6 +8,11 @@ from datetime import datetime
 import torch
 import torch.optim as optim
 
+def save_this_model(model):
+    if not os.path.exists('model_save'):
+        os.makedirs('model_save')
+    torch.save(model.state_dict(), 'model_save/model.pytorch')
+
 class Log():
     def __init__(self, name):
 
@@ -142,3 +147,18 @@ def ensure_shared_grads(model, shared_model):
         if shared_param.grad is not None:
             return
         shared_param._grad = param.grad
+
+
+def ss(s=''):
+    print()
+    print('   ---' * 15)
+    print('   ---' * 15)
+    print()
+    # print('        >>>>>>>>>>>>>>>>>>>>                <<<<<<<<<<<<<<<<<<<<        ')
+    print(s)
+    print()
+    print('   ---' * 15)
+    print('   ---' * 15)
+    print()
+    import sys
+    sys.exit()
