@@ -4,7 +4,13 @@
 - encoder vs vae vs no train
     - dataset generator
 
-
+# gym episode max limit
+ 
+```text
+env = gym.make('Pong-v0')
+env._max_episode_steps = 5
+```
+Change `5` to 100000 ish, to complete training. On rnn experiment, agent can't learn further because of the limit is 10000.
 # model input and output
 - idea: input is raw pixel, not preprocessed pytorch tensors
     - [x] make a distinct difference between frame work

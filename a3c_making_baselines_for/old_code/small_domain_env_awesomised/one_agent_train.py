@@ -13,9 +13,9 @@ import torch.nn.functional as F
 import torch.multiprocessing as mp
 import torch.optim as optim
 
-# from ss import ss
+from ss import ss
 from this_utility import *
-from this_models import *
+from this_models import Policy
 
 action_map = {
     0: 2,
@@ -30,27 +30,19 @@ def train():
     # env.seed(args.seed + rank)
     # torch.manual_seed(args.seed + rank)
 
-    model = RNN_only(2, action_map)
+    model = Policy(2, action_map)
     model.train()
     # model.eval()
     optimizer = optim.Adam(model.parameters())
     state = env.reset()
-    # print(state.shape)
+    print(state.shape)
     a = np.zeros(128)
-    # print(a.shape)
+    print(a.shape)
     # state = tensor_state(state)
     done = True
     episode_length = 0
     while True:
 
-        hx1 = torch.zeros(1, 64)
-        cx1 = torch.zeros(1, 64)
-
-        hx2 = torch.zeros(1, 32)
-        cx2 = torch.zeros(1, 32)
-
-        hx3 = torch.zeros(1, 16)
-        cx3 = torch.zeros(1, 16)
 
 
         values = []
@@ -59,7 +51,7 @@ def train():
         entropies = []
         while True:
             episode_length += 1
-            action, hx1, cx1, hx2, cx2, hx3, cx3 = model(state, hx1, cx1, hx2, cx2, hx3, cx3)
+            action = model(state)
             entropies.append(model.entropy)
             state, reward, done, _ = env.step(action)
             reward = max(min(reward, 1), -1)
