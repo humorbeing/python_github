@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c92e74d0-6915-4daa-bc65-7c3cd6b88b9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EXPERIMENT_RUN/a3c_small_domain/RNN/this_utility.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +102,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/a3c_making_baselines_for/old_code/dryfeet_01/workingON.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="432">
@@ -112,6 +112,16 @@
                   </folding>
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/EXPERIMENT_RUN/a3c_small_domain/RNN/this_models.py">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/EXPERIMENT_RUN/a3c_small_domain/RNN/this_utility.py">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -243,6 +253,50 @@
             <path>
               <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="__SSSSTTTTOOOORRRREEEE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="__SSSSTTTTOOOORRRREEEE" type="462c0819:PsiDirectoryNode" />
+              <item name="a3c_making_baselines_for" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="__SSSSTTTTOOOORRRREEEE" type="462c0819:PsiDirectoryNode" />
+              <item name="a3c_making_baselines_for" type="462c0819:PsiDirectoryNode" />
+              <item name="working_place" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="__SSSSTTTTOOOORRRREEEE" type="462c0819:PsiDirectoryNode" />
+              <item name="a3c_making_baselines_for" type="462c0819:PsiDirectoryNode" />
+              <item name="working_place" type="462c0819:PsiDirectoryNode" />
+              <item name="small_domain_env" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="EXPERIMENT_RUN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="EXPERIMENT_RUN" type="462c0819:PsiDirectoryNode" />
+              <item name="a3c_small_domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
+              <item name="EXPERIMENT_RUN" type="462c0819:PsiDirectoryNode" />
+              <item name="a3c_small_domain" type="462c0819:PsiDirectoryNode" />
+              <item name="RNN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_github" type="462c0819:PsiDirectoryNode" />
               <item name="pytorch_PLAYGROUND" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -273,11 +327,11 @@
       <recent name="$PROJECT_DIR$/__uu/DANGEROUS_CODE" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/EXPERIMENT_RUN/a3c_small_domain/RNN" />
       <recent name="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/a3c_making_baselines_for/working_place/small_domain_env" />
       <recent name="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/a3c_making_baselines_for/old_code/dryfeet_01" />
       <recent name="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/a3c_making_baselines_for" />
       <recent name="$PROJECT_DIR$/__SSSSTTTTOOOORRRREEEE/a3c_making_baselines_for/from_other_source" />
-      <recent name="$PROJECT_DIR$/learning_python/at_property" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -450,12 +504,12 @@
       <workItem from="1549203372944" duration="3000" />
       <workItem from="1549203567297" duration="26000" />
       <workItem from="1549204177274" duration="1561000" />
-      <workItem from="1549218080791" duration="19911000" />
+      <workItem from="1549218080791" duration="20352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114003000" />
+    <option name="totallyTimeSpent" value="114444000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,7 +521,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1212" extended-state="6" />
+    <frame x="1984" y="-1211" width="1857" height="1212" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17910448" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -524,25 +578,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/A2C/pytorch-a2c-ppo-acktr/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/common/vec_env/dummy_vec_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MASTERPIECE/baselines/baselines/common/vec_env/util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -898,6 +933,12 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EXPERIMENT_RUN/a3c_small_domain/RNN/this_models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EXPERIMENT_RUN/a3c_small_domain/RNN/this_utility.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
