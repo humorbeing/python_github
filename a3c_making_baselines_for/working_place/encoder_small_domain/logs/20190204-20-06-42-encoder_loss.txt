@@ -1,0 +1,4 @@
+epoch: 0, Reconstruct loss: 0.21544830094684253
+epoch: 1, Reconstruct loss: 0.18769202584570105
+epoch: 2, Reconstruct loss: 0.1539581630266074
+epoch: 3, Reconstruct loss: 0.12694906330469882
