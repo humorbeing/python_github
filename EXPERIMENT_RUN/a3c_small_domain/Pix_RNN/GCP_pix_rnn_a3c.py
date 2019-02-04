@@ -13,7 +13,7 @@ import torch.nn.functional as F
 import torch.multiprocessing as mp
 import torch.optim as optim
 
-from ss import ss
+# from ss import ss
 from this_utility import *
 from this_models import *
 
@@ -34,7 +34,7 @@ def get_args():
                         help='value loss coefficient (default: 50)')
     parser.add_argument('--seed', type=int, default=1,
                         help='random seed (default: 1)')
-    parser.add_argument('--num-processes', type=int, default=4,
+    parser.add_argument('--num-processes', type=int, default=10,
                         help='how many training processes to use (default: 4)')
     parser.add_argument('--num-steps', type=int, default=20,
                         help='number of forward steps in A3C (default: 20)')
@@ -57,9 +57,10 @@ def train(rank, args, shared_model, optimizer, counter, lock):
     env.seed(args.seed + rank)
     torch.manual_seed(args.seed + rank)
 
-    model = RNN(2, action_map)
+    model = Pixel_RNN(2, action_map)
     model.train()
-    state = env.reset()
+    state1 = np.zeros(128)
+    state2 = env.reset()
     # state = tensor_state(state)
     done = True
     episode_length = 0
@@ -78,17 +79,18 @@ def train(rank, args, shared_model, optimizer, counter, lock):
         entropies = []
         for step in range(args.num_steps):
             episode_length += 1
-            action, hx, cx = model(state, hx, cx)
-
+            action, hx, cx = model(state1, state2, hx, cx)
+            state1 = state2
             entropies.append(model.entropy)
-            state, reward, done, _ = env.step(action)
+            state2, reward, done, _ = env.step(action)
             reward = max(min(reward, 1), -1)
             with lock:
                 counter.value += 1
 
             if done:
                 episode_length = 0
-                state = env.reset()
+                state1 = np.zeros(128)
+                state2 = env.reset()
 
             values.append(model.v)
             log_probs.append(model.log_prob)
@@ -99,7 +101,7 @@ def train(rank, args, shared_model, optimizer, counter, lock):
 
         R = torch.zeros(1, 1)
         if not done:
-            model(state, hx, cx)
+            model(state1, state2, hx, cx)
             R = model.v.data
         values.append(R)
         policy_loss = 0
@@ -131,14 +133,15 @@ def test(rank, args, shared_model, counter):
     env.seed(args.seed + rank)
     torch.manual_seed(args.seed + rank)
 
-    model = RNN(2, action_map)
+    model = Pixel_RNN(2, action_map)
 
     model.eval()
+    state1 = np.zeros(128)
+    state2 = env.reset()
 
-    state = env.reset()
     reward_sum = 0
     done = True
-
+    best_reward = -999
     start_time = time.time()
 
     # a quick hack to prevent the agent from stucking
@@ -147,15 +150,16 @@ def test(rank, args, shared_model, counter):
     while True:
         episode_length += 1
         # Sync with the shared model
-        env.render()
+        # env.render()
         if done:
             model.load_state_dict(shared_model.state_dict())
             cx = torch.zeros(1, 16)
             hx = torch.zeros(1, 16)
 
 
-        action, hx, cx= model(state, hx, cx)
-        state, reward, done, _ = env.step(action)
+        action, hx, cx = model(state1, state2, hx, cx)
+        state1 = state2
+        state2, reward, done, _ = env.step(action)
 
         reward_sum += reward
 
@@ -167,10 +171,14 @@ def test(rank, args, shared_model, counter):
                 reward_sum, episode_length)
             # print(log_string)
             log.log(log_string)
+            if reward_sum > best_reward:
+                best_reward = reward_sum
+                save_this_model(model)
             reward_sum = 0
             episode_length = 0
             # actions.clear()
-            state = env.reset()
+            state1 = np.zeros(128)
+            state2 = env.reset()
             time.sleep(5)
 
 
@@ -183,7 +191,7 @@ if __name__ == "__main__":
     args = get_args()
     env = gym.make(args.env_name)
 
-    shared_model = RNN(2, action_map)
+    shared_model = Pixel_RNN(2, action_map)
 
     shared_model = shared_model.share_memory()
     optimizer = SharedAdam(shared_model.parameters(), lr=args.lr)

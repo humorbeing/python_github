@@ -34,7 +34,7 @@ def get_args():
                         help='value loss coefficient (default: 50)')
     parser.add_argument('--seed', type=int, default=1,
                         help='random seed (default: 1)')
-    parser.add_argument('--num-processes', type=int, default=4,
+    parser.add_argument('--num-processes', type=int, default=10,
                         help='how many training processes to use (default: 4)')
     parser.add_argument('--num-steps', type=int, default=20,
                         help='number of forward steps in A3C (default: 20)')
@@ -147,7 +147,7 @@ def test(rank, args, shared_model, counter):
     while True:
         episode_length += 1
         # Sync with the shared model
-        env.render()
+        # env.render()
         if done:
             model.load_state_dict(shared_model.state_dict())
             cx = torch.zeros(1, 16)
