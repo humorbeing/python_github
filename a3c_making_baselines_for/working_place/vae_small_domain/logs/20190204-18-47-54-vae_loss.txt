@@ -1,0 +1,1 @@
+epoch: 0, KL loss: nan, Reconstruct loss: nan
