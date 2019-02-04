@@ -1,0 +1,4 @@
+Time 00h 00m 03s, num steps 80, FPS 22, episode reward -19.0, episode length 1520
+Time 00h 00m 11s, num steps 80, FPS 7, episode reward -18.0, episode length 1549
+Time 00h 00m 19s, num steps 80, FPS 4, episode reward -21.0, episode length 1277
+Time 00h 00m 26s, num steps 80, FPS 3, episode reward -20.0, episode length 1290

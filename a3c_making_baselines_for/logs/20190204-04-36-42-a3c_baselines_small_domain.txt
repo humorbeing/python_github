@@ -1,0 +1,1 @@
+Time 00h 00m 02s, num steps 15824, FPS 6191, episode reward -21.0, episode length 1184
