@@ -96,4 +96,4 @@ class RNN(nn.Module):
             self.entropy = -(log_prob_all * prob).sum(1, keepdim=True)
             self.log_prob = log_prob_all.gather(1, selected)
             self.v = self.critic_linear(x)
-        return action, hx, cx
+        return action
