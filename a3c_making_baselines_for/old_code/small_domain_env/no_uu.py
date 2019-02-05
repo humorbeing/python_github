@@ -7,7 +7,7 @@ print(state)
 
 while True:
     env.render()
-    _,_,done,_ = env.step(3)
+    _,_,done,_ = env.step(1)
     if done:
         env.reset()
 

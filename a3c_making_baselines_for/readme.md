@@ -6,7 +6,13 @@
     - [x] vae
     - [x] encoder
     - [x] un trained vae and encoder?
-- [ ] extreme rnn
+- [x] extreme rnn
+- [x] Small, Simple Domain
+- [ ] awesomisation
+    - [ ] unify model
+    - [ ] unify input x
+- [ ] 3 moves with small simple domain
+
 # More RNN?
 after review the plot, Maybe all RNN?
 

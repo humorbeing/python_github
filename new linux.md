@@ -11,11 +11,11 @@
     - after `git pull` and error: `git commit -m 'some'` to make new update committed.
 # Notes
 - already there
-    - pytorch
-        - 
+    - pytorch 
     - cv2
     - git
-- python3 != python3.5 
+- python3 != python3.5
+- If you close GCP console, it seems the program will end. 
 
 # Don't-s
 - Don't upgrade pip
