@@ -18,7 +18,7 @@ from this_utility import *
 from this_models import *
 
 # Feature: log save name and model save name
-log_name = 'encoder_rnn'
+log_name = '3_SS'
 
 def get_args():
     parser = argparse.ArgumentParser(description='A3C')

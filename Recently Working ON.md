@@ -12,3 +12,5 @@
     - using 40 average to show trend.
 1. untrained encoder
 1. extreme rnn
+1. Simplify game domain
+1. awesomisation

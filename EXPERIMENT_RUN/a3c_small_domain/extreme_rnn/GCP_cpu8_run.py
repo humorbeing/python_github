@@ -18,7 +18,7 @@ from this_utility import *
 from this_models import *
 
 # Feature: log save name and model save name
-log_name = 'encoder_rnn'
+log_name = 'extreme_rnn'
 
 def get_args():
     parser = argparse.ArgumentParser(description='A3C')
@@ -48,9 +48,8 @@ def get_args():
 
 
 action_map = {
-    0: 1,
-    1: 2,
-    2: 3
+    0: 2,
+    1: 3
 }
 
 def train(rank, args, shared_model, optimizer, counter, lock):
@@ -59,41 +58,40 @@ def train(rank, args, shared_model, optimizer, counter, lock):
     env.seed(args.seed + rank)
     torch.manual_seed(args.seed + rank)
 
-    model = RNN_only(3, action_map)
+    model = RNN_EXT(2, action_map)
     model.train()
     state = env.reset()
     done = True
-    one_done = True
     episode_length = 0
     while True:
         # Sync with the shared model
         model.load_state_dict(shared_model.state_dict())
         if done:
-            h1 = torch.zeros(1, 16)
-            c1 = torch.zeros(1, 16)
-            # h2 = torch.zeros(1, 32)
-            # c2 = torch.zeros(1, 32)
-            # h3 = torch.zeros(1, 16)
-            # c3 = torch.zeros(1, 16)
-            # h12 = torch.zeros(1, 64)
-            # c12 = torch.zeros(1, 64)
-            # hc = torch.zeros(1, 1)
-            # cc = torch.zeros(1, 1)
-            # ha = torch.zeros(1, 2)
-            # ca = torch.zeros(1, 2)
+            h1 = torch.zeros(1, 64)
+            c1 = torch.zeros(1, 64)
+            h2 = torch.zeros(1, 32)
+            c2 = torch.zeros(1, 32)
+            h3 = torch.zeros(1, 16)
+            c3 = torch.zeros(1, 16)
+            h12 = torch.zeros(1, 64)
+            c12 = torch.zeros(1, 64)
+            hc = torch.zeros(1, 1)
+            cc = torch.zeros(1, 1)
+            ha = torch.zeros(1, 2)
+            ca = torch.zeros(1, 2)
         else:
             h1 = h1.data
             c1 = c1.data
-            # h2 = h2.data
-            # c2 = c2.data
-            # h3 = h3.data
-            # c3 = c3.data
-            # h12 = h12.data
-            # c12 = c12.data
-            # hc = hc.data
-            # cc = cc.data
-            # ha = ha.data
-            # ca = ca.data
+            h2 = h2.data
+            c2 = c2.data
+            h3 = h3.data
+            c3 = c3.data
+            h12 = h12.data
+            c12 = c12.data
+            hc = hc.data
+            cc = cc.data
+            ha = ha.data
+            ca = ca.data
 
             # hx = hx.data
             # cx = cx.data
@@ -106,34 +104,29 @@ def train(rank, args, shared_model, optimizer, counter, lock):
         for step in range(args.num_steps):
             episode_length += 1
 
-            action, h1, c1 = model(state, h1, c1)
+            action, h1, c1, h2, c2, h3, c3, h12, c12, hc, cc, ha, ca = model(state, h1, c1, h2, c2, h3, c3, h12, c12, hc, cc, ha, ca)
             entropies.append(model.entropy)
             state, reward, done, _ = env.step(action)
             reward = max(min(reward, 1), -1)
             with lock:
                 counter.value += 1
 
-            if reward == 0.0:
-                one_done = False
-            else:
-                one_done = True
-
             if done:
-                # one_done = True
-                # episode_length = 0
+                episode_length = 0
                 state = env.reset()
 
             values.append(model.v)
             log_probs.append(model.log_prob)
             rewards.append(reward)
 
-            if one_done:
+            if done:
                 break
 
         R = torch.zeros(1, 1)
-        if not one_done:
+        if not done:
             # z = encoder.get_z(state)
-            model(state, h1, c1)
+            model(state, h1, c1, h2, c2, h3, c3, h12, c12,
+                                                                             hc, cc, ha, ca)
             R = model.v.data
         values.append(R)
         policy_loss = 0
@@ -166,7 +159,7 @@ def test(rank, args, shared_model, counter):
     env.seed(args.seed + rank)
     torch.manual_seed(args.seed + rank)
 
-    model = RNN_only(3, action_map)
+    model = RNN_EXT(2, action_map)
 
     model.eval()
 
@@ -182,24 +175,25 @@ def test(rank, args, shared_model, counter):
     while True:
         episode_length += 1
         # Sync with the shared model
-        env.render()
+        # env.render()
         if done:
             model.load_state_dict(shared_model.state_dict())
-            h1 = torch.zeros(1, 16)
-            c1 = torch.zeros(1, 16)
-            # h2 = torch.zeros(1, 32)
-            # c2 = torch.zeros(1, 32)
-            # h3 = torch.zeros(1, 16)
-            # c3 = torch.zeros(1, 16)
-            # h12 = torch.zeros(1, 64)
-            # c12 = torch.zeros(1, 64)
-            # hc = torch.zeros(1, 1)
-            # cc = torch.zeros(1, 1)
-            # ha = torch.zeros(1, 2)
-            # ca = torch.zeros(1, 2)
+            h1 = torch.zeros(1, 64)
+            c1 = torch.zeros(1, 64)
+            h2 = torch.zeros(1, 32)
+            c2 = torch.zeros(1, 32)
+            h3 = torch.zeros(1, 16)
+            c3 = torch.zeros(1, 16)
+            h12 = torch.zeros(1, 64)
+            c12 = torch.zeros(1, 64)
+            hc = torch.zeros(1, 1)
+            cc = torch.zeros(1, 1)
+            ha = torch.zeros(1, 2)
+            ca = torch.zeros(1, 2)
 
         # z = encoder.get_z(state)
-        action, h1, c1 = model(state, h1, c1)
+        action, h1, c1, h2, c2, h3, c3, h12, c12, hc, cc, ha, ca = model(state, h1, c1, h2, c2, h3, c3, h12, c12, hc,
+                                                                         cc, ha, ca)
 
         state, reward, done, _ = env.step(action)
 
@@ -229,7 +223,7 @@ if __name__ == "__main__":
     # env = gym.make(args.env_name)
     # env._max_episode_steps = 100000
 
-    shared_model = RNN_only(3, action_map)
+    shared_model = RNN_EXT(2, action_map)
 
     shared_model = shared_model.share_memory()
     optimizer = SharedAdam(shared_model.parameters(), lr=args.lr)
