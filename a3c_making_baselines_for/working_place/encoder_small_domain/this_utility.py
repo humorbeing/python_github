@@ -12,12 +12,13 @@ import torch.optim as optim
 
 VAE_DATA_PATH = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/Data_save_here/pong-ram/vae_data'
 VAE_MODEL_PATH = 'model_save/vae_model.pytorch'
+ENCODER_MODEL_PATH = 'model_save/encoder_model.pytorch'
 
-
-def save_this_model(model):
+def save_this_model(model, name='some'):
     if not os.path.exists('model_save'):
         os.makedirs('model_save')
-    torch.save(model.state_dict(), 'model_save/model.pytorch')
+    save_name = name + '_model.pytorch'
+    torch.save(model.state_dict(), 'model_save/'+save_name)
 
 def save_vae_model(model):
     if not os.path.exists('model_save'):
