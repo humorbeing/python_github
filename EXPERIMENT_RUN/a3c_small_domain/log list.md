@@ -5,6 +5,10 @@
 - log: log location (copy relative path)
 
 `FORMAT----------------------------------------`
+# PROGRESS untrained encoder
+- PNU my
+- waiting
+
 # VAE RNN a3c small domain
 - n202
 - code: /VAE/vae_rnn_a3c.py

@@ -1,12 +1,14 @@
 # To Do
 - [x] Code Awesomisation
     - [x] 4 expriments code
-- [ ] encoder vs vae vs no train
+- [x] encoder vs vae vs no train
     - [x] dataset generator
     - [x] vae
     - [x] encoder
-    - [ ] un trained vae and encoder?
-- [ ] extreme rnn
+    - [x] un trained vae and encoder?
+- [x] extreme rnn
+- [ ] Small, Simple Domain
+
 # More RNN?
 after review the plot, Maybe all RNN?
 
