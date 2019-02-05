@@ -1,11 +1,17 @@
 # To Do
 - [x] Code Awesomisation
     - [x] 4 expriments code
-- encoder vs vae vs no train
+- [ ] encoder vs vae vs no train
     - [x] dataset generator
     - [x] vae
     - [x] encoder
     - [ ] un trained vae and encoder?
+- [ ] extreme rnn
+# More RNN?
+after review the plot, Maybe all RNN?
+
+# Need small and simpler environment
+use reward more frequently.
 
 # NEW in old_code
 In old_code folder, NEW is the latest(newest)
