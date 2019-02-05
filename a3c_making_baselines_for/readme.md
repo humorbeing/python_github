@@ -6,7 +6,9 @@
     - [x] vae
     - [x] encoder
     - [x] un trained vae and encoder?
-- [ ] extreme rnn
+- [x] extreme rnn
+- [ ] Small, Simple Domain
+
 # More RNN?
 after review the plot, Maybe all RNN?
 

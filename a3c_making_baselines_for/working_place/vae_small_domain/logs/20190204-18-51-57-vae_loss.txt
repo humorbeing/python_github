@@ -1,2 +1,0 @@
-epoch: 0, KL loss: 8.00, Reconstruct loss: 0.09173062792769424
-epoch: 1, KL loss: 8.00, Reconstruct loss: 0.02760005537588317
