@@ -14,9 +14,10 @@
 - PNU my
 - waiting
 
-# In Progress Extreme RNN
+# Extreme RNN
 - GCP cpu8-1
-- waiting
+- code: EXPERIMENT_RUN/a3c_small_domain/extreme_rnn/GCP_cpu8_run.py
+- log: EXPERIMENT_RUN/a3c_small_domain/extreme_rnn/logs/20190205-02-42-33-extreme_rnn.txt
 
 # untrained encoder
 - PNU my
