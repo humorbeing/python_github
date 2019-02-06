@@ -5,9 +5,23 @@
 - log: log location (copy relative path)
 
 `FORMAT----------------------------------------`
-# PROGRESS untrained encoder
+# 3 actions Small, Simple
+- n202
+- code: EXPERIMENT_RUN/a3c_small_domain/3_small_simple/this_models.py
+- log: EXPERIMENT_RUN/a3c_small_domain/3_small_simple/logs/20190205-16-40-10-3_SS.txt
+
+# In Progress Simple Domain
 - PNU my
 - waiting
+
+# In Progress Extreme RNN
+- GCP cpu8-1
+- waiting
+
+# untrained encoder
+- PNU my
+- code: EXPERIMENT_RUN/a3c_small_domain/Encoder/PNU_untrained_encoder_a3c.py
+- log: EXPERIMENT_RUN/a3c_small_domain/Encoder/logs/20190205-08-40-47-untrainedencoder_PNUmy.txt
 
 # VAE RNN a3c small domain
 - n202
