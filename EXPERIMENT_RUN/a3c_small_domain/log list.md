@@ -3,8 +3,18 @@
 - where is it computed
 - code: executed code (copy relative path)
 - log: log location (copy relative path)
-
+- time: Start
 `FORMAT----------------------------------------`
+# In Progress Random Seed 100
+- PNU my
+- awaiting
+- time: 7:56 am
+
+# In Progress Random Seed 1000
+- GCP pytorch-2
+- awaiting
+- time: 7.56 am
+
 # 3 actions Small, Simple
 - n202
 - code: EXPERIMENT_RUN/a3c_small_domain/3_small_simple/this_models.py

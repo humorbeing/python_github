@@ -13,7 +13,7 @@
     - [Not Working] unify input x
 - [x] 3 moves with small simple domain
 - [ ] test with max possibility.
-- [ ] different seed.
+- [x] different seed.
 # More RNN?
 after review the plot, Maybe all RNN?
 
