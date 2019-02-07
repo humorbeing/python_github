@@ -7,8 +7,11 @@
 `FORMAT----------------------------------------`
 # In Progress max action
 - GCP cpu8-1
-- awaiting
+- code: EXPERIMENT_RUN/a3c_small_domain/max_action/GCP_cpu8-1_run.py
+- log: EXPERIMENT_RUN/a3c_small_domain/max_action/logs/20190206-23-19-07-GCP_C81_max_action.txt
 - time: 8:21 am
+- note: stopped accidentally
+
 
 # In Progress Random Seed 100
 - PNU my
