@@ -5,6 +5,11 @@
 - log: log location (copy relative path)
 - time: Start
 `FORMAT----------------------------------------`
+# In Progress max action
+- GCP cpu8-1
+- awaiting
+- time: 8:21 am
+
 # In Progress Random Seed 100
 - PNU my
 - awaiting
@@ -13,7 +18,7 @@
 # In Progress Random Seed 1000
 - GCP pytorch-2
 - awaiting
-- time: 7.56 am
+- time: 8:21 am
 
 # 3 actions Small, Simple
 - n202
