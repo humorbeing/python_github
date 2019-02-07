@@ -15,14 +15,16 @@
 - awaiting
 - time: 11:43 am
 
-# In Progress Random Seed 100
+# Random Seed 100
 - PNU my
-- awaiting
+- code: EXPERIMENT_RUN/a3c_small_domain/different_seed/PNU_my_runner.py
+- log: EXPERIMENT_RUN/a3c_small_domain/different_seed/logs/20190207-07-47-51-PNUmy_seed_100.txt
 - time: 7:56 am
 
-# In Progress Random Seed 1000
+# Random Seed 1000
 - GCP pytorch-2
-- awaiting
+- code: EXPERIMENT_RUN/a3c_small_domain/different_seed/GCP_pyt_run.py
+- log: EXPERIMENT_RUN/a3c_small_domain/different_seed/logs/20190206-23-20-49-GCP_pytorch-2_1000.txt
 - time: 8:21 am
 
 # 3 actions Small, Simple
