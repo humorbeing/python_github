@@ -47,11 +47,10 @@ def get_args():
                         help='environment to train on (default: PongDeterministic-v4)')
     return parser.parse_args()
 
-
+actions = 2
 action_map = {
-    0: 1,
-    1: 2,
-    2: 3
+    0: 2,
+    1: 3
 }
 
 def train(rank, args, shared_model, optimizer, counter, lock):
@@ -60,7 +59,7 @@ def train(rank, args, shared_model, optimizer, counter, lock):
     env.seed(args.seed + rank)
     torch.manual_seed(args.seed + rank)
 
-    model = Model(3, action_map)
+    model = Model(actions, action_map)
     model.train()
     state = env.reset()
     done = True
@@ -141,7 +140,7 @@ def test(rank, args, shared_model, counter):
     env.seed(args.seed + rank)
     torch.manual_seed(args.seed + rank)
 
-    model = Model(3, action_map)
+    model = Model(actions, action_map)
     model.eval()
     state = env.reset()
     reward_sum = 0
@@ -186,7 +185,7 @@ if __name__ == "__main__":
 
     args = get_args()
     torch.manual_seed(args.seed)
-    shared_model = Model(3, action_map)
+    shared_model = Model(actions, action_map)
 
     shared_model = shared_model.share_memory()
     optimizer = SharedAdam(shared_model.parameters(), lr=args.lr)

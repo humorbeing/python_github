@@ -14,3 +14,4 @@
 1. extreme rnn
 1. Simplify game domain
 1. awesomisation
+1. different seed

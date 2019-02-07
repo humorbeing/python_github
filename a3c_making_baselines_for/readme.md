@@ -9,16 +9,17 @@
 - [x] extreme rnn
 - [x] Small, Simple Domain
 - [ ] awesomisation
-    - [ ] unify model
-    - [ ] unify input x
-- [ ] 3 moves with small simple domain
-
+    - [x] unify model
+    - [Not Working] unify input x
+- [x] 3 moves with small simple domain
+- [ ] test with max possibility.
+- [ ] different seed.
 # More RNN?
 after review the plot, Maybe all RNN?
 
 # Need small and simpler environment
-use reward more frequently.
-
+- use reward more frequently.
+- Result is not ideal. Maybe testing is not correct?
 # NEW in old_code
 In old_code folder, NEW is the latest(newest)
 version of commonly used code.

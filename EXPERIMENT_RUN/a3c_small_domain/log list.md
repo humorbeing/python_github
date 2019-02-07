@@ -10,9 +10,10 @@
 - code: EXPERIMENT_RUN/a3c_small_domain/3_small_simple/this_models.py
 - log: EXPERIMENT_RUN/a3c_small_domain/3_small_simple/logs/20190205-16-40-10-3_SS.txt
 
-# In Progress Simple Domain
+# Small Simple Domain
 - PNU my
-- waiting
+- code: EXPERIMENT_RUN/a3c_small_domain/small_simple/PNU_my_small_simple.py
+- log: EXPERIMENT_RUN/a3c_small_domain/small_simple/logs/20190205-12-43-50-PUNmy_simple_domain.txt
 
 # Extreme RNN
 - GCP cpu8-1

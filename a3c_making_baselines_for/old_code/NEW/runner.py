@@ -13,12 +13,13 @@ import torch.nn.functional as F
 import torch.multiprocessing as mp
 import torch.optim as optim
 
-# from ss import ss
+
 from this_utility import *
 from this_models import *
-from encoder_model import ENCODER
 
+# Feature: log save name and model save name
 log_name = 'encoder_rnn'
+Model = RNN_only
 
 def get_args():
     parser = argparse.ArgumentParser(description='A3C')
@@ -36,7 +37,7 @@ def get_args():
                         help='value loss coefficient (default: 50)')
     parser.add_argument('--seed', type=int, default=1,
                         help='random seed (default: 1)')
-    parser.add_argument('--num-processes', type=int, default=1,
+    parser.add_argument('--num-processes', type=int, default=8,
                         help='how many training processes to use (default: 4)')
     parser.add_argument('--num-steps', type=int, default=20,
                         help='number of forward steps in A3C (default: 20)')
@@ -48,12 +49,10 @@ def get_args():
 
 
 action_map = {
-    0: 2,
-    1: 3
+    0: 1,
+    1: 2,
+    2: 3
 }
-encoder = ENCODER()
-encoder.load_state_dict(torch.load(ENCODER_MODEL_PATH, map_location=lambda storage, loc: storage))
-
 
 def train(rank, args, shared_model, optimizer, counter, lock):
     env = gym.make(args.env_name)
@@ -61,21 +60,21 @@ def train(rank, args, shared_model, optimizer, counter, lock):
     env.seed(args.seed + rank)
     torch.manual_seed(args.seed + rank)
 
-    model = RNN_vae(2, action_map)
+    model = Model(3, action_map)
     model.train()
     state = env.reset()
     done = True
+    one_done = True
     episode_length = 0
     while True:
         # Sync with the shared model
         model.load_state_dict(shared_model.state_dict())
         if done:
-            hx = torch.zeros(1, 16)
-            cx = torch.zeros(1, 16)
+            h1 = torch.zeros(1, 16)
+            c1 = torch.zeros(1, 16)
         else:
-            hx = hx.data
-            cx = cx.data
-
+            h1 = h1.data
+            c1 = c1.data
 
         values = []
         log_probs = []
@@ -83,13 +82,18 @@ def train(rank, args, shared_model, optimizer, counter, lock):
         entropies = []
         for step in range(args.num_steps):
             episode_length += 1
-            z = encoder.get_z(state)
-            action, hx, cx = model(z, hx, cx)
+
+            action, h1, c1 = model(state, h1, c1)
             entropies.append(model.entropy)
             state, reward, done, _ = env.step(action)
             reward = max(min(reward, 1), -1)
             with lock:
                 counter.value += 1
+
+            if reward == 0.0:
+                one_done = False
+            else:
+                one_done = True
 
             if done:
                 episode_length = 0
@@ -99,13 +103,12 @@ def train(rank, args, shared_model, optimizer, counter, lock):
             log_probs.append(model.log_prob)
             rewards.append(reward)
 
-            if done:
+            if one_done:
                 break
 
         R = torch.zeros(1, 1)
-        if not done:
-            z = encoder.get_z(state)
-            action, hx, cx = model(z, hx, cx)
+        if not one_done:
+            model(state, h1, c1)
             R = model.v.data
         values.append(R)
         policy_loss = 0
@@ -138,18 +141,13 @@ def test(rank, args, shared_model, counter):
     env.seed(args.seed + rank)
     torch.manual_seed(args.seed + rank)
 
-    model = RNN_vae(2, action_map)
-
+    model = Model(3, action_map)
     model.eval()
-
     state = env.reset()
-
     reward_sum = 0
     done = True
     best_reward = -999
     start_time = time.time()
-
-    # a quick hack to prevent the agent from stucking
     episode_length = 0
     while True:
         episode_length += 1
@@ -157,11 +155,11 @@ def test(rank, args, shared_model, counter):
         env.render()
         if done:
             model.load_state_dict(shared_model.state_dict())
-            hx = torch.zeros(1, 16)
-            cx = torch.zeros(1, 16)
+            h1 = torch.zeros(1, 16)
+            c1 = torch.zeros(1, 16)
 
-        z = encoder.get_z(state)
-        action, hx, cx = model(z, hx, cx)
+        action, h1, c1 = model(state, h1, c1)
+
         state, reward, done, _ = env.step(action)
 
         reward_sum += reward
@@ -175,7 +173,7 @@ def test(rank, args, shared_model, counter):
             log.log(log_string)
             if reward_sum > best_reward:
                 best_reward = reward_sum
-                save_this_model(model, 'rnn')
+                save_this_model(model, log_name)
             reward_sum = 0
             episode_length = 0
             state = env.reset()
@@ -187,10 +185,8 @@ if __name__ == "__main__":
     mp.set_start_method('spawn')
 
     args = get_args()
-    # env = gym.make(args.env_name)
-    # env._max_episode_steps = 100000
-
-    shared_model = RNN_vae(2, action_map)
+    torch.manual_seed(args.seed)
+    shared_model = Model(3, action_map)
 
     shared_model = shared_model.share_memory()
     optimizer = SharedAdam(shared_model.parameters(), lr=args.lr)
