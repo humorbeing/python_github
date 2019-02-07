@@ -15,3 +15,4 @@
 1. Simplify game domain
 1. awesomisation
 1. different seed
+1. argmax when testing

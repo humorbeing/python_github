@@ -3,8 +3,28 @@
 - where is it computed
 - code: executed code (copy relative path)
 - log: log location (copy relative path)
-
+- time: Start
 `FORMAT----------------------------------------`
+# In Progress max action
+- GCP cpu8-1
+- code: EXPERIMENT_RUN/a3c_small_domain/max_action/GCP_cpu8-1_run.py
+- log: EXPERIMENT_RUN/a3c_small_domain/max_action/logs/20190206-23-19-07-GCP_C81_max_action.txt
+- time: 8:21 am
+- note: stopped accidentally
+- Pen9
+- awaiting
+- time: 11:43 am
+
+# In Progress Random Seed 100
+- PNU my
+- awaiting
+- time: 7:56 am
+
+# In Progress Random Seed 1000
+- GCP pytorch-2
+- awaiting
+- time: 8:21 am
+
 # 3 actions Small, Simple
 - n202
 - code: EXPERIMENT_RUN/a3c_small_domain/3_small_simple/this_models.py

@@ -18,7 +18,7 @@ from this_utility import *
 from this_models import *
 
 # Feature: log save name and model save name
-log_name = 'encoder_rnn'
+log_name = 'GCP_pytorch-2_1000'
 Model = RNN_only
 
 def get_args():
@@ -35,9 +35,9 @@ def get_args():
                         help='value loss coefficient (default: 0.5)')
     parser.add_argument('--max-grad-norm', type=float, default=50,
                         help='value loss coefficient (default: 50)')
-    parser.add_argument('--seed', type=int, default=1,
+    parser.add_argument('--seed', type=int, default=1000,
                         help='random seed (default: 1)')
-    parser.add_argument('--num-processes', type=int, default=8,
+    parser.add_argument('--num-processes', type=int, default=5,
                         help='how many training processes to use (default: 4)')
     parser.add_argument('--num-steps', type=int, default=20,
                         help='number of forward steps in A3C (default: 20)')
@@ -151,7 +151,7 @@ def test(rank, args, shared_model, counter):
     while True:
         episode_length += 1
         # Sync with the shared model
-        env.render()
+        # env.render()
         if done:
             model.load_state_dict(shared_model.state_dict())
             h1 = torch.zeros(1, 16)

@@ -98,6 +98,20 @@ class RNN_only(nn.Module):
             self.v = self.critic_linear(x)
         return action, hx, cx
 
+    def test(self, state, hx, cx):
+        # state = image_pre_process(state)
+        state = state.astype(np.float32)
+        state = state / 255.0
+        state = torch.from_numpy(state)
+        state = state.unsqueeze(0)
+
+        x = self.layers(state)
+        hx, cx = self.lstm(x, (hx, cx))
+        x = hx
+        logit = self.actor_linear(x)
+        prob = F.softmax(logit, dim=1)
+        action = self.action_map[torch.argmax(prob).item()]
+        return action, hx, cx
 
 class PixelPolicy(nn.Module):
     def __init__(self, action_space, action_map):

@@ -18,10 +18,10 @@ from this_utility import *
 from this_models import *
 
 # Feature: log save name and model save name
-log_name = 'encoder_rnn'
+log_name = 'GCP_C81_max_action'
 Model = RNN_only
-num_process = 6
-is_test_render = True
+num_process = 9
+is_test_render = False
 actions = 2
 action_map = {
     0: 2,

@@ -20,7 +20,7 @@ from this_models import *
 # Feature: log save name and model save name
 log_name = 'encoder_rnn'
 Model = RNN_only
-num_process = 6
+num_p = 6
 is_test_render = True
 actions = 2
 action_map = {
@@ -43,7 +43,7 @@ def get_args():
                         help='value loss coefficient (default: 50)')
     parser.add_argument('--seed', type=int, default=1,
                         help='random seed (default: 1)')
-    parser.add_argument('--num-processes', type=int, default=num_process,
+    parser.add_argument('--num-processes', type=int, default=num_p,
                         help='how many training processes to use (default: 4)')
     parser.add_argument('--num-steps', type=int, default=20,
                         help='number of forward steps in A3C (default: 20)')
