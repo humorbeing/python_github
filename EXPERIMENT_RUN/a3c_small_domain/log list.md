@@ -5,14 +5,15 @@
 - log: log location (copy relative path)
 - time: Start
 `FORMAT----------------------------------------`
-# In Progress max action
+# max action
 - GCP cpu8-1
 - code: EXPERIMENT_RUN/a3c_small_domain/max_action/GCP_cpu8-1_run.py
 - log: EXPERIMENT_RUN/a3c_small_domain/max_action/logs/20190206-23-19-07-GCP_C81_max_action.txt
 - time: 8:21 am
 - note: stopped accidentally
 - Pen9
-- awaiting
+- code: EXPERIMENT_RUN/a3c_small_domain/max_action/Pen9_run.py
+- log: 20190207-11-38-31-Pen8_max_action.txt
 - time: 11:43 am
 
 # Random Seed 100

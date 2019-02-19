@@ -54,7 +54,6 @@ def get_args():
     return parser.parse_args()
 
 
-
 def train(rank, args, shared_model, optimizer, counter, lock):
     env = gym.make(args.env_name)
     env._max_episode_steps = 100000

@@ -14,6 +14,70 @@
 - [x] 3 moves with small simple domain
 - [x] test with max possibility.
 - [x] different seed.
+- [ ] encoder model based model
+    - [ ] Train a simple RNN model.
+        - Don't know how LSTM vs LSTMCell. And I need a simple version of
+        RNN training sessions to use in further coding. E.g. new pytorch test code.
+    - [ ] train encoder from scratch
+        - train with raw sequence
+    - [ ] train encoder first then model
+        - train with extracted sequence
+- [ ] encoder with gradient through the network
+- [ ] Understand RL
+    - [ ] a2c
+    - [ ] ppo
+    - [ ] trpo
+    - [ ] dqn
+
+
+# Train a simple RNN model
+- [x] make identity matrix
+- [ ] lstmcell can't be trained with batches
+- [ ] use lstm in pytorch
+    - It looks like I might have made
+    a mistake in my early implementation
+    of 'World models' with LSTM part.
+    I think I need to study pytroch world models
+    implementation codes? the problem in these code
+    is, when you are training lstm with one batch of 1000
+    sequence, How should i manage hidden and cell layers
+    inputs. and in the 'internet code', there seems to be
+    a LSTM train and LSTMcell use kind of structure.
+    About the my mistake part, I think I screwed up training
+    part. 
+
+
+
+# Gradient injection
+- encoder is trained with 
+    - decoder error
+    - model based error
+        - with or without decoder
+    - policy gradient error
+    - inverse model error
+    - state action to previous action error
+    - any combination of above
+        - IDEA: encoder with
+             - policy gradient
+             - model based with decoder
+             - inverse model
+             - SA pre S model
+
+# About pixel - pixel
+Why didn't id work at all. I think this
+128 vectors of representation doesn't work
+like image pixels.
+So, what it means is, it's not really
+`pixel - pixel`, more like,
+`state - state` and the result is not 
+obtaining much information about the
+game state MOTIONS.
+
+# argmax on action selection
+- turns out this yields good result, I am going to use this as new metric.
+
+
+
 # More RNN?
 after review the plot, Maybe all RNN?
 

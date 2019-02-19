@@ -31,7 +31,7 @@ def xy(name):
         # print(reward_num+0.2)
         step_stack.append(step_num)
         reward_stack.append(reward_num)
-        if count % 100 == 0:
+        if count % 40 == 0:
             s = np.mean(step_stack)
             r = np.mean(reward_stack)
             log.append([s, r])
@@ -61,12 +61,12 @@ def plot_this(file_name, plot_name):
 # plt.scatter(t_log[0], t_log[1])
 fig, ax = plt.subplots()
 # plot_this('3ss.txt', '3 Simp')
-plot_this('max.txt', 'MaxAc')
+plot_this('max.txt', 'Max1')
 plot_this('rnn.txt', 'RNN')
 plot_this('ex.txt', 'RNN(EXT)')
 plot_this('r100.txt', 'Rd1')
 plot_this('r1000.txt', 'Rd2')
-# plot_this('RNN_10000_limit.txt', 'RNN(10000)')
+plot_this('max2.txt', 'Max2')
 # plot_this('vae_rnn.txt', 'VAE')
 ax.grid(True)
 ax.legend(loc='upper left')
