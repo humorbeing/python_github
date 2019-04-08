@@ -76,6 +76,9 @@ class ENCODER(nn.Module):
         return z
 
 
+    def sequence_trainer(self, state1, action, state2):
+        pass
+
     def forward(self, state):
         # print(state.shape)
         # ss('hi')
