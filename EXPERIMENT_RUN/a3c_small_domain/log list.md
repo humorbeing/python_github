@@ -5,6 +5,14 @@
 - log: log location (copy relative path)
 - time: Start
 `FORMAT----------------------------------------`
+
+# competing loss, find lambda log
+- pnu my
+- code: EXPERIMENT_RUN/a3c_small_domain/competing_loss_WM/encoder_model_v1001.py
+    - the lambda is varied {0.2, 0.5, 0.7, 1}
+- log: EXPERIMENT_RUN/a3c_small_domain/competing_loss_WM/logs
+- time: 2.33 pm
+
 # max action
 - GCP cpu8-1
 - code: EXPERIMENT_RUN/a3c_small_domain/max_action/GCP_cpu8-1_run.py

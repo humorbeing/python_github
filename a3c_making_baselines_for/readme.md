@@ -34,9 +34,39 @@
         hope math works.
         - problem. loss is not diverging. maybe need more data,
         maybe need more layers.
-            - [ ] better log
-            - [ ] more data
-            - [ ] more layer 
+            - [x] better log
+            - [x] more data  <---
+            - [ ] more layer
+# Working On (Top is latest)
+- save model function (good news on lambda 0.85)
+- more layers
+- (competing loss)test lambda which give penalty to maximizing loss
+- cuda train
+- Better logging
+- More data on competing loss WM
+- Checking math code on competing loss WorldModel
+
+# competing loss lambda find.
+Looks like the loss is not separating as I hoped.
+if maximizing is wining the battle, minimizing will compromise
+its goal, vise versa. why? maybe model is not complex enough.
+
+
+# multiple model train encoder
+- encoder decoder
+- state1 encoder + state2 encoder to action
+- state1 encoder + action to z to decoder state2
+- state1 encoder + rnn to action correlate z2 to decoder to stat2s competing loss
+- competing loss to state1 state2 action
+
+# Not Competing loss, train a action preditor
+basicly, putting a s_t s_t+1_hat --> predict actions.
+1. use states for everything
+2. use latent value for everything
+
+before that, should I try why competing loss doesn't work.
+or make normal model based first?
+
 # Idea on model learning with competing loss
 rnn model learning network doesn't take in action vectors,
 instead, it generates num_action x latent vector, then decoded
