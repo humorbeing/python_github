@@ -10,7 +10,10 @@ import torch.optim as optim
 
 
 
-VAE_DATA_PATH = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/Data_save_here/pong-ram/vae_data'
+# VAE_DATA_PATH = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/Data_save_here/pong-ram/vae_data'
+# dataset moved to shared folder, this needs to be corrected on other computers
+VAE_DATA_PATH = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSShare_DDDate_set/pong-ram/vae_data'
+
 VAE_MODEL_PATH = 'model_save/vae_model.pytorch'
 ENCODER_MODEL_PATH = 'model_save/encoder_model.pytorch'
 
@@ -37,6 +40,11 @@ class Log():
 
     def end(self):
         print('log is saved in: {}'.format(self.log_file))
+
+def one_hot(a, num_action=2):
+    # a = a - num_action
+    one = np.eye(num_action)[a]
+    return one
 
 
 def image_pre_process(frame):

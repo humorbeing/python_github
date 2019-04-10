@@ -28,7 +28,19 @@
     - [ ] ppo
     - [ ] trpo
     - [ ] dqn
+- [ ] make model-based architecture.
+    - [ ] make competing loss model-learning model.
+        - so, loss is going inif negative, I will try exp() on it.
+        hope math works.
 
+# Idea on model learning with competing loss
+rnn model learning network doesn't take in action vectors,
+instead, it generates num_action x latent vector, then decoded
+next state. And loss is like with corresponding action predicted state,
+the reconstruction loss is getting minimized; tho, the other action predicted
+states are getting loss maximized. So trying to squeeze network to
+learn the important part of action related features.
+ - another thought: only use encoder, and loss is calculated using latent vectors.
 
 # Train a simple RNN model
 - [x] make identity matrix

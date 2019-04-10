@@ -6,9 +6,9 @@ import numpy as np
 import os
 from this_utility import *
 
-class ENCODER(nn.Module):
+class RNN_WM_competing(nn.Module):
     def __init__(self):
-        super(ENCODER, self).__init__()
+        super(RNN_WM_competing, self).__init__()
         # self.kl_tolerance = 0.5
         self.z_size = 32
         self.encoder = nn.Sequential(
@@ -20,14 +20,18 @@ class ENCODER(nn.Module):
             nn.ReLU()
         )
         # self.z_layer = nn.Linear(32, self.z_size)
-        self.lstm = nn.LSTMCell(self.z_size + 2, self.z_size)
+        self.num_actions = 2
+        self.lstm = nn.LSTM(
+            self.z_size,
+            self.z_size * self.num_actions,
+            batch_first=True)
         self.decoder = nn.Sequential(
             nn.Linear(self.z_size, 32),
             nn.ReLU(),
             nn.Linear(32, 64),
             nn.ReLU(),
             nn.Linear(64, 128),
-            nn.ReLU()
+            # nn.ReLU()
         )
 
         self.apply(weights_init)
@@ -67,7 +71,7 @@ class ENCODER(nn.Module):
 
         return z
 
-    def training_on(self, state):
+    def realtime_trainer(self, state):
         state = state.astype(np.float32)
         state = state / 255.0
         state = torch.from_numpy(state)
@@ -77,7 +81,78 @@ class ENCODER(nn.Module):
 
 
     def sequence_trainer(self, state1, action, state2):
-        pass
+        state1 = state1.astype(np.float32)
+        state1 = state1 / 255.0
+        state1 = torch.from_numpy(state1)
+        state2 = state2.astype(np.float32)
+        state2 = state2 / 255.0
+        state2 = torch.from_numpy(state2)
+        # state1 = state1.unsqueeze(0)
+        # print(state1.shape)
+        z1 = self.encoder(state1)
+        z1 = z1.unsqueeze(0)
+        self.h, self.c = self.lstm(z1)
+        z2 = self.h.squeeze(0)
+        # print(z2.shape)
+        pred_action_pair = []
+        for i in range(self.num_actions):
+            pred = z2[:, i*self.z_size:(i+1)*self.z_size]
+            pred_action_pair.append(pred)
+        # print(len(pred_action_pair))
+        preds = []
+        for i in range(self.num_actions):
+            pred = self.decoder(pred_action_pair[i])
+            preds.append(pred)
+        errors = []
+        for i in range(self.num_actions):
+            error = preds[i] - state2
+            error = error**2
+            error = torch.sum(error, dim=1)
+            errors.append(error)
+        # print(errors[0].shape)
+        # print(actions.shape)
+        actions = action.T
+        # print(actions.shape)
+        actions = actions.astype(np.float32)
+        # state1 = state1 / 255.0
+        actions = torch.from_numpy(actions)
+        not_actions = actions*(-1) + 1
+        # actions = action
+        num_seq = len(actions)
+        # print(actions.shape)
+
+        mini_losses = []
+        maxi_losses = []
+
+        for i in range(self.num_actions):
+            mi_loss = errors[i] * actions[i]
+            mi_loss = torch.mean(mi_loss)
+            mini_losses.append(mi_loss)
+            ma_loss = errors[i] * not_actions[i]
+            ma_loss = torch.mean(ma_loss)
+            maxi_losses.append(ma_loss)
+        # print(losses)
+        mini_loss = sum(mini_losses)
+        maxi_loss = sum(maxi_losses)
+        # loss = torch.exp(loss)
+        # print(loss)
+        # a = errors[0][0]
+        # print(a)
+        # print(a*2)
+        # b = torch.Tensor([2])
+        # print(b)
+        # print(a*2)
+
+        # print(loss)
+        # print(errors)
+        # print(z)
+        # print(state1[9])
+        # print(state2[8])
+        # print(state2[9])
+        # print('yo')
+        loss = mini_loss*10 + maxi_loss*(-1)
+        # loss = mini_loss
+        return loss, mini_loss, maxi_loss
 
     def forward(self, state):
         # print(state.shape)
@@ -97,33 +172,48 @@ class ENCODER(nn.Module):
 
 if __name__ == '__main__':
     filelist = os.listdir(VAE_DATA_PATH)
-    log = Log('encoder_predict_loss')
+    # print(filelist)
+    # ss('new')
+    log = Log('WM_competing_loss')
     # ss('hi')
+    lr = 0.001
+    m = RNN_WM_competing()
+    optimizer = optim.Adam(m.parameters(), lr=lr)  #, weight_decay=0.0001)
+    while True:
+        filename = filelist[0]
+        # print(filename)
 
-    def creat_dataset(filelist, MAX=1000000):
-        np.random.shuffle(filelist)
-        data = None
-        for filename in filelist:
-            onefilepath = os.path.join(VAE_DATA_PATH, filename)
-            raw_data = np.load(onefilepath)['obs']
-            if data is None:
-                data = raw_data
-            else:
-                data = np.concatenate((data, raw_data), axis=0)
-            print('loading:', len(data))
-            if len(data) > MAX:
-                break
-        return data
-
-
-    for filename in filelist:
+        # for filename in filelist:
         onefilepath = os.path.join(VAE_DATA_PATH, filename)
         raw_data = np.load(onefilepath)
         raw_ob = raw_data['obs']
         raw_action = raw_data['action']
-        print(raw_ob.shape)
-        print(raw_action.shape)
-        ss('ho')
+        # print(raw_ob.shape)
+        # print(raw_action.shape)
+        #     ss('ho')
+        # one = one_hot(0)
+        # print(one)
+        actions = raw_action - 2
+        actions = one_hot(actions)
+        # print(actions)
+        # x = 52
+        # print(actions[x], raw_action[x])
+        input_ob = raw_ob[:-1, :]
+        actions = actions[:-1, :]
+        output_ob = raw_ob[1:, :]
+        # x = 99
+        # print(raw_ob[x], input_ob[x])
+        # print(raw_action[x], actions[x])
+        # print(raw_ob[x+1], output_ob[x])
+        # print(len(input_ob))
+        # print(len(actions))
+        # print(len(output_ob))
+
+        loss,mi,ma = m.sequence_trainer(input_ob, actions, output_ob)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        print('loss', loss, 'mini', mi, 'maxi', ma)
     ss('hi')
     dataset = creat_dataset(filelist)
     N = len(dataset)
