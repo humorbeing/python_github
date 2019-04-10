@@ -32,7 +32,11 @@
     - [ ] make competing loss model-learning model.
         - so, loss is going inif negative, I will try exp() on it.
         hope math works.
-
+        - problem. loss is not diverging. maybe need more data,
+        maybe need more layers.
+            - [ ] better log
+            - [ ] more data
+            - [ ] more layer 
 # Idea on model learning with competing loss
 rnn model learning network doesn't take in action vectors,
 instead, it generates num_action x latent vector, then decoded
