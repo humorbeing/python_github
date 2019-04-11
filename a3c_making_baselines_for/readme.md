@@ -29,22 +29,26 @@
     - [ ] trpo
     - [ ] dqn
 - [ ] make model-based architecture.
-    - [ ] make competing loss model-learning model.
+    - [x] make competing loss model-learning model.
         - so, loss is going inif negative, I will try exp() on it.
         hope math works.
         - problem. loss is not diverging. maybe need more data,
         maybe need more layers.
             - [x] better log
             - [x] more data  <---
-            - [ ] more layer
+            - [x] more layer
+    - [ ] make a normal one
+    - [ ] adverserial one
 # Working On (Top is latest)
-- save model function (good news on lambda 0.85)
-- more layers
-- (competing loss)test lambda which give penalty to maximizing loss
-- cuda train
-- Better logging
-- More data on competing loss WM
-- Checking math code on competing loss WorldModel
+- [ ] found a bug, when logging, lss should be np.mean(), not loss.
+- [ ] make a normal encoder decoder
+- [x] save model function (good news on lambda 0.85)
+- [x] more layers
+- [x] (competing loss)test lambda which give penalty to maximizing loss
+- [x] cuda train
+- [x] Better logging
+- [x] More data on competing loss WM
+- [x] Checking math code on competing loss WorldModel
 
 # competing loss lambda find.
 Looks like the loss is not separating as I hoped.
