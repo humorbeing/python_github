@@ -1,0 +1,3 @@
+epoch: 0, loss: 1.0705, minimizing loss: 10.8282, maximizing loss: 10.8419
+epoch: 1, loss: 0.0867, minimizing loss: 1.1846, maximizing loss: 1.2199
+epoch: 2, loss: 0.0685, minimizing loss: 1.2729, maximizing loss: 1.3382

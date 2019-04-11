@@ -209,8 +209,9 @@ if __name__ == '__main__':
     # filelist = os.listdir(toy_path)
     # print(filelist)
     # ss('new')
-    save_name = 'WM_1'
-    log_name = 'WM_competing_loss_lambda_1'
+    # save_name = 'WM_2'
+    log_name = 'WM_competing_loss_lambda_0.85'
+    save_name = log_name
     log = Log(log_name)
     # ss('hi')
     lr = 0.001
@@ -228,6 +229,7 @@ if __name__ == '__main__':
     EPOCH = 1000
     thre = 0.01
     best_mi = 999
+    so_far_best = 999
     for epoch in range(EPOCH):
         lss = []
         miss = []
@@ -275,7 +277,7 @@ if __name__ == '__main__':
 
         mean_ls = np.mean(lss)
         mean_mi = np.mean(miss)
-        mean_ma = np.mean(mass * (-1))
+        mean_ma = np.mean(mass) * (-1)
 
         log_string = "epoch: {}, loss: {:0.4f}, minimizing loss: {:0.4f}, maximizing loss: {:0.4f}".format(
             epoch, mean_ls, mean_mi, mean_ma)
@@ -297,3 +299,7 @@ if __name__ == '__main__':
                     if is_save:
                         save_this_model(m, save_name)
 
+        if mean_mi < so_far_best:
+            so_far_best = mean_mi
+            if is_save:
+                save_this_model(m, save_name+'SFB')

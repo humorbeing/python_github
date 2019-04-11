@@ -6,6 +6,11 @@
 - time: Start
 `FORMAT----------------------------------------`
 
+# RUNNING Competing loss, max limited
+- pnu my
+- code: EXPERIMENT_RUN/a3c_small_domain/CL_limit_max/CL_limit_max.py
+- log: EXPERIMENT_RUN/a3c_small_domain/CL_limit_max/logs
+
 # competing loss, find lambda log
 - pnu my
 - code: EXPERIMENT_RUN/a3c_small_domain/competing_loss_WM/encoder_model_v1001.py
