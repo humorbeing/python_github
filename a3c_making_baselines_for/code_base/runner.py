@@ -29,7 +29,13 @@ action_map = {
     1: 3
 }
 is_encoder_freeze = True
-# is_encoder_freeze = True
+# is_encoder_freeze = False
+is_encoder = True
+# is_encoder = False
+
+ENCODER_MODEL_PATH = './model_save/enc_dec_1_model.pytorch'
+
+
 def get_args():
     parser = argparse.ArgumentParser(description='A3C')
     parser.add_argument('--lr', type=float, default=0.0001,
@@ -197,10 +203,7 @@ if __name__ == "__main__":
 
 
     shared_model = Model(actions, action_map)
-    is_encoder = True
-    # is_encoder = False
 
-    ENCODER_MODEL_PATH = '/mnt/36D4F815D4F7D559/workspace/python_github/a3c_making_baselines_for/working_place/encoder_decoder/model_save/enc_dec_1_model.pytorch'
     if is_encoder:
         en = encoder()
         en.load_state_dict(torch.load(ENCODER_MODEL_PATH, map_location=lambda storage, loc: storage))
