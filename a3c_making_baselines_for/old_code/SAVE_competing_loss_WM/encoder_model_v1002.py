@@ -275,7 +275,7 @@ if __name__ == '__main__':
 
         mean_ls = np.mean(lss)
         mean_mi = np.mean(miss)
-        mean_ma = np.mean(mass * (-1))
+        mean_ma = np.mean(mass) * (-1)
 
         log_string = "epoch: {}, loss: {:0.4f}, minimizing loss: {:0.4f}, maximizing loss: {:0.4f}".format(
             epoch, mean_ls, mean_mi, mean_ma)

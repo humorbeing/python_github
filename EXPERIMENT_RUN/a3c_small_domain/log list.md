@@ -5,12 +5,40 @@
 - log: log location (copy relative path)
 - time: Start
 `FORMAT----------------------------------------`
+<<<<<<< HEAD
 # Running, competing loss, with saving
 - note: strange behavior on losses, found a bug and fixed it.
 now, it's running again. bug is np.mean(loss), should be np.mean(lss)
 - pnu my
 - code: under save-competingloss wm
 - log: same loot
+=======
+# CL_trainer
+1. cl good 1 load freeze
+    - pnu my
+    - code: cl_trainer
+    - setup: cl good1 model, load, freeze
+    
+# RUNNING encoder-decoder-trainer with rnn, freeze
+1. encoder load, freeze on
+    - gcp pytorch2
+    - code:
+    - log:
+    - setups: encoder load, freeze on
+    - time : 2 pm (all)
+2. encoder load, freeze off
+    - gcp cpu8
+    - setup: encoder load, freeze off
+3. no load, no freeze
+    -gcp cpu4
+    -setup: no load, no freeze
+
+
+# Competing loss, max limited
+- pnu my
+- code: EXPERIMENT_RUN/a3c_small_domain/CL_limit_max/CL_limit_max.py
+- log: EXPERIMENT_RUN/a3c_small_domain/CL_limit_max/logs
+>>>>>>> 7f8bed199721db82d265c70dc11ce2895fadd98e
 
 # competing loss, find lambda log
 - pnu my

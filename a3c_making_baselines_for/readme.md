@@ -1,3 +1,7 @@
+# abbreviation dictionary
+- WM: world model
+- CL: competing loss
+
 # To Do
 - [x] Code Awesomisation
     - [x] 4 expriments code
@@ -15,7 +19,7 @@
 - [x] test with max possibility.
 - [x] different seed.
 - [ ] encoder model based model
-    - [ ] Train a simple RNN model.
+    - [x] Train a simple RNN model.
         - Don't know how LSTM vs LSTMCell. And I need a simple version of
         RNN training sessions to use in further coding. E.g. new pytorch test code.
     - [ ] train encoder from scratch
@@ -39,9 +43,19 @@
             - [x] more layer
     - [ ] make a normal one
     - [ ] adverserial one
+
+
 # Working On (Top is latest)
+<<<<<<< HEAD
 - [x] found a bug, when logging, lss should be np.mean(), not loss.
 - [ ] make a normal encoder decoder
+=======
+- [ ] conduct experiment
+- [x] transfer encodr weight to a3c platform
+- [x] add a max ceiling on maximizing loss
+- [x] found a bug, when logging, lss should be np.mean(), not loss.
+- [x] make a normal encoder decoder
+>>>>>>> 7f8bed199721db82d265c70dc11ce2895fadd98e
 - [x] save model function (good news on lambda 0.85)
 - [x] more layers
 - [x] (competing loss)test lambda which give penalty to maximizing loss
@@ -54,7 +68,8 @@
 Looks like the loss is not separating as I hoped.
 if maximizing is wining the battle, minimizing will compromise
 its goal, vise versa. why? maybe model is not complex enough.
-
+- due to loss explosion, how about add a max number it can get.
+so, add a max loss on maximizing loss, give minimizing more benefit.
 
 # multiple model train encoder
 - encoder decoder
