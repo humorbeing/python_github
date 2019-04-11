@@ -19,10 +19,10 @@ from this_models import *
 from CL_limit_max import RNN_WM_competing as encoder_M
 
 # Feature: log save name and model save name
-log_name = 'encoder_rnn'
+log_name = 'pnu-my-cl-good1-load-freeze'
 Model = RNN_only
-num_process = 6
-is_test_render = True
+num_process = 4
+# is_test_render = True
 is_test_render = False
 actions = 2
 action_map = {
