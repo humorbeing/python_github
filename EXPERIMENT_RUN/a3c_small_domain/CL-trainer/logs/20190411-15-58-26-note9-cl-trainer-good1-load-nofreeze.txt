@@ -582,3 +582,4 @@ Time 04h 34m 56s, num steps 20956951, FPS 1270, episode reward -11.0, episode le
 Time 04h 35m 51s, num steps 21025898, FPS 1270, episode reward -9.0, episode length 12695
 Time 04h 36m 58s, num steps 21110660, FPS 1270, episode reward -2.0, episode length 15848
 Time 04h 38m 07s, num steps 21194890, FPS 1270, episode reward -3.0, episode length 16388
+Time 04h 39m 10s, num steps 21263950, FPS 1269, episode reward -8.0, episode length 12565
