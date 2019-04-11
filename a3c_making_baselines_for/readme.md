@@ -46,11 +46,16 @@
 
 
 # Working On (Top is latest)
+<<<<<<< HEAD
+- [x] found a bug, when logging, lss should be np.mean(), not loss.
+- [ ] make a normal encoder decoder
+=======
 - [ ] conduct experiment
 - [x] transfer encodr weight to a3c platform
 - [x] add a max ceiling on maximizing loss
 - [x] found a bug, when logging, lss should be np.mean(), not loss.
 - [x] make a normal encoder decoder
+>>>>>>> 7f8bed199721db82d265c70dc11ce2895fadd98e
 - [x] save model function (good news on lambda 0.85)
 - [x] more layers
 - [x] (competing loss)test lambda which give penalty to maximizing loss
