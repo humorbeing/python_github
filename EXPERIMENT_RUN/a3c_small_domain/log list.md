@@ -5,11 +5,19 @@
 - log: log location (copy relative path)
 - time: Start
 `FORMAT----------------------------------------`
-# CL_trainer
+
+
+
+# RUNNING CL_trainer
 1. cl good 1 load freeze
     - pnu my
     - code: cl_trainer
     - setup: cl good1 model, load, freeze
+2. cl good 1 load no freeze
+    - note 9
+3. cl good 2 load no freeze
+    - note 9
+    
     
 # RUNNING encoder-decoder-trainer with rnn, freeze
 1. encoder load, freeze on
@@ -25,6 +33,12 @@
     -gcp cpu4
     -setup: no load, no freeze
 
+# competing loss, with saving
+- note: strange behavior on losses, found a bug and fixed it.
+now, it's running again. bug is np.mean(loss), should be np.mean(lss)
+- pnu my
+- code: under save-competingloss wm
+- log: same loot
 
 # Competing loss, max limited
 - pnu my
