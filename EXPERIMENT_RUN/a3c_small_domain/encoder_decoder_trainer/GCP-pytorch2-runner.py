@@ -16,13 +16,12 @@ import torch.optim as optim
 
 from this_utility import *
 from this_models import *
-from CL_limit_max import RNN_WM_competing as encoder_M
+from encoder_model import encoder
 
 # Feature: log save name and model save name
-log_name = 'encoder_rnn'
+log_name = 'enc-dec-trainer-GCP-pytorch2-load-encoder-freezeon'
 Model = RNN_only
 num_process = 6
-is_test_render = True
 is_test_render = False
 actions = 2
 action_map = {
@@ -34,9 +33,7 @@ is_encoder_freeze = True
 is_encoder = True
 # is_encoder = False
 
-ENCODER_MODEL_PATH = './model_save/CL_good1.pytorch'
-# ENCODER_MODEL_PATH = './model_save/CL_good2.pytorch'
-# ENCODER_MODEL_PATH = './model_save/CL_soso.pytorch'
+ENCODER_MODEL_PATH = './model_save/enc_dec_1_model.pytorch'
 
 
 def get_args():
@@ -208,7 +205,7 @@ if __name__ == "__main__":
     shared_model = Model(actions, action_map)
 
     if is_encoder:
-        en = encoder_M()
+        en = encoder()
         en.load_state_dict(torch.load(ENCODER_MODEL_PATH, map_location=lambda storage, loc: storage))
         shared_model.encoder.load_state_dict(en.encoder.state_dict())
 
