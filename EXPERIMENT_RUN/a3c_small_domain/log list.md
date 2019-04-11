@@ -19,11 +19,11 @@
     - note 9
     
     
-# RUNNING encoder-decoder-trainer with rnn, freeze
+# encoder-decoder-trainer with rnn, freeze
 1. encoder load, freeze on
     - gcp pytorch2
-    - code:
-    - log:
+    - code: /encoder_decoder_trainer/
+    - log: /encoder_decoder_trainer/
     - setups: encoder load, freeze on
     - time : 2 pm (all)
 2. encoder load, freeze off
