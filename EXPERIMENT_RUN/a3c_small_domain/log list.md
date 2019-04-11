@@ -5,15 +5,41 @@
 - log: log location (copy relative path)
 - time: Start
 `FORMAT----------------------------------------`
-# In Progress Random Seed 100
+
+# RUNNING Competing loss, max limited
+- pnu my
+- code: EXPERIMENT_RUN/a3c_small_domain/CL_limit_max/CL_limit_max.py
+- log: EXPERIMENT_RUN/a3c_small_domain/CL_limit_max/logs
+
+# competing loss, find lambda log
+- pnu my
+- code: EXPERIMENT_RUN/a3c_small_domain/competing_loss_WM/encoder_model_v1001.py
+    - the lambda is varied {0.2, 0.5, 0.7, 1}
+- log: EXPERIMENT_RUN/a3c_small_domain/competing_loss_WM/logs
+- time: 2.33 pm
+
+# max action
+- GCP cpu8-1
+- code: EXPERIMENT_RUN/a3c_small_domain/max_action/GCP_cpu8-1_run.py
+- log: EXPERIMENT_RUN/a3c_small_domain/max_action/logs/20190206-23-19-07-GCP_C81_max_action.txt
+- time: 8:21 am
+- note: stopped accidentally
+- Pen9
+- code: EXPERIMENT_RUN/a3c_small_domain/max_action/Pen9_run.py
+- log: 20190207-11-38-31-Pen8_max_action.txt
+- time: 11:43 am
+
+# Random Seed 100
 - PNU my
-- awaiting
+- code: EXPERIMENT_RUN/a3c_small_domain/different_seed/PNU_my_runner.py
+- log: EXPERIMENT_RUN/a3c_small_domain/different_seed/logs/20190207-07-47-51-PNUmy_seed_100.txt
 - time: 7:56 am
 
-# In Progress Random Seed 1000
+# Random Seed 1000
 - GCP pytorch-2
-- awaiting
-- time: 7.56 am
+- code: EXPERIMENT_RUN/a3c_small_domain/different_seed/GCP_pyt_run.py
+- log: EXPERIMENT_RUN/a3c_small_domain/different_seed/logs/20190206-23-20-49-GCP_pytorch-2_1000.txt
+- time: 8:21 am
 
 # 3 actions Small, Simple
 - n202
