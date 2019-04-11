@@ -19,18 +19,23 @@ from this_models import *
 from encoder_model import encoder
 
 # Feature: log save name and model save name
-log_name = 'encoder_decoder_trainer'
+log_name = 'encoder_rnn'
 Model = RNN_only
 num_process = 6
-# is_test_render = True
-is_test_render = False
+is_test_render = True
 actions = 2
 action_map = {
     0: 2,
     1: 3
 }
 is_encoder_freeze = True
-# is_encoder_freeze = True
+# is_encoder_freeze = False
+is_encoder = True
+# is_encoder = False
+
+ENCODER_MODEL_PATH = './model_save/enc_dec_1_model.pytorch'
+
+
 def get_args():
     parser = argparse.ArgumentParser(description='A3C')
     parser.add_argument('--lr', type=float, default=0.0001,
@@ -198,10 +203,7 @@ if __name__ == "__main__":
 
 
     shared_model = Model(actions, action_map)
-    is_encoder = True
-    # is_encoder = False
 
-    ENCODER_MODEL_PATH = './model_save/enc_dec_1_model.pytorch'
     if is_encoder:
         en = encoder()
         en.load_state_dict(torch.load(ENCODER_MODEL_PATH, map_location=lambda storage, loc: storage))
