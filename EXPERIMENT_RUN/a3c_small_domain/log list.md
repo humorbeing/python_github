@@ -5,6 +5,12 @@
 - log: log location (copy relative path)
 - time: Start
 `FORMAT----------------------------------------`
+# Running, competing loss, with saving
+- note: strange behavior on losses, found a bug and fixed it.
+now, it's running again. bug is np.mean(loss), should be np.mean(lss)
+- pnu my
+- code: under save-competingloss wm
+- log: same loot
 
 # competing loss, find lambda log
 - pnu my

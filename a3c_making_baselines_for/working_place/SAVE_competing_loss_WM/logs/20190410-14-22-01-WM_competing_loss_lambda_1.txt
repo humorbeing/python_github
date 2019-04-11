@@ -1,2 +1,0 @@
-epoch: 0, loss: -1881.6934, minimizing loss: 21507.5645, maximizing loss: 23389.2578
-epoch: 1, loss: -18474.5156, minimizing loss: 211053.8125, maximizing loss: 229528.3281

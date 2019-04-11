@@ -40,7 +40,7 @@
     - [ ] make a normal one
     - [ ] adverserial one
 # Working On (Top is latest)
-- [ ] found a bug, when logging, lss should be np.mean(), not loss.
+- [x] found a bug, when logging, lss should be np.mean(), not loss.
 - [ ] make a normal encoder decoder
 - [x] save model function (good news on lambda 0.85)
 - [x] more layers
