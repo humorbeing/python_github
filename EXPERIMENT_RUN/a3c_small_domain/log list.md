@@ -4,8 +4,16 @@
 - code: executed code (copy relative path)
 - log: log location (copy relative path)
 - time: Start
+
 `FORMAT----------------------------------------`
 
+# RUNNING cl-trainer-random-seed
+1. normal 
+    - gcp pytorch 2
+2. g1 nofreeze
+    - gcp cpu4
+3. g2 nofreeze
+    - pnumy
 
 
 # RUNNING CL_trainer
@@ -17,7 +25,10 @@
     - note 9
 3. cl good 2 load no freeze
     - note 9
-    
+4. cl good 1 freeze
+    - note9
+5. cl soso no freeze
+    -note9
     
 # encoder-decoder-trainer with rnn, freeze
 1. encoder load, freeze on
