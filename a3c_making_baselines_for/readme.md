@@ -60,6 +60,16 @@
 - [x] More data on competing loss WM
 - [x] Checking math code on competing loss WorldModel
 
+# online train CL model
+after cl model is converged, find a way to online train it with
+policy gradient. it looks like cl model can grab good env information
+at first, but those information is not that valuable for later state.
+it can mean that later state is unseen state, so it needs to train on later state
+as well.
+
+# make training CL model schedule
+first is 0.01, and max limit is 20, then 0.001, max limit is 50, etc.
+
 # in pretrained weight with decoder on st
 since i have pretrained weight on Competing loss model. I can use it to train 
 decoder to state1 as well.
