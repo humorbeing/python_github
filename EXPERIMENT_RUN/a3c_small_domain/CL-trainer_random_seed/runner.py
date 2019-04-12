@@ -29,8 +29,8 @@ action_map = {
     0: 2,
     1: 3
 }
-is_encoder_freeze = True
-# is_encoder_freeze = False
+# is_encoder_freeze = True
+is_encoder_freeze = False
 is_encoder = True
 # is_encoder = False
 
@@ -38,6 +38,7 @@ ENCODER_MODEL_PATH = './model_save/CL_good1.pytorch'
 # ENCODER_MODEL_PATH = './model_save/CL_good2.pytorch'
 # ENCODER_MODEL_PATH = './model_save/CL_soso.pytorch'
 
+random_seed = 1000
 
 def get_args():
     parser = argparse.ArgumentParser(description='A3C')
@@ -53,7 +54,7 @@ def get_args():
                         help='value loss coefficient (default: 0.5)')
     parser.add_argument('--max-grad-norm', type=float, default=50,
                         help='value loss coefficient (default: 50)')
-    parser.add_argument('--seed', type=int, default=1,
+    parser.add_argument('--seed', type=int, default=random_seed,
                         help='random seed (default: 1)')
     parser.add_argument('--num-processes', type=int, default=num_process,
                         help='how many training processes to use (default: 4)')
@@ -203,6 +204,8 @@ if __name__ == "__main__":
 
     args = get_args()
     torch.manual_seed(args.seed)
+    # print(args.seed)
+    # ss('s')
 
 
     shared_model = Model(actions, action_map)
