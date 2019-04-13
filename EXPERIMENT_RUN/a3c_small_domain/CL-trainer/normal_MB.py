@@ -22,8 +22,8 @@ class RNN_WM_competing(nn.Module):
         # self.z_layer = nn.Linear(32, self.z_size)
         self.num_actions = 2
         self.lstm = nn.LSTM(
+            self.z_size + self.num_actions,
             self.z_size,
-            self.z_size * self.num_actions,
             batch_first=True)
         self.decoder = nn.Sequential(
             nn.Linear(self.z_size, 32),
@@ -80,7 +80,11 @@ class RNN_WM_competing(nn.Module):
         return z
 
 
-    def sequence_trainer(self, state1, action, state2):
+    def sequence_trainer(self, state1, actions, state2):
+        # print(state1.shape)
+        # print(action.shape)
+        # print(state2)
+        # ss('here')
         state1 = state1.astype(np.float32)
         state1 = state1 / 255.0
         state1 = torch.from_numpy(state1)
@@ -92,7 +96,7 @@ class RNN_WM_competing(nn.Module):
         # print('state1', state1, 'len', len(state1))
         # print('state2', state2, 'len', len(state2))
         # print('action', action, 'len', len(action))
-        actions = action.T
+        # actions = action.T
         # print(actions.shape)
         actions = actions.astype(np.float32)
         # state1 = state1 / 255.0
@@ -105,8 +109,13 @@ class RNN_WM_competing(nn.Module):
             state2 = state2.cuda()
             actions = actions.cuda()
         not_actions = actions * (-1) + 1
+
         z1 = self.encoder(state1)
+        # print(z1)
+        z1 = torch.cat((z1, actions), dim=1)
         # print('z1', z1)
+        # print(actions.shape)
+        # ss('here')
         z1 = z1.unsqueeze(0)
         self.h, self.c = self.lstm(z1)
         # print('h', self.h)
@@ -114,26 +123,33 @@ class RNN_WM_competing(nn.Module):
         z2 = self.h.squeeze(0)
         # print('z2', z2)
         # print(z2.shape)
-        pred_action_pair = []
-        for i in range(self.num_actions):
-            pred = z2[:, i*self.z_size:(i+1)*self.z_size]
-            pred_action_pair.append(pred)
+        # ss('h')
+        # pred_action_pair = []
+        # for i in range(self.num_actions):
+        #     pred = z2[:, i*self.z_size:(i+1)*self.z_size]
+        #     pred_action_pair.append(pred)
         # print(len(pred_action_pair))
         # print('z2 first', pred_action_pair[0])
         # print('---   ' * 20)
         # print('z2 second', pred_action_pair[1])
-        preds = []
-        for i in range(self.num_actions):
-            pred = self.decoder(pred_action_pair[i])
-            preds.append(pred)
+        # preds = []
+        # for i in range(self.num_actions):
+        #     pred = self.decoder(pred_action_pair[i])
+        #     preds.append(pred)
         # print('preds 0', preds[0])
         # print('preds 1', preds[1])
-        errors = []
-        for i in range(self.num_actions):
-            error = preds[i] - state2
-            error = error**2
-            error = torch.sum(error, dim=1)
-            errors.append(error)
+        pred = self.decoder(z2)
+        # print(pred.shape)
+        # ss('s')
+        loss = F.mse_loss(pred, state2)
+        # print(loss)
+        # ss('s')
+        # errors = []
+        # for i in range(self.num_actions):
+        #     error = preds[i] - state2
+        #     error = error**2
+        #     error = torch.sum(error, dim=1)
+        #     errors.append(error)
         # print('error 0', errors[0])
         # print('error 1', errors[1])
         # print(errors[0].shape)
@@ -142,35 +158,35 @@ class RNN_WM_competing(nn.Module):
         # print('non actions 0', not_actions[0])
         # print('non actions 1', not_actions[1])
         # actions = action
-        num_seq = len(actions)
-        # print(actions.shape)
-
-        mini_losses = []
-        maxi_losses = []
-
-        for i in range(self.num_actions):
-            mi_loss = errors[i] * actions[i]
-            # print('mi loss', i, mi_loss)
-            mi_loss = torch.mean(mi_loss)
-            # print('mean mi loss', i, mi_loss)
-            mini_losses.append(mi_loss)
-            ma_loss = errors[i] * not_actions[i]
-            # print('mx loss', i, ma_loss)
-            ma_loss = torch.mean(ma_loss)
-            # print('mean mx loss', i, ma_loss)
-            maxi_losses.append(ma_loss)
-        # print(losses)
-        mini_loss = sum(mini_losses)
-        maxi_loss = sum(maxi_losses)
-        lllambda = 0.9
-        limit = 100
-        maxi_loss = torch.clamp(maxi_loss, max=limit)
-        maxi_loss = maxi_loss * (-1)
-        # loss = mini_loss * 20 + maxi_loss * (-1)
-        loss = mini_loss + maxi_loss * lllambda
-        # loss = mini_loss
-        # loss = maxi_loss*(-1)
-        return loss, mini_loss, maxi_loss
+        # num_seq = len(actions)
+        # # print(actions.shape)
+        #
+        # mini_losses = []
+        # maxi_losses = []
+        #
+        # for i in range(self.num_actions):
+        #     mi_loss = errors[i] * actions[i]
+        #     # print('mi loss', i, mi_loss)
+        #     mi_loss = torch.mean(mi_loss)
+        #     # print('mean mi loss', i, mi_loss)
+        #     mini_losses.append(mi_loss)
+        #     ma_loss = errors[i] * not_actions[i]
+        #     # print('mx loss', i, ma_loss)
+        #     ma_loss = torch.mean(ma_loss)
+        #     # print('mean mx loss', i, ma_loss)
+        #     maxi_losses.append(ma_loss)
+        # # print(losses)
+        # mini_loss = sum(mini_losses)
+        # maxi_loss = sum(maxi_losses)
+        # lllambda = 0.9
+        # limit = 100
+        # maxi_loss = torch.clamp(maxi_loss, max=limit)
+        # maxi_loss = maxi_loss * (-1)
+        # # loss = mini_loss * 20 + maxi_loss * (-1)
+        # loss = mini_loss + maxi_loss * lllambda
+        # # loss = mini_loss
+        # # loss = maxi_loss*(-1)
+        return loss
 
     def forward(self, state):
         # print(state.shape)
@@ -196,7 +212,7 @@ if __name__ == '__main__':
     # print(filelist)
     # ss('new')
 
-    log_name = 'CL_maxlim_l0.9_m_100_c_50_1'
+    log_name = 'normal_model-based'
     save_name = log_name
     log = Log(log_name)
     # ss('hi')
@@ -252,7 +268,7 @@ if __name__ == '__main__':
             # print(len(actions))
             # print(len(output_ob))
 
-            loss, mi, ma = m.sequence_trainer(input_ob, actions, output_ob)
+            loss = m.sequence_trainer(input_ob, actions, output_ob)
             optimizer.zero_grad()
             loss.backward()
 
@@ -262,36 +278,36 @@ if __name__ == '__main__':
 
             loss = loss.item()
             lss.append(loss)
-            mi = mi.item()
-            miss.append(mi)
-            ma = ma.item()
-            mass.append(ma)
+            # mi = mi.item()
+            # miss.append(mi)
+            # ma = ma.item()
+            # mass.append(ma)
 
         mean_ls = np.mean(lss)
-        mean_mi = np.mean(miss)
-        mean_ma = np.mean(mass) * (-1)
+        mean_mi = 0  # np.mean(miss)
+        mean_ma = 0  # np.mean(mass) * (-1)
 
         log_string = "epoch: {}, loss: {:0.4f}, minimizing loss: {:0.4f}, maximizing loss: {:0.4f}".format(
             epoch, mean_ls, mean_mi, mean_ma)
         log.log(log_string)
-        if mean_ma > mean_mi:
-            # print(1)
-            diff = mean_ma - mean_mi
-            ratio = mean_mi / diff
-            if ratio < thre:
-                # print(2)
-                if mean_mi < best_mi:
-                    best_mi = mean_mi
-                    print('> '*20)
-                    print('best so far mi loss: {:0.4f}, ma loss: {:0.4f}.'.format(
-                        mean_mi, mean_ma
-                    ))
-                    print('save name is', save_name)
-                    print('< '*20)
-                    if is_save:
-                        save_this_model(m, save_name)
+        # if mean_ma > mean_mi:
+        #     # print(1)
+        #     diff = mean_ma - mean_mi
+        #     ratio = mean_mi / diff
+        #     if ratio < thre:
+        #         # print(2)
+        #         if mean_mi < best_mi:
+        #             best_mi = mean_mi
+        #             print('> '*20)
+        #             print('best so far mi loss: {:0.4f}, ma loss: {:0.4f}.'.format(
+        #                 mean_mi, mean_ma
+        #             ))
+        #             print('save name is', save_name)
+        #             print('< '*20)
+        #             if is_save:
+        #                 save_this_model(m, save_name)
 
-        if mean_mi < so_far_best:
-            so_far_best = mean_mi
+        if mean_ls < so_far_best:
+            so_far_best = mean_ls
             if is_save:
-                save_this_model(m, save_name+'SFB')
+                save_this_model(m, save_name)
