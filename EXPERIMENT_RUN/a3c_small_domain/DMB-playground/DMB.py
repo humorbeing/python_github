@@ -6,9 +6,9 @@ import numpy as np
 import os
 from this_utility import *
 
-class RNN_WM_competing(nn.Module):
+class M(nn.Module):
     def __init__(self):
-        super(RNN_WM_competing, self).__init__()
+        super(M, self).__init__()
         # self.kl_tolerance = 0.5
         self.z_size = 32
         self.encoder = nn.Sequential(
@@ -206,7 +206,7 @@ if __name__ == '__main__':
     is_save = True
     # is_save = False
 
-    m = RNN_WM_competing()
+    m = M()
     if is_cuda:
         m = m.cuda()
         m.is_cuda = True

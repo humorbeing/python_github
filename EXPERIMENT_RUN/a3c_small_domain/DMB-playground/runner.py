@@ -16,29 +16,38 @@ import torch.optim as optim
 
 from this_utility import *
 from this_models import *
-from CL_limit_max import RNN_WM_competing as encoder_M
+
 
 # Feature: log save name and model save name
-log_name = 'encoder_rnn'
+log_name = 'pnumy-dmb-soso-freeze'
 Model = RNN_only
-num_process = 6
-is_test_render = True
+num_process = 3
+# is_test_render = True
 is_test_render = False
 actions = 2
 action_map = {
     0: 2,
     1: 3
 }
-# is_encoder_freeze = True
-is_encoder_freeze = False
+
+random_seed = 1000
+
+is_encoder_freeze = True
+# is_encoder_freeze = False
 is_encoder = True
 # is_encoder = False
 
-ENCODER_MODEL_PATH = './model_save/CL_good1.pytorch'
+from DMB import M
+# ENCODER_MODEL_PATH = './model_save/CL_good1.pytorch'
 # ENCODER_MODEL_PATH = './model_save/CL_good2.pytorch'
-# ENCODER_MODEL_PATH = './model_save/CL_soso.pytorch'
+ENCODER_MODEL_PATH = './model_save/CL_soso.pytorch'
 
-random_seed = 1000
+# from MB import M
+# ENCODER_MODEL_PATH = './model_save/normal_model-based_model.pytorch'
+
+# from encoder_model import M
+# ENCODER_MODEL_PATH = './model_save/enc_dec_1_model.pytorch'
+
 
 def get_args():
     parser = argparse.ArgumentParser(description='A3C')
@@ -211,7 +220,7 @@ if __name__ == "__main__":
     shared_model = Model(actions, action_map)
 
     if is_encoder:
-        en = encoder_M()
+        en = M()
         en.load_state_dict(torch.load(ENCODER_MODEL_PATH, map_location=lambda storage, loc: storage))
         shared_model.encoder.load_state_dict(en.encoder.state_dict())
 

@@ -1,6 +1,12 @@
 # abbreviation dictionary
 - WM: world model
 - CL: competing loss
+- DMB: Discriminative Model Based RL
+    - competing loss is inaccurate term.
+    from now on, use discriminative loss.
+    So is DMB
+- MB: model based method, means I train with
+conventional model based method.
 
 # To Do
 - [x] Code Awesomisation
