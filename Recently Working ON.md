@@ -16,3 +16,7 @@
 1. awesomisation
 1. different seed
 1. argmax when testing
+1. PPO version dissect
+    - simple
+    - move37
+    - pytorch
