@@ -12,13 +12,13 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 from a2c_ppo_acktr import algo
-# from a2c_ppo_acktr import utils
+from a2c_ppo_acktr import utils
 # from a2c_ppo_acktr.algo import gail
 from a2c_ppo_acktr.arguments import get_args
 from a2c_ppo_acktr.envs import make_vec_envs
 from a2c_ppo_acktr.model import Policy
 from a2c_ppo_acktr.storage import RolloutStorage
-# from evaluation import evaluate
+from evaluation import evaluate
 
 
 def ss(s=''):
@@ -35,7 +35,15 @@ def ss(s=''):
     import sys
     sys.exit()
 
-
+# env = gym.make('Pong-ramNoFrameskip-v4')
+# env.reset()
+# while True:
+#     s,r,d,i = env.step(env.action_space.sample())
+#     print('out',d)
+#     if d:
+#         print(d)
+#         # print(i.keys())
+#         # env.reset()
 
 def main():
     args = get_args()
@@ -56,9 +64,10 @@ def main():
     # device = torch.device("cuda:0" if args.cuda else "cpu")
     device = torch.device("cpu")
     # print(args.env_name)
+    # args.env_name = 'Pong-ramNoFrameskip-v4'
     args.env_name = 'Pong-ram-v0'
     # print(args.env_name)
-    args.num_processes = 2
+    args.num_processes = 5
     # ss('stop')
     envs = make_vec_envs(args.env_name, args.seed, args.num_processes,
                          args.gamma, args.log_dir, device, False)
@@ -113,7 +122,7 @@ def main():
             shuffle=True,
             drop_last=True)
     # ss('out of define ppo')
-    args.num_steps = 3
+    args.num_steps = 10
     rollouts = RolloutStorage(args.num_steps, args.num_processes,
                               envs.observation_space.shape, envs.action_space,
                               actor_critic.recurrent_hidden_state_size)
@@ -130,6 +139,8 @@ def main():
     # print(args.num_env_steps)
     # print()
     # ss('pp')
+    sum_re = torch.zeros(args.num_processes, 1)
+    # print(sum_re.shape)
     for j in range(num_updates):
 
         if args.use_linear_lr_decay:
@@ -151,9 +162,27 @@ def main():
             # ss('runner')
             # Obser reward and next obs
             obs, reward, done, infos = envs.step(action)
+
+            sum_re += reward
+            # print(reward.shape)
+            if any(done):
+                # print(sum_re)
+                # print(done)
+                for i in range(len(done)):
+                    if done[i]:
+                        # print(i)
+                        # print(*sum_re[i])
+                        # print(sum_re[i].item())
+                        episode_rewards.append(sum_re[i].item())
+                        sum_re[i] *= 0
+
+
+            # ss('make reward')
             # print(infos)
             # ss('runner')
+
             for info in infos:
+                # print(info)
                 if 'episode' in info.keys():
                     episode_rewards.append(info['episode']['r'])
                     print('what env info with episode do?', info.keys())
@@ -195,24 +224,27 @@ def main():
                                  args.gae_lambda, args.use_proper_time_limits)
         # ss('runner1')
         value_loss, action_loss, dist_entropy = agent.update(rollouts)
-        ss('runner1')
+        # ss('runner1')
         rollouts.after_update()
-
+        # ss('runner2')
         # save for every interval-th episode or for the last epoch
-        if (j % args.save_interval == 0
-                or j == num_updates - 1) and args.save_dir != "":
-            save_path = os.path.join(args.save_dir, args.algo)
-            try:
-                os.makedirs(save_path)
-            except OSError:
-                pass
-
-            torch.save([
-                actor_critic,
-                getattr(utils.get_vec_normalize(envs), 'ob_rms', None)
-            ], os.path.join(save_path, args.env_name + ".pt"))
-
+        # if (j % args.save_interval == 0
+        #         or j == num_updates - 1) and args.save_dir != "":
+        #     save_path = os.path.join(args.save_dir, args.algo)
+        #     try:
+        #         os.makedirs(save_path)
+        #     except OSError:
+        #         pass
+        #
+        #     torch.save([
+        #         actor_critic,
+        #         getattr(utils.get_vec_normalize(envs), 'ob_rms', None)
+        #     ], os.path.join(save_path, args.env_name + ".pt"))
+        # print(args.log_interval)
+        args.log_interval = 100
         if j % args.log_interval == 0 and len(episode_rewards) > 1:
+
+        # if j % args.log_interval == 0:  # and len(episode_rewards) > 1:
             total_num_steps = (j + 1) * args.num_processes * args.num_steps
             end = time.time()
             print(
@@ -221,14 +253,15 @@ def main():
                         int(total_num_steps / (end - start)),
                         len(episode_rewards), np.mean(episode_rewards),
                         np.median(episode_rewards), np.min(episode_rewards),
-                        np.max(episode_rewards), dist_entropy, value_loss,
+                        np.max(episode_rewards),
+                        dist_entropy, value_loss,
                         action_loss))
 
-        if (args.eval_interval is not None and len(episode_rewards) > 1
-                and j % args.eval_interval == 0):
-            ob_rms = utils.get_vec_normalize(envs).ob_rms
-            evaluate(actor_critic, ob_rms, args.env_name, args.seed,
-                     args.num_processes, eval_log_dir, device)
+        # if (args.eval_interval is not None and len(episode_rewards) > 1
+        #         and j % args.eval_interval == 0):
+        #     ob_rms = utils.get_vec_normalize(envs).ob_rms
+        #     evaluate(actor_critic, ob_rms, args.env_name, args.seed,
+        #              args.num_processes, eval_log_dir, device)
 
 
 if __name__ == "__main__":

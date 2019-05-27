@@ -202,7 +202,7 @@ if __name__ == '__main__':
         m.is_cuda = True
     optimizer = optim.Adam(m.parameters(), lr=lr, weight_decay=0.0001)
     np.random.shuffle(filelist)
-    cuts = filelist[:500]
+    cuts = filelist[:50]
     EPOCH = 1000
     thre = 0.01
     best_mi = 999

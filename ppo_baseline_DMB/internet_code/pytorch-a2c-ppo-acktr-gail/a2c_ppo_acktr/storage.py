@@ -136,9 +136,16 @@ class RolloutStorage(object):
                                advantages,
                                num_mini_batch=None,
                                mini_batch_size=None):
+        # ss('in rollouts ff generator')
+        # print(self.rewards.size())
+        # ss('in rollouts ff generator')
         num_steps, num_processes = self.rewards.size()[0:2]
+        # print(num_steps, num_processes)
+        # ss('in rollouts ff generator')
         batch_size = num_processes * num_steps
-
+        # print(num_mini_batch)
+        # print(mini_batch_size)
+        # ss('in rollouts ff generator')
         if mini_batch_size is None:
             assert batch_size >= num_mini_batch, (
                 "PPO requires the number of processes ({}) "
@@ -151,8 +158,24 @@ class RolloutStorage(object):
             SubsetRandomSampler(range(batch_size)),
             mini_batch_size,
             drop_last=True)
+        # print('new round')
         for indices in sampler:
+            # print(indices)
             obs_batch = self.obs[:-1].view(-1, *self.obs.size()[2:])[indices]
+            # # print(self.obs)
+            # # print(self.obs.shape)
+            # a = self.obs[:-1]
+            # print(a.shape)
+            # b = self.obs.size()
+            # print(b)
+            # c = b[2:]
+            # print(c)
+            # print(*c)
+            # aa = a.view(-1, *c)
+            # print(aa.shape)
+            # aaa = aa[indices]
+            # print(aaa.shape)
+            # ss('what does indices do')
             recurrent_hidden_states_batch = self.recurrent_hidden_states[:-1].view(
                 -1, self.recurrent_hidden_states.size(-1))[indices]
             actions_batch = self.actions.view(-1,

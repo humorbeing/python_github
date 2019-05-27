@@ -12,6 +12,8 @@
     <mapping directory="$PROJECT_DIR$/MASTERPIECE/large-scale-curiosity" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/MASTERPIECE/move37" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/git_in_git" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/baselines" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/baselines_0.10.0" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/ppo-pytorch" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/pytorch-a2c-ppo-acktr-gail" vcs="Git" />
   </component>

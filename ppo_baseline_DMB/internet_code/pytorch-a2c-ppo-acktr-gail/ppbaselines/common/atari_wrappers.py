@@ -243,9 +243,9 @@ def make_atari(env_id, timelimit=True):
         # print('here')
         env = env.env
     # ss('in make atari sss')
-    print(env.spec.id)
+    # print(env.spec.id)
     assert 'NoFrameskip' in env.spec.id
-    ss('in make atari sss')
+    # ss('in make atari sss')
     env = NoopResetEnv(env, noop_max=30)
     env = MaxAndSkipEnv(env, skip=4)
     return env

@@ -7,7 +7,7 @@
 
 `FORMAT----------------------------------------`
 
-# RUNNING cl-trainer-random-seed
+# cl-trainer-random-seed
 1. normal 
     - gcp pytorch 2
 2. g1 nofreeze
@@ -16,7 +16,7 @@
     - pnumy
 
 
-# RUNNING CL_trainer
+# CL_trainer
 1. cl good 1 load freeze
     - pnu my
     - code: cl_trainer

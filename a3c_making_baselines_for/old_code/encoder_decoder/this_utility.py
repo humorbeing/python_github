@@ -17,6 +17,7 @@ import torch.optim as optim
 
 #pnu
 VAE_DATA_PATH = '/mnt/36D4F815D4F7D559/workspace/python_github/__SSSSShare_DDDate_set/pong-ram/vae_data'
+VAE_DATA_PATH = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSShare_DDDate_set/pong-ram/vae_data'
 # VAE_MODEL_PATH = 'model_save/vae_model.pytorch'
 # ENCODER_MODEL_PATH = 'model_save/encoder_model.pytorch'
 # ENCODER_MODEL_PATH = '/mnt/36D4F815D4F7D559/workspace/python_github/a3c_making_baselines_for/working_place/encoder_decoder/model_save/WM_competing_loss_lambda_1_model.pytorch'

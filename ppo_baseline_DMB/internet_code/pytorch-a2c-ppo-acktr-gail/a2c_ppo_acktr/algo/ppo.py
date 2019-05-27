@@ -62,6 +62,7 @@ class PPO():
                     advantages, self.num_mini_batch)
             else:
                 # print('here')
+                # print(self.num_mini_batch)
                 data_generator = rollouts.feed_forward_generator(
                     advantages, self.num_mini_batch)
 
@@ -74,15 +75,25 @@ class PPO():
                 values, action_log_probs, dist_entropy, _ = self.actor_critic.evaluate_actions(
                     obs_batch, recurrent_hidden_states_batch, masks_batch,
                     actions_batch)
-
+                # ss('in sample')
                 ratio = torch.exp(action_log_probs -
                                   old_action_log_probs_batch)
+                # print(action_log_probs.requires_grad)
+                # print(old_action_log_probs_batch.requires_grad)
                 surr1 = ratio * adv_targ
                 surr2 = torch.clamp(ratio, 1.0 - self.clip_param,
                                     1.0 + self.clip_param) * adv_targ
                 action_loss = -torch.min(surr1, surr2).mean()
-
+                # print(ratio.shape)
+                # print(adv_targ.shape)
+                # print(self.use_clipped_value_loss)
+                # ss('in sample')
                 if self.use_clipped_value_loss:
+                    # print(values.requires_grad)
+                    # print(value_preds_batch.requires_grad)
+                    # print(return_batch.requires_grad)
+                    # print(self.clip_param)
+                    # ss('in sample')
                     value_pred_clipped = value_preds_batch + \
                         (values - value_preds_batch).clamp(-self.clip_param, self.clip_param)
                     value_losses = (values - return_batch).pow(2)

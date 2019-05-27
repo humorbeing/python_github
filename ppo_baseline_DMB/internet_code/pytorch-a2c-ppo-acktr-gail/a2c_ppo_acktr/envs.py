@@ -118,6 +118,30 @@ def make_env(env_id, seed, rank, log_dir, allow_early_resets):
 
     return _thunk
 
+# # env = gym.make('Pong-ramNoFrameskip-v4')
+# env_name = 'Pong-ram-v0'
+# # env_name = 'Pong-v0'
+# seed = 1
+# i = 2
+# log_dir = '.'
+# allow_early_resets = False
+# envs = [
+#         make_env(env_name, seed, i, log_dir, allow_early_resets)
+#         for i in range(2)
+#     ]
+# envs = ShmemVecEnv(envs)
+# print(envs.reset())
+# # fenv = envs[0]
+# # env = fenv()
+# # env.reset()
+# while True:
+#     s,r,d,i = envs.step([0,0])
+#     # print('out',d)
+#     if any(d):
+#         print(d)
+#         # print(i.keys())
+#         # env.reset()
+
 # env_name = 'Pong-ram-v0'
 # # env_name = 'Pong-v0'
 # seed = 1
