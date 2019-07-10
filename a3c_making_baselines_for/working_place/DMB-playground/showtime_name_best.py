@@ -41,14 +41,14 @@ action_map = {
 mm = Model(actions, action_map)
 env_name = 'Pong-ram-v0'
 env = gym.make(env_name)
-env._max_episode_steps = 100000
+env._max_episode_steps = 1000000
 # env.seed(args.seed + rank)
 # torch.manual_seed(args.seed + rank)
-# is_test_render = True
-is_test_render = False
+is_test_render = True
+# is_test_render = False
 # model = Model(actions, action_map)
 best_reward = -999
-seed = 0
+seed = 51
 
 torch.manual_seed(seed)
 state = env.reset()
@@ -60,8 +60,12 @@ start_time = time.time()
 episode_length = 0
 PATH = './model_save_1/'
 filelist = os.listdir(PATH)
-for f in filelist:
-    onefilepath = os.path.join(PATH, f)
+onefilepath = './model_save_1/gcp-cpu8-R500-a3c_model.pytorch'
+mm.load_state_dict(torch.load(onefilepath, map_location=lambda storage, loc: storage))
+mm.eval()
+torch.manual_seed(seed)
+while True:
+    # onefilepath = os.path.join(PATH, f)
     # print(onefilepath)
     # ss('1')
     # print('loading:',onefilepath)
@@ -70,9 +74,8 @@ for f in filelist:
     onefilepath = './model_save_1/note9-cl-so-noFreeze_model.pytorch'
     onefilepath = './model_save_1/gcp-cpu8-R500-a3c_model.pytorch'
     onefilepath = './model_save_1/gcp-pyt2-R500-dmb-soso_model.pytorch'
-    mm.load_state_dict(torch.load(onefilepath, map_location=lambda storage, loc: storage))
-    mm.eval()
-    torch.manual_seed(seed)
+
+
     while True:
         # print('hi')
     # ss('1')
@@ -80,6 +83,7 @@ for f in filelist:
         # Sync with the shared model
         if is_test_render:
             env.render()
+            # env.seed(seed)
         if done:
             # model.load_state_dict(shared_model.state_dict())
             h1 = torch.zeros(1, 16)
@@ -110,10 +114,10 @@ for f in filelist:
             #     save_this_model(model, log_name)
             reward_sum = 0
             episode_length = 0
-            env_name = 'Pong-ram-v0'
-            env = gym.make(env_name)
-            env._max_episode_steps = 100000
+            # env_name = 'Pong-ram-v0'
+            # env = gym.make(env_name)
+            # env._max_episode_steps = 100000
             state = env.reset()
-            env.seed(seed)
+            # env.seed(seed)
             break
             # time.sleep(5)
