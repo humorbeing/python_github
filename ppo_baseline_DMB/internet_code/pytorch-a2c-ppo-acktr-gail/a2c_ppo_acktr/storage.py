@@ -24,6 +24,7 @@ class RolloutStorage(object):
     def __init__(self, num_steps, num_processes, obs_shape, action_space,
                  recurrent_hidden_state_size):
         # print(obs_shape)
+        # obs_shape = (128, 5, 1)
         # print(*obs_shape)
         # # print()
         # a = [2, 3]
@@ -39,6 +40,8 @@ class RolloutStorage(object):
         self.value_preds = torch.zeros(num_steps + 1, num_processes, 1)
         self.returns = torch.zeros(num_steps + 1, num_processes, 1)
         self.action_log_probs = torch.zeros(num_steps, num_processes, 1)
+        # print(action_space.__class__.__name__)
+        # ss('in rollouts')
         if action_space.__class__.__name__ == 'Discrete':
             action_shape = 1
         else:
@@ -55,7 +58,11 @@ class RolloutStorage(object):
         self.bad_masks = torch.ones(num_steps + 1, num_processes, 1)
 
         self.num_steps = num_steps
+        # print(self.num_steps)
         self.step = 0
+        # print(recurrent_hidden_state_size)
+        # print(self.obs[0].type())
+        # ss('rollout')
 
     def to(self, device):
         self.obs = self.obs.to(device)
@@ -96,7 +103,18 @@ class RolloutStorage(object):
                         use_gae,
                         gamma,
                         gae_lambda,
+                        ii = False,
                         use_proper_time_limits=True):
+        # gamma = 1.0
+        # gae_lambda = 1.0
+        if ii:
+            print(self.value_preds)
+            print(self.rewards)
+            print(gamma)
+            print(gae_lambda)
+            # print(use_proper_time_limits)
+            # print(use_gae)
+            # ss('in compute returns')
         if use_proper_time_limits:
             if use_gae:
                 self.value_preds[-1] = next_value
@@ -127,10 +145,20 @@ class RolloutStorage(object):
                                                                   1] * gae
                     self.returns[step] = gae + self.value_preds[step]
             else:
+                if ii:
+                    print(self.returns)
                 self.returns[-1] = next_value
+                if ii:
+                    print(self.returns)
+                    print(self.rewards.size(0))
+                    print(self.masks)
+                    print()
                 for step in reversed(range(self.rewards.size(0))):
+                    if ii:
+                        print(step)
                     self.returns[step] = self.returns[step + 1] * \
                         gamma * self.masks[step + 1] + self.rewards[step]
+                if ii: ss('here')
 
     def feed_forward_generator(self,
                                advantages,
@@ -154,6 +182,8 @@ class RolloutStorage(object):
                 "".format(num_processes, num_steps, num_processes * num_steps,
                           num_mini_batch))
             mini_batch_size = batch_size // num_mini_batch
+        # print(mini_batch_size)
+        # ss('stop')
         sampler = BatchSampler(
             SubsetRandomSampler(range(batch_size)),
             mini_batch_size,

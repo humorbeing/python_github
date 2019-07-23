@@ -4,10 +4,10 @@ An interface for asynchronous vectorized environments.
 
 from multiprocessing import Pipe, Array, Process
 import numpy as np
-from . import VecEnv, CloudpickleWrapper
+from from_init import VecEnv, CloudpickleWrapper
 import ctypes
 
-from .util import dict_to_obs, obs_space_info, obs_to_dict
+from util_from_baseline import dict_to_obs, obs_space_info, obs_to_dict
 
 def ss(s=''):
     print()

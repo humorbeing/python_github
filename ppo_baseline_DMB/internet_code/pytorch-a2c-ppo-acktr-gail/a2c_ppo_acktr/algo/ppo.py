@@ -49,8 +49,8 @@ class PPO():
         # print(self.ppo_epoch)
         # ss('in update')
         advantages = rollouts.returns[:-1] - rollouts.value_preds[:-1]
-        advantages = (advantages - advantages.mean()) / (
-            advantages.std() + 1e-5)
+        # advantages = (advantages - advantages.mean()) / (
+        #     advantages.std() + 1e-5)
 
         value_loss_epoch = 0
         action_loss_epoch = 0
@@ -63,6 +63,7 @@ class PPO():
             else:
                 # print('here')
                 # print(self.num_mini_batch)
+                # ss('hi')
                 data_generator = rollouts.feed_forward_generator(
                     advantages, self.num_mini_batch)
 

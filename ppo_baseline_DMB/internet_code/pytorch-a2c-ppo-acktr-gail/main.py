@@ -35,40 +35,20 @@ def ss(s=''):
     import sys
     sys.exit()
 
-# env = gym.make('Pong-ramNoFrameskip-v4')
-# env.reset()
-# while True:
-#     s,r,d,i = env.step(env.action_space.sample())
-#     print('out',d)
-#     if d:
-#         print(d)
-#         # print(i.keys())
-#         # env.reset()
+
 
 def main():
     args = get_args()
-    # ss('g')
-    # torch.manual_seed(args.seed)
-    # torch.cuda.manual_seed_all(args.seed)
-
-    # if args.cuda and torch.cuda.is_available() and args.cuda_deterministic:
-    #     torch.backends.cudnn.benchmark = False
-    #     torch.backends.cudnn.deterministic = True
-
-    # log_dir = os.path.expanduser(args.log_dir)
-    # eval_log_dir = log_dir + "_eval"
-    # utils.cleanup_log_dir(log_dir)
-    # utils.cleanup_log_dir(eval_log_dir)
 
     torch.set_num_threads(1)
     # device = torch.device("cuda:0" if args.cuda else "cpu")
     device = torch.device("cpu")
-    # print(args.env_name)
+
     # args.env_name = 'Pong-ramNoFrameskip-v4'
     args.env_name = 'Pong-ram-v0'
-    # print(args.env_name)
-    args.num_processes = 5
-    # ss('stop')
+
+    args.num_processes = 2
+
     envs = make_vec_envs(args.env_name, args.seed, args.num_processes,
                          args.gamma, args.log_dir, device, False)
     # ss('here')
@@ -78,51 +58,24 @@ def main():
         base_kwargs={'recurrent': args.recurrent_policy})
     actor_critic.to(device)
     # ss('in main, after actor_critic')
-    if args.algo == 'a2c':
-        agent = algo.A2C_ACKTR(
-            actor_critic,
-            args.value_loss_coef,
-            args.entropy_coef,
-            lr=args.lr,
-            eps=args.eps,
-            alpha=args.alpha,
-            max_grad_norm=args.max_grad_norm)
-    elif args.algo == 'ppo':
-        args.num_mini_batch = 2
-        agent = algo.PPO(
-            actor_critic,
-            args.clip_param,
-            args.ppo_epoch,
-            args.num_mini_batch,
-            args.value_loss_coef,
-            args.entropy_coef,
-            lr=args.lr,
-            eps=args.eps,
-            max_grad_norm=args.max_grad_norm)
-        # ss('here in ppo')
-    elif args.algo == 'acktr':
-        print('not here')
-        agent = algo.A2C_ACKTR(
-            actor_critic, args.value_loss_coef, args.entropy_coef, acktr=True)
 
-    if args.gail:
-        print('not here')
-        assert len(envs.observation_space.shape) == 1
-        discr = gail.Discriminator(
-            envs.observation_space.shape[0] + envs.action_space.shape[0], 100,
-            device)
-        file_name = os.path.join(
-            args.gail_experts_dir, "trajs_{}.pt".format(
-                args.env_name.split('-')[0].lower()))
 
-        gail_train_loader = torch.utils.data.DataLoader(
-            gail.ExpertDataset(
-                file_name, num_trajectories=4, subsample_frequency=20),
-            batch_size=args.gail_batch_size,
-            shuffle=True,
-            drop_last=True)
+    args.num_mini_batch = 2
+    agent = algo.PPO(
+        actor_critic,
+        args.clip_param,
+        args.ppo_epoch,
+        args.num_mini_batch,
+        args.value_loss_coef,
+        args.entropy_coef,
+        lr=args.lr,
+        eps=args.eps,
+        max_grad_norm=args.max_grad_norm)
+
+
+
     # ss('out of define ppo')
-    args.num_steps = 10
+    args.num_steps = 4
     rollouts = RolloutStorage(args.num_steps, args.num_processes,
                               envs.observation_space.shape, envs.action_space,
                               actor_critic.recurrent_hidden_state_size)
@@ -143,13 +96,8 @@ def main():
     # print(sum_re.shape)
     for j in range(num_updates):
 
-        if args.use_linear_lr_decay:
-            print('is it happening')
-            # decrease learning rate linearly
-            utils.update_linear_schedule(
-                agent.optimizer, j, num_updates,
-                agent.optimizer.lr if args.algo == "acktr" else args.lr)
         # ss('pp')
+        is_any_done = False
         for step in range(args.num_steps):
         # for step in range(50000):
             # print(step)
@@ -159,23 +107,34 @@ def main():
                 value, action, action_log_prob, recurrent_hidden_states = actor_critic.act(
                     rollouts.obs[step], rollouts.recurrent_hidden_states[step],
                     rollouts.masks[step])
+            # print(value)
+            # print(action_log_prob)
+            # print(action)
             # ss('runner')
             # Obser reward and next obs
             obs, reward, done, infos = envs.step(action)
 
             sum_re += reward
+            # print('- --'*20)
+            # print(reward)
+            # print(sum_re)
+            # print()
             # print(reward.shape)
             if any(done):
                 # print(sum_re)
                 # print(done)
+                # input('hi')
+                # is_any_done = True
                 for i in range(len(done)):
                     if done[i]:
                         # print(i)
                         # print(*sum_re[i])
                         # print(sum_re[i].item())
                         episode_rewards.append(sum_re[i].item())
+                        # print(sum_re[i])
                         sum_re[i] *= 0
-
+                # pass
+            # episode_rewards.append(reward.item())
 
             # ss('make reward')
             # print(infos)
@@ -203,25 +162,10 @@ def main():
             next_value = actor_critic.get_value(
                 rollouts.obs[-1], rollouts.recurrent_hidden_states[-1],
                 rollouts.masks[-1]).detach()
-        # ss('runner')
-        # if args.gail:
-        #     if j >= 10:
-        #         envs.venv.eval()
-        #
-        #     gail_epoch = args.gail_epoch
-        #     if j < 10:
-        #         gail_epoch = 100  # Warm up
-        #     for _ in range(gail_epoch):
-        #         discr.update(gail_train_loader, rollouts,
-        #                      utils.get_vec_normalize(envs)._obfilt)
-        #
-        #     for step in range(args.num_steps):
-        #         rollouts.rewards[step] = discr.predict_reward(
-        #             rollouts.obs[step], rollouts.actions[step], args.gamma,
-        #             rollouts.masks[step])
+
 
         rollouts.compute_returns(next_value, args.use_gae, args.gamma,
-                                 args.gae_lambda, args.use_proper_time_limits)
+                                 args.gae_lambda, is_any_done, args.use_proper_time_limits)
         # ss('runner1')
         value_loss, action_loss, dist_entropy = agent.update(rollouts)
         # ss('runner1')
@@ -248,7 +192,7 @@ def main():
             total_num_steps = (j + 1) * args.num_processes * args.num_steps
             end = time.time()
             print(
-                "Updates {}, num timesteps {}, FPS {} \n Last {} training episodes: mean/median reward {:.1f}/{:.1f}, min/max reward {:.1f}/{:.1f}\n"
+                "Updates {}, num timesteps {}, FPS {} \n Last {} training episodes: mean/median reward {:.1f}/{:.1f}, min/max reward {:.1f}/{:.1f}\n Ent {},V {},A {}"
                 .format(j, total_num_steps,
                         int(total_num_steps / (end - start)),
                         len(episode_rewards), np.mean(episode_rewards),
@@ -262,7 +206,7 @@ def main():
         #     ob_rms = utils.get_vec_normalize(envs).ob_rms
         #     evaluate(actor_critic, ob_rms, args.env_name, args.seed,
         #              args.num_processes, eval_log_dir, device)
-
+        # is_any_done = False
 
 if __name__ == "__main__":
     main()

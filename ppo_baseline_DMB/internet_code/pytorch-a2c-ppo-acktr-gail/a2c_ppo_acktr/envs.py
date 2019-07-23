@@ -90,6 +90,7 @@ def make_env(env_id, seed, rank, log_dir, allow_early_resets):
         # print(str(env.__class__.__name__))
         # ss('name')
         if str(env.__class__.__name__).find('TimeLimit') >= 0:
+            # print('hiosdfoi '* 30)
             env = TimeLimitMask(env)
 
         # if log_dir is not None:
@@ -165,6 +166,7 @@ def make_vec_envs(env_name,
                   allow_early_resets,
                   num_frame_stack=None):
     # print(num_processes)
+    # print(gamma)
     # ss('here')
     envs = [
         make_env(env_name, seed, i, log_dir, allow_early_resets)
@@ -188,7 +190,8 @@ def make_vec_envs(env_name,
             envs = VecNormalize(envs, ret=False)
         else:
             # ss('in else')
-            envs = VecNormalize(envs, gamma=gamma)
+            pass
+            # envs = VecNormalize(envs, gamma=gamma)
     # print(envs.reset())
     # ss('out of else')
     envs = VecPyTorch(envs, device)
@@ -200,7 +203,7 @@ def make_vec_envs(env_name,
     elif len(envs.observation_space.shape) == 3:
         print('in that')
         envs = VecPyTorchFrameStack(envs, 4, device)
-
+    # ss('hi')
     return envs
 
 
@@ -266,6 +269,7 @@ class VecPyTorch(VecEnvWrapper):
 
     def step_wait(self):
         obs, reward, done, info = self.venv.step_wait()
+        # print('SSSS:', reward)
         obs = torch.from_numpy(obs).float().to(self.device)
         reward = torch.from_numpy(reward).unsqueeze(dim=1).float()
         return obs, reward, done, info
