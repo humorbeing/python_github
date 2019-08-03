@@ -1,3 +1,7 @@
+# Plan v7
+- [ ] let me see
+
+
 # Exp run
 - v0002: pong D v4 3 actions, with gamma, gae, value loss clip, adv stdiz,
 GPU

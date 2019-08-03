@@ -1,0 +1,5 @@
+steps:20100.  Evaluation using 10 episodes: mean reward -20.00000
+steps:40100.  Evaluation using 10 episodes: mean reward -21.00000
+steps:60100.  Evaluation using 10 episodes: mean reward -20.00000
+steps:80100.  Evaluation using 10 episodes: mean reward -19.00000
+steps:100100.  Evaluation using 10 episodes: mean reward -21.00000

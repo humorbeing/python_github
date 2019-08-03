@@ -1,0 +1,4 @@
+steps:51456.  Evaluation using 16 episodes: mean reward -21.00000
+steps:102656.  Evaluation using 16 episodes: mean reward -21.00000
+steps:153856.  Evaluation using 16 episodes: mean reward -16.00000
+steps:205056.  Evaluation using 16 episodes: mean reward -17.00000
