@@ -6,7 +6,10 @@ try:
     from .envs import make_vec_envs
 except Exception:
     from envs import make_vec_envs
-
+try:
+    from .utils_from_pytorch import get_vec_normalize
+except Exception:
+    from utils_from_pytorch import get_vec_normalize
 def ss(s=''):
     print()
     print('   ---' * 15)
@@ -23,15 +26,19 @@ def ss(s=''):
 
 
 
-def evaluate(actor_critic, env_name, seed, num_processes):
+def evaluate(actor_critic, ob_rms, env_name, seed, num_processes):
 
     eval_envs = make_vec_envs(env_name, seed + num_processes, num_processes)
 
-
+    norm_envs = get_vec_normalize(eval_envs)
+    norm_envs.eval()
+    norm_envs.ob_rms = ob_rms
 
     eval_episode_rewards = []
 
     obs = eval_envs.reset()
+
+    # ss('haha')
     sum_re = torch.zeros(num_processes, 1)
 
     while len(eval_episode_rewards) < 10:

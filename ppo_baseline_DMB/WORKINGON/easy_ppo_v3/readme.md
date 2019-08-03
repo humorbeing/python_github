@@ -3,7 +3,7 @@
     - [x] simple one. from my A3C experiment
     - [ ] pytorch-ppo code has its own logging system
     attached to the evaluation process. learning it.
-- [ ] evaluation, learn from pytoch ppo code
+- [x] evaluation, learn from pytoch ppo code
     - I was logging training errors from last 10 episodes
     - in the code, there is a evaluation code, learning it.    
 - [ ] GPU

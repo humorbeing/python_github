@@ -1,0 +1,14 @@
+E 100, N_steps 10100, FPS 1413 mean/median -20.3/-20.0, min/max -21.0/-20.0 Entropy 0.93214,V 0.03823,Action 0.17419
+E 110, N_steps 11100, FPS 940 mean/median -20.2/-20.0, min/max -21.0/-19.0 Entropy 0.99746,V 0.00748,Action 0.10880
+E 120, N_steps 12100, FPS 967 mean/median -20.2/-20.0, min/max -21.0/-19.0 Entropy 1.02545,V 0.00149,Action 0.04962
+E 130, N_steps 13100, FPS 991 mean/median -20.2/-20.0, min/max -21.0/-19.0 Entropy 0.99991,V 0.00893,Action 0.07514
+E 140, N_steps 14100, FPS 1012 mean/median -20.2/-20.0, min/max -21.0/-19.0 Entropy 1.04633,V 0.00388,Action 0.03679
+E 150, N_steps 15100, FPS 1031 mean/median -20.2/-20.0, min/max -21.0/-19.0 Entropy 0.93567,V 0.13157,Action -0.20924
+E 160, N_steps 16100, FPS 1049 mean/median -20.2/-20.0, min/max -21.0/-19.0 Entropy 0.91710,V 0.00582,Action 0.03957
+E 170, N_steps 17100, FPS 1065 mean/median -20.2/-20.0, min/max -21.0/-19.0 Entropy 0.74277,V 0.00991,Action 0.00894
+E 180, N_steps 18100, FPS 1080 mean/median -20.3/-20.0, min/max -21.0/-19.0 Entropy 0.97744,V 0.00802,Action 0.09473
+E 190, N_steps 19100, FPS 1092 mean/median -20.4/-20.5, min/max -21.0/-19.0 Entropy 1.01546,V 0.00981,Action -0.01970
+E 200, N_steps 20100, FPS 1104 mean/median -20.6/-21.0, min/max -21.0/-19.0 Entropy 0.92996,V 0.00850,Action 0.02575
+E 210, N_steps 21100, FPS 931 mean/median -20.6/-21.0, min/max -21.0/-19.0 Entropy 0.86798,V 0.01115,Action 0.17010
+E 220, N_steps 22100, FPS 945 mean/median -20.6/-21.0, min/max -21.0/-19.0 Entropy 0.97669,V 0.00302,Action 0.03114
+E 230, N_steps 23100, FPS 959 mean/median -20.6/-21.0, min/max -21.0/-19.0 Entropy 0.97345,V 0.00297,Action 0.06946

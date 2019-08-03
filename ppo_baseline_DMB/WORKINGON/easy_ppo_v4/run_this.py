@@ -26,6 +26,10 @@ try:
     from .evaluation import evaluate
 except Exception:
     from evaluation import evaluate
+try:
+    from .utils_from_pytorch import get_vec_normalize
+except Exception:
+    from utils_from_pytorch import get_vec_normalize
 
 def ss(s=''):
     print()
@@ -41,11 +45,12 @@ def ss(s=''):
     import sys
     sys.exit()
 
-args_env_name = 'Pong-ram-v0'
-args_num_processes = 2  # how many envs running, default: 10
+
+args_env_name = 'Pong-ramDeterministic-v4'
+args_num_processes = 10  # how many envs running, default: 10
 args_seed = 1
 args_gamma = 0.99
-args_num_mini_batch = 2  # how many batchs to train, default: 32
+args_num_mini_batch = 32  # how many batchs to train, default: 32
 args_clip_param = 0.2
 args_ppo_epoch = 4  # in training weight after collection, how many epoch to train agent, default: 4
 args_value_loss_coef = 0.5
@@ -56,7 +61,9 @@ args_max_grad_norm = 0.5
 args_num_steps = 4  # in gathering rollouts, how many steps forward, default: 4
 args_num_env_steps = 1e8  # total training steps
 args_log_interval = 10
-args_eval_interval = 10
+args_eval_interval = 100
+
+
 def main():
     log_name = 'ppo_no_input_process'
     train_log = Log(log_name+'_train_log')
@@ -88,7 +95,8 @@ def main():
 
     obs = envs.reset()
     rollouts.obs[0].copy_(obs)
-
+    # print(obs)
+    # ss('i am over it')
     num_updates = int(
         args_num_env_steps) // args_num_steps // args_num_processes
 
@@ -151,11 +159,12 @@ def main():
         if (args_eval_interval is not None and len(episode_rewards) > 1
                 and j % args_eval_interval == 0):
             total_num_steps = (j + 1) * args_num_processes * args_num_steps
-
-            ev_result = evaluate(actor_critic, args_env_name, args_seed,
+            ob_rms = get_vec_normalize(envs).ob_rms
+            ev_result = evaluate(actor_critic, ob_rms, args_env_name, args_seed,
                      args_num_processes)
             ev_log_string = 'steps:'+str(total_num_steps)+'. '+ev_result
             evl_log.log(ev_log_string)
+
 
 if __name__ == "__main__":
     main()
