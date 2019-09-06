@@ -1,0 +1,10 @@
+steps:12864.  Evaluation using 12 episodes: mean reward -21.00000
+steps:25664.  Evaluation using 12 episodes: mean reward -21.00000
+steps:38464.  Evaluation using 12 episodes: mean reward -21.00000
+steps:51264.  Evaluation using 12 episodes: mean reward -21.00000
+steps:64064.  Evaluation using 12 episodes: mean reward -21.00000
+steps:76864.  Evaluation using 12 episodes: mean reward -21.00000
+steps:89664.  Evaluation using 12 episodes: mean reward -21.00000
+steps:102464.  Evaluation using 12 episodes: mean reward -20.00000
+steps:115264.  Evaluation using 12 episodes: mean reward -21.00000
+steps:128064.  Evaluation using 12 episodes: mean reward -21.00000

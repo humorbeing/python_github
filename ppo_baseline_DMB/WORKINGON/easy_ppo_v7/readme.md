@@ -1,6 +1,21 @@
-# Plan v7
-- [ ] let me see
+# Exp run v7
+- v0002: pong D v4 3 actions, with gamma, gae, value loss clip, adv stdiz,
+GPU with RNN
+- expri_run_v0002.py
+- log: ppo_PongD43act_64RNN_gpu
 
+# Exp run v7
+- v0002: pong D v4 3 actions, with gamma, gae, value loss clip, adv stdiz,
+GPU with RNN
+- expri_run_v0001.py
+- log: ppo_PongD43act_RNN_gpu
+
+
+# Plan v7
+- [x] rnn
+- [x] rnn + gpu
+- [ ] need to fix non-rnn
+- [ ] need to fix non-rnn gpu
 
 # Exp run
 - v0002: pong D v4 3 actions, with gamma, gae, value loss clip, adv stdiz,

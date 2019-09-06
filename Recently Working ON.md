@@ -20,3 +20,4 @@
     - simple
     - move37
     - pytorch
+1. making a logging system, with csv file
