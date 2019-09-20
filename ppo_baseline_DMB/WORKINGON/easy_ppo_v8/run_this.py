@@ -71,8 +71,8 @@ args_eval_interval = 200
 args_use_gae = True
 args_gae_lambda = 0.95
 args_use_clipped_value_loss = True
-# args_recurrent_policy = True
-args_recurrent_policy = False
+args_recurrent_policy = True
+# args_recurrent_policy = False
 # new set
 args_num_processes = 4
 args_num_mini_batch = 2

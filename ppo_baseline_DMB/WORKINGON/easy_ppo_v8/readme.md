@@ -1,4 +1,6 @@
 # Plan v8
+- [x] fix rnn on and off
+- [ ] noframeskip
 - [ ] side by side check code
     - [x] learning rate decay
     - [ ] save
