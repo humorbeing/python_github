@@ -1,0 +1,1 @@
+E 330, N_steps 2648, FPS 551 mean/median -20.0/-20.0, min/max -20.0/-20.0 Entropy 1.57477,V 0.14761,Action 0.54076

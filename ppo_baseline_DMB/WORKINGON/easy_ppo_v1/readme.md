@@ -1,0 +1,12 @@
+# This is most simple version of pytorch PPO
+- No RNN
+- No GAE
+- No V function fancy error
+- No Standardization
+    - No input
+    - No advantage value
+- No Pixel
+- No 4 frames
+- No fancy logging system
+- No GPU
+- No fixing pytorch env data stream

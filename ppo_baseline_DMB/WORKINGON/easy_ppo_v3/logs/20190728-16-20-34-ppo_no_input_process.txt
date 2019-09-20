@@ -1,0 +1,4 @@
+E 300, N_steps 12040, FPS 168 mean/median -20.7/-21.0, min/max -21.0/-20.0 Entropy 2.22994,V 0.00000,Action -0.00351
+E 310, N_steps 12440, FPS 168 mean/median -20.5/-20.5, min/max -21.0/-20.0 Entropy 2.22165,V 0.00006,Action -0.00085
+E 320, N_steps 12840, FPS 167 mean/median -20.7/-21.0, min/max -21.0/-20.0 Entropy 2.17481,V 0.07784,Action 0.13815
+E 330, N_steps 13240, FPS 167 mean/median -20.4/-20.0, min/max -21.0/-20.0 Entropy 2.23298,V 0.00001,Action -0.00666
