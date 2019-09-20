@@ -47,10 +47,10 @@ def xy(name):
         mass.append(ma)
     return lss, miss, mass
 # name = '20190410-14-26-18-WM_competing_loss_lambda_0.5.txt'
-# name = '20190410-14-26-38-WM_competing_loss_lambda_0.7.txt'
+name = '20190410-14-26-38-WM_competing_loss_lambda_0.7.txt'
 # name = '20190410-14-26-49-WM_competing_loss_lambda_0.2.txt'
 # name = '20190410-15-14-30-WM_competing_loss_lambda_0.85_more_E.txt'
-name = '20190410-15-14-12-WM_competing_loss_lambda_0.75_more_E.txt'
+# name = '20190410-15-14-12-WM_competing_loss_lambda_0.75_more_E.txt'
 # name = '20190410-16-14-07-WM_competing_loss_more_layer_lambda_0.7.txt'
 # name = '20190410-16-15-28-WM_competing_loss_more_layer_lambda_0.85.txt'
 # name = '20190411-11-12-22-CL_maxlim_l0.9_m_20_c_50.txt'  # **
