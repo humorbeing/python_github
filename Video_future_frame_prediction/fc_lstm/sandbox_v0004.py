@@ -1,11 +1,13 @@
-from model_v0002 import FC_LSTM
+from model_v0003 import FC_LSTM
 import torch
 import numpy as np
 import torch.nn.functional as F
 import torch.optim as optim
 import matplotlib.pyplot as plt
-# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-device = torch.device("cpu")
+from matplotlib.animation import FuncAnimation
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# device = torch.device("cpu")
 path = '../../__SSSSTTTTOOOORRRREEEE/Data_save_here/'
 # path = '../data_here/'
 data_set = np.load(path + 'mnist_test_seq.npy')
@@ -19,6 +21,22 @@ model = FC_LSTM().to(device)
 optimizer = optim.Adam(model.parameters())
 
 
+
+def make_gif(imgs):
+    plt.gray()
+    fig, ax = plt.subplots(
+        1, 1,
+        gridspec_kw={'hspace': 0, 'wspace': 0})
+    fig.set_tight_layout(True)
+    def images(i):
+        ax.imshow(imgs[i])
+        return ax
+    anim = FuncAnimation(
+        fig, images,
+        frames=np.arange(len(imgs)), interval=500)
+    anim.save('make.gif', dpi=80, writer='imagemagick')
+    plt.show()
+
 def show_images(imgs):
     show_size = len(imgs)
     plt.gray()
@@ -29,6 +47,7 @@ def show_images(imgs):
         axs[n].imshow(imgs[n])
         axs[n].axis('off')
     fig.set_size_inches(np.array(fig.get_size_inches()) * show_size * 0.25)
+    plt.savefig('save.png')
     plt.show()
 
 def input_target_maker(batch, device):
@@ -37,6 +56,7 @@ def input_target_maker(batch, device):
     pred_target = batch[:, 10:, :, :]
     rec_target = np.flip(batch[:, :10, :, :], axis=1)
     rec_target = np.ascontiguousarray(rec_target)
+    # make_gif(input_x[0])
     # show_images(batch[0])
     # show_images(input_x[0])
     # show_images(pred_target[0])
@@ -83,4 +103,4 @@ for e in range(EPOCH):
     total_loss = 0.9 * rec_l + pred_l
     if total_loss < best_loss:
         best_loss = total_loss
-        torch.save(model, './model.save')
+        torch.save(model, './model_cnn_fcLSTM.save')
