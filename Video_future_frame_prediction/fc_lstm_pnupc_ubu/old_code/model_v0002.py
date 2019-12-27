@@ -7,7 +7,7 @@ import numpy as np
 class FC_LSTM(nn.Module):
     def __init__(self):
         super(FC_LSTM, self).__init__()
-        self.num_lstm_layers = 1
+        self.num_lstm_layers = 3
         self.encoder_lstm = nn.LSTM(
             4096, 4096,
             num_layers=self.num_lstm_layers,

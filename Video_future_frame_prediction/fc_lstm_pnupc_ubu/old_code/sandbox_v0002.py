@@ -4,17 +4,19 @@ import numpy as np
 import torch.nn.functional as F
 import torch.optim as optim
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 path = '../../__SSSSTTTTOOOORRRREEEE/Data_save_here/'
 # path = '../data_here/'
 train_set = np.load(path + 'mnist_test_seq.npy')
 train_set = np.transpose(train_set,(1,0,2,3))
 # print(train_set.shape)
 model = FC_LSTM().to(device)
+print(next(model.parameters()).device)
 optimizer = optim.Adam(model.parameters())
 # mse = F.mse_loss()
 # bce = F.binary_cross_entropy
-batch_size = 100
+batch_size = 1
 idx = np.random.permutation(len(train_set))  # i.i.d. sampling
 EPOCH = 200
 for e in range(EPOCH):
