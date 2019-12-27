@@ -4,7 +4,7 @@ import torch
 import numpy as np
 import torch.nn.functional as F
 import torch.optim as optim
-
+import os
 
 # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 device = torch.device("cpu")
@@ -76,4 +76,7 @@ for e in range(EPOCH):
     total_loss = rec_l
     if total_loss < best_loss:
         best_loss = total_loss
+
+        if not os.path.exists('./model_save'):
+            os.makedirs('./model_save')
         torch.save(model, './model_save/lstmcell_simple_encoder_decoder.save')
