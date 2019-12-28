@@ -21,3 +21,5 @@
 # Problem
 - 1-i-abc is too big. The plan was to make 1-ii-abc,
 but, i am going to make cnn version first.
+    - done
+- organize coding files
