@@ -1,4 +1,4 @@
-from models.lstmcell_simple_encoder_decoder import FC_LSTM
+from models.lstmcell_cnn_lstm_encoder_decoder import FC_LSTM
 
 import torch
 import numpy as np
@@ -32,7 +32,7 @@ def input_target_maker(batch, device):
 model = FC_LSTM().to(device)
 optimizer = optim.Adam(model.parameters())
 
-batch_size = 200
+batch_size = 64
 EPOCH = 2000
 best_loss = 99999
 for e in range(EPOCH):
@@ -79,4 +79,4 @@ for e in range(EPOCH):
 
         if not os.path.exists('./model_save'):
             os.makedirs('./model_save')
-        torch.save(model, './model_save/lstmcell_simple_encoder_decoder.save')
+        torch.save(model, './model_save/lstmcell_cnn_lstm_encoder_decoder.save')
