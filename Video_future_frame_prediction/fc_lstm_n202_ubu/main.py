@@ -16,9 +16,6 @@ train_set = data_set[1000:7000]
 valid_set = data_set[7000:]
 del data_set
 
-model = FC_LSTM().to(device)
-optimizer = optim.Adam(model.parameters())
-
 
 def input_target_maker(batch, device):
     batch = batch / 255.
@@ -31,6 +28,8 @@ def input_target_maker(batch, device):
     rec_target = torch.Tensor(rec_target).to(device)
     return input_x, rec_target, pred_target
 
+model = FC_LSTM().to(device)
+optimizer = optim.Adam(model.parameters())
 
 batch_size = 10
 EPOCH = 200
