@@ -8,14 +8,14 @@ import torch.optim as optim
 import os
 from utility import Log
 
-name = 'lstm'
+name = 'cnn_lstmcell'
 this_group = 'encoder_decoder'
 this_name = name +'_'+ this_group
 batch_size = 200
 EPOCH = 200
 
 
-seed = 5
+seed = 6
 np.random.seed(seed)
 torch.manual_seed(seed)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -42,7 +42,7 @@ def input_target_maker(batch, device):
     rec_target = torch.Tensor(rec_target).to(device)
     return input_x, rec_target, pred_target
 
-model = m1().to(device)
+model = m3().to(device)
 optimizer = optim.Adam(model.parameters())
 
 log = Log(this_name)
