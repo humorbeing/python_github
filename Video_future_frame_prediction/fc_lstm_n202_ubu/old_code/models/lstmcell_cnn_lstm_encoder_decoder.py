@@ -31,7 +31,6 @@ class FC_LSTM(nn.Module):
             nn.ConvTranspose2d(256, 128, 5, stride=2),
             nn.ReLU(),
             nn.ConvTranspose2d(128, 1, 4, stride=2),
-            nn.Tanh()
         )
         self.en1 = nn.LSTMCell(512, 512)
         self.en2 = nn.LSTMCell(512, 512)
