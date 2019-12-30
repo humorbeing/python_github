@@ -1,0 +1,18 @@
+# google colab local
+/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/bin/jupyter notebook \
+--NotebookApp.allow_origin='https://colab.research.google.com' \
+--port=8888 \
+--NotebookApp.port_retries=0
+
+# if port is in use
+netstat -lnp | grep 8888
+kill -9 process_id
+# don't use pycharm to start jupyter notebook or lab, it doesn't terminate cleanly
+
+# normal use
+/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/bin/jupyter notebook
+/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/bin/jupyter lab
+
+# spyder
+setsid ~/anaconda3/bin/spyder
+~/anaconda3/bin/spyder
