@@ -1,6 +1,7 @@
 from models.simple_encoder_decoder import FC_LSTM as m1
 from models.lstmcell_simple_encoder_decoder import FC_LSTM as m2
-from models.lstmcell_cnn_lstm_encoder_decoder import FC_LSTM as m3
+# from models.lstmcell_cnn_lstm_encoder_decoder import FC_LSTM as m3
+from models.lstmcell_cnn_lstm_encoder_decoder_v0002 import FC_LSTM as m3
 import torch
 import numpy as np
 import torch.nn.functional as F
