@@ -2,6 +2,7 @@ from models.simple_encoder_decoder import FC_LSTM as m1
 from models.lstmcell_simple_encoder_decoder import FC_LSTM as m2
 # from models.lstmcell_cnn_lstm_encoder_decoder import FC_LSTM as m3
 from models.lstmcell_cnn_lstm_encoder_decoder_v0002 import FC_LSTM as m3
+from models.cnn_flatten_lstmcell_en_de import FC_LSTM as m4
 import torch
 import numpy as np
 import torch.nn.functional as F
@@ -10,7 +11,7 @@ import os
 from utility import Log
 
 name = 'cnn_lstmcell'
-this_group = 'encoder_decoder'
+this_group = 'en_de_orderrecon'
 this_name = name +'_'+ this_group
 batch_size = 200
 EPOCH = 200
@@ -43,7 +44,7 @@ def input_target_maker(batch, device):
     rec_target = torch.Tensor(rec_target).to(device)
     return input_x, rec_target, pred_target
 
-model = m3().to(device)
+model = m4().to(device)
 optimizer = optim.Adam(model.parameters())
 
 log = Log(this_name)
@@ -61,7 +62,7 @@ for e in range(EPOCH):
 
         optimizer.zero_grad()
         rec = model(input_x)
-        loss_recon = F.mse_loss(rec, rec_target)
+        loss_recon = F.mse_loss(rec, input_x)
         loss = loss_recon
         loss.backward()
         optimizer.step()
@@ -75,7 +76,7 @@ for e in range(EPOCH):
                 input_target_maker(
                     valid_set[:, i:i + batch_size], device)
             rec = model(input_x)
-            loss_recon = F.mse_loss(rec, rec_target)
+            loss_recon = F.mse_loss(rec, input_x)
 
             loss = loss_recon
         rec_loss.append(loss_recon.item())
