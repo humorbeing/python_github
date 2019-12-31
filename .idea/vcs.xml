@@ -2,20 +2,20 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MASTERPIECE/A2C/A2C" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MASTERPIECE/A2C/pytorch-a2c-ppo-acktr" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MASTERPIECE/A2C/tf-a2c" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MASTERPIECE/Curiosity-driven Exploration by Self-supervised Prediction" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MASTERPIECE/DQN-tensorflow" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MASTERPIECE/WorldModelsExperiments" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MASTERPIECE/baselines" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MASTERPIECE/large-scale-curiosity" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MASTERPIECE/move37" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/__Read_This_CODE_to_start/pytorch_name/examples" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/git_in_git" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/baselines" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/baselines_0.10.0" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/ppo-pytorch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MASTERPIECE/A2C/A2C" vcs="" />
+    <mapping directory="$PROJECT_DIR$/MASTERPIECE/A2C/pytorch-a2c-ppo-acktr" vcs="" />
+    <mapping directory="$PROJECT_DIR$/MASTERPIECE/A2C/tf-a2c" vcs="" />
+    <mapping directory="$PROJECT_DIR$/MASTERPIECE/Curiosity-driven Exploration by Self-supervised Prediction" vcs="" />
+    <mapping directory="$PROJECT_DIR$/MASTERPIECE/DQN-tensorflow" vcs="" />
+    <mapping directory="$PROJECT_DIR$/MASTERPIECE/WorldModelsExperiments" vcs="" />
+    <mapping directory="$PROJECT_DIR$/MASTERPIECE/baselines" vcs="" />
+    <mapping directory="$PROJECT_DIR$/MASTERPIECE/large-scale-curiosity" vcs="" />
+    <mapping directory="$PROJECT_DIR$/MASTERPIECE/move37" vcs="" />
+    <mapping directory="$PROJECT_DIR$/__Read_This_CODE_to_start/pytorch_name/examples" vcs="" />
+    <mapping directory="$PROJECT_DIR$/git_in_git" vcs="" />
+    <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/baselines" vcs="" />
+    <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/baselines_0.10.0" vcs="" />
+    <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/ppo-pytorch" vcs="" />
     <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/pytorch-a2c-ppo-acktr-gail" vcs="Git" />
   </component>
 </project>
