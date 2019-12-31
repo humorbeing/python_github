@@ -11,7 +11,7 @@ import os
 from utility import Log
 
 name = 'cnn_lstmcell'
-this_group = 'encoder_decoder'
+this_group = 'en_de_orderrecon'
 this_name = name +'_'+ this_group
 batch_size = 200
 EPOCH = 200
@@ -62,7 +62,7 @@ for e in range(EPOCH):
 
         optimizer.zero_grad()
         rec = model(input_x)
-        loss_recon = F.mse_loss(rec, rec_target)
+        loss_recon = F.mse_loss(rec, input_x)
         loss = loss_recon
         loss.backward()
         optimizer.step()
@@ -76,7 +76,7 @@ for e in range(EPOCH):
                 input_target_maker(
                     valid_set[:, i:i + batch_size], device)
             rec = model(input_x)
-            loss_recon = F.mse_loss(rec, rec_target)
+            loss_recon = F.mse_loss(rec, input_x)
 
             loss = loss_recon
         rec_loss.append(loss_recon.item())
