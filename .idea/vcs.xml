@@ -16,6 +16,6 @@
     <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/baselines" vcs="" />
     <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/baselines_0.10.0" vcs="" />
     <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/ppo-pytorch" vcs="" />
-    <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/pytorch-a2c-ppo-acktr-gail" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ppo_baseline_DMB/internet_code/pytorch-a2c-ppo-acktr-gail" vcs="" />
   </component>
 </project>

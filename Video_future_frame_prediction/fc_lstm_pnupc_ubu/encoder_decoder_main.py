@@ -1,6 +1,7 @@
 from models.simple_encoder_decoder import FC_LSTM as m1
 from models.lstmcell_simple_encoder_decoder import FC_LSTM as m2
-from models.lstmcell_cnn_lstm_encoder_decoder import FC_LSTM as m3
+# from models.lstmcell_cnn_lstm_encoder_decoder import FC_LSTM as m3
+from models.lstmcell_cnn_lstm_encoder_decoder_v0002 import FC_LSTM as m3
 import torch
 import numpy as np
 import torch.nn.functional as F
@@ -8,10 +9,10 @@ import torch.optim as optim
 import os
 from utility import Log
 
-name = 'cnn_lstmcell'
+name = 'cnn_lstmcell_v0002'
 this_group = 'encoder_decoder'
 this_name = name +'_'+ this_group
-batch_size = 200
+batch_size = 100
 EPOCH = 200
 
 
