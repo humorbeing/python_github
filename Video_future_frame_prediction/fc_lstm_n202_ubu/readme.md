@@ -30,28 +30,31 @@ but, i am going to make cnn version first.
     - lstmcell encoder decoder
     - cnn lstmcell encoder decoder v0001
     - cnn lstmcell encoder decoder v0002
+    - cnn-lstmcell-v0003
     - cnn flatten lstmcell encoder decoder
 - experiments
     - recon
     - order recon
     - pred
 - combo
-    - lstm recon
-    - lstm order-recon [x]
-    - lstm pred [x]
-    - lstmcell recon
-    - lstmcell order-recon
-    - lstmcell pred
-    - cnn-lstmcell-v0001 recon
+    - [x] lstm recon
+    - ~~lstm order-recon~~
+    - ~~lstm pred~~
+    - [x] lstmcell recon
+    - [ ] lstmcell order-recon
+    - [x] lstmcell pred
+    - [x] cnn-lstmcell-v0001 recon x 2
     - cnn-lstmcell-v0001 order-recon
     - cnn-lstmcell-v0001 pred
-    - cnn-lstmcell-v0002 recon
+    - [x] cnn-lstmcell-v0002 recon
     - cnn-lstmcell-v0002 order-recon
     - cnn-lstmcell-v0002 pred
     - cnn-flatten-lstmcell recon
     - cnn-flatten-lstmcell order-recon
     - cnn-flatten-lstmcell pred
-
+    - cnn-lstmcell-v0003 recon
+    - cnn-lstmcell-v0003 order-recon
+    - cnn-lstmcell-v0003 pred
     
 ### Schedule
 - work with 
