@@ -2,7 +2,7 @@ from models.simple_encoder_decoder import FC_LSTM as m1
 from models.lstmcell_simple_encoder_decoder import FC_LSTM as m2
 # from models.lstmcell_cnn_lstm_encoder_decoder import FC_LSTM as m3
 from models.lstmcell_cnn_lstm_encoder_decoder_v0002 import FC_LSTM as m3
-from models.CNN_LSTMCell_en_de_v0003 import FC_LSTM as m4
+from models.copycode_de import FC_LSTM as m4
 import torch
 import numpy as np
 import torch.nn.functional as F
@@ -10,8 +10,8 @@ import torch.optim as optim
 import os
 from utility import Log
 
-name = 'cnn_v0003'
-this_group = 'en_de_orderrecon'
+name = 'copy_de'
+this_group = 'ori_pred'
 this_name = name +'_'+ this_group
 batch_size = 200
 EPOCH = 200
@@ -62,7 +62,7 @@ for e in range(EPOCH):
 
         optimizer.zero_grad()
         rec = model(input_x)
-        loss_recon = F.mse_loss(rec, input_x)
+        loss_recon = F.binary_cross_entropy(rec, pred_target)
         loss = loss_recon
         loss.backward()
         optimizer.step()
@@ -76,7 +76,7 @@ for e in range(EPOCH):
                 input_target_maker(
                     valid_set[:, i:i + batch_size], device)
             rec = model(input_x)
-            loss_recon = F.mse_loss(rec, input_x)
+            loss_recon = F.binary_cross_entropy(rec, pred_target)
 
             loss = loss_recon
         rec_loss.append(loss_recon.item())
