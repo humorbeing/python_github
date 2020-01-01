@@ -1,4 +1,4 @@
-# Plan
+### Plan
 1. Input is vector. Means no CNN
     1. neither decoder nor predictor have no generated input
         1. encoder - decoder         
@@ -18,8 +18,40 @@
         1. encoder - predictor            
         1. encoder - (decoder and predictor)        
 
-# Problem
+### Problem
 - 1-i-abc is too big. The plan was to make 1-ii-abc,
 but, i am going to make cnn version first.
     - done
 - organize coding files
+
+### combination
+- models
+    - lstm encoder decoder
+    - lstmcell encoder decoder
+    - cnn lstmcell encoder decoder v0001
+    - cnn lstmcell encoder decoder v0002
+    - cnn flatten lstmcell encoder decoder
+- experiments
+    - recon
+    - order recon
+    - pred
+- combo
+    - lstm recon
+    - lstm order-recon [x]
+    - lstm pred [x]
+    - lstmcell recon
+    - lstmcell order-recon
+    - lstmcell pred
+    - cnn-lstmcell-v0001 recon
+    - cnn-lstmcell-v0001 order-recon
+    - cnn-lstmcell-v0001 pred
+    - cnn-lstmcell-v0002 recon
+    - cnn-lstmcell-v0002 order-recon
+    - cnn-lstmcell-v0002 pred
+    - cnn-flatten-lstmcell recon
+    - cnn-flatten-lstmcell order-recon
+    - cnn-flatten-lstmcell pred
+
+    
+### Schedule
+- work with 
