@@ -50,7 +50,7 @@ decoder is zero input
     - [x] cnn-lstmcell-v0002 recon
     - cnn-lstmcell-v0002 order-recon
     - [pnu2] cnn-lstmcell-v0002 pred
-    - [pnumy] cnn-flatten-lstmcell recon
+    - [x] cnn-flatten-lstmcell recon
     - cnn-flatten-lstmcell order-recon
     - [x] cnn-flatten-lstmcell pred
     - [x] cnn-lstmcell-v0003 recon
@@ -76,5 +76,5 @@ decoder is zero input
 - loss function is cross entropy Bernoulli
 - input is 0-1
 - experiments
-    - recon
+    - [pnumy] recon
     - pred
