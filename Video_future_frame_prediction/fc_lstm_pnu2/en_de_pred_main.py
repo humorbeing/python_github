@@ -2,7 +2,7 @@ from models.simple_encoder_decoder import FC_LSTM as m1
 from models.lstmcell_simple_encoder_decoder import FC_LSTM as m2
 # from models.lstmcell_cnn_lstm_encoder_decoder import FC_LSTM as m3
 from models.lstmcell_cnn_lstm_encoder_decoder_v0002 import FC_LSTM as m3
-from models.cnn_flatten_lstmcell_en_de import FC_LSTM as m4
+from models.CNN_LSTMCell_en_de_v0003 import FC_LSTM as m4
 import torch
 import numpy as np
 import torch.nn.functional as F
@@ -10,7 +10,7 @@ import torch.optim as optim
 import os
 from utility import Log
 
-name = 'cnn_lstmcell'
+name = 'cnn_v0002'
 this_group = 'en_de_pred'
 this_name = name +'_'+ this_group
 batch_size = 200
@@ -44,7 +44,7 @@ def input_target_maker(batch, device):
     rec_target = torch.Tensor(rec_target).to(device)
     return input_x, rec_target, pred_target
 
-model = m4().to(device)
+model = m3().to(device)
 optimizer = optim.Adam(model.parameters())
 
 log = Log(this_name)
