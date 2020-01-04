@@ -60,7 +60,7 @@ class FC_LSTM(nn.Module):
             h_d2, c_d2 = self.de2(h_d1, (h_d2, c_d2))
             h_d3, c_d3 = self.de3(h_d2, (h_d3, c_d3))
             z = h_d3
-            # z = torch.tanh(z)
+            z = torch.sigmoid(z)
             z = torch.reshape(z, (batch_size, 64, 64))
             recon_outputs.append(z)
 
