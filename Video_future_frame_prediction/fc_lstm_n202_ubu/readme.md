@@ -78,3 +78,12 @@ decoder is zero input
 - experiments
     - [pnumy] recon
     - pred
+
+### it's not learning at all
+with all these hustle, right number of inputs and outputs
+for LSTMs, use binary cross entropy, input is set to (0,1),
+so is torch.sigmoid attached to output layer. the out come is
+it's not learning at all.
+- I think it's a good opportunity explore optimizers and learning rate
+schedulers. 
+- Let's do "out of the box performance"
