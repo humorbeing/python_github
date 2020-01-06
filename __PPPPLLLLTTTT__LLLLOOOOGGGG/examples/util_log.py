@@ -2,7 +2,6 @@ from datetime import datetime
 import os
 
 
-
 class Log():
     def __init__(self, name, path='./'):
         surfix = datetime.now().strftime('%Y%m%d-%H-%M-%S-')
