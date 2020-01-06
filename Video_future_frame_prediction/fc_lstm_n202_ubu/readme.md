@@ -87,3 +87,7 @@ it's not learning at all.
 - I think it's a good opportunity explore optimizers and learning rate
 schedulers. 
 - Let's do "out of the box performance"
+    -[ ] all optimizer
+- how about some loss change on original model?
+    -[ ] 
+    
