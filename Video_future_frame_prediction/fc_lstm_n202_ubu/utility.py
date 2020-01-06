@@ -33,14 +33,15 @@ def show_images(imgs):
     plt.savefig('save.png')
     plt.show()
 
+from datetime import datetime
+import os
 
 class Log():
-    def __init__(self, name):
-
+    def __init__(self, name, path='./'):
         surfix = datetime.now().strftime('%Y%m%d-%H-%M-%S-')
-        self.log_file = 'logs/' + surfix + name + '.txt'
-        if not os.path.exists('logs'):
-            os.makedirs('logs')
+        self.log_file = path+'logs/' + surfix + name + '.txt'
+        if not os.path.exists(path+'logs'):
+            os.makedirs(path+'logs')
         with open(self.log_file, 'w'):
             print('opening log file:', self.log_file)
 
