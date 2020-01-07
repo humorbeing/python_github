@@ -19,7 +19,10 @@ def appendDFToCSV_void(df, csvFilePath, sep=","):
         n.to_csv(csvFilePath, mode='w', index=False, sep=sep)
         # raise Exception("Columns do not match!! Dataframe has " + str(len(df.columns)) + " columns. CSV file has " + str(len(pd.read_csv(csvFilePath, nrows=1, sep=sep).columns)) + " columns.")
     elif not (df.columns == pd.read_csv(csvFilePath, nrows=1, sep=sep).columns).all():
-        raise Exception("Columns and column order of dataframe and csv file do not match!!")
+        df1 = pd.read_csv(csvFilePath, sep=sep)
+        n = pd.concat([df, df1], axis=0, ignore_index=True, sort=True)
+        n.to_csv(csvFilePath, mode='w', index=False, sep=sep)
+        # raise Exception("Columns and column order of dataframe and csv file do not match!!")
     else:
         df.to_csv(csvFilePath, mode='a', index=False, sep=sep, header=False)
 
@@ -34,11 +37,11 @@ class Log():
         if not os.path.exists(args.work_path + 'logs'):
             os.makedirs(args.work_path + 'logs')
         t = datetime.now()
-        surfix = t.strftime('%Y%m%d-%H%M%S-')
-        args.log_time = t.strftime('%Y%m%d%H%M%S')
+        surfix = t.strftime('%Y%m%d-%H%M%S')
+        args.log_time = surfix
         args.this_name = args.model + '-' + args.mode
         args.model_save_file = args.save_path + args.this_name + '.save'
-        args.log_path = args.work_path + 'logs/' + surfix + args.this_name + '.txt'
+        args.log_path = args.work_path + 'logs/' + surfix + '-' + args.this_name + '.txt'
         save_args(args, args.work_path + 'logs/' + csv_name)
         self.log_file = args.log_path
         with open(self.log_file, 'w'):

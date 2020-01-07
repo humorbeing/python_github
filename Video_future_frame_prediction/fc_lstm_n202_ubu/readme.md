@@ -126,3 +126,16 @@ schedulers.
 - looks like without last layer activation function is way to go
 - and also add both losses tracking, and use one of them to train
 - make a all working EDP network and runner
+- experiments schedule
+    - [colab] on lstm copy model, recon, loss combo
+        - (-1,1), tanh, mse
+        - (-1,1), non, mse
+        - (0,1), sigmoid, bce
+        - (0,1), sigmoid, mse
+        - (0,1), non, mse
+    - [colab1] on lstm copy model, both, loss combo
+        - (-1,1), tanh, mse
+        - (-1,1), non, mse
+        - (0,1), sigmoid, bce
+        - (0,1), sigmoid, mse
+        - (0,1), non, mse
