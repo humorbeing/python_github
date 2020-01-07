@@ -113,41 +113,53 @@ class lstm_copy(nn.Module):
             recon_outputs.append(z)
 
         recon_outputs = torch.stack(recon_outputs)
-        return recon_outputs
-        # if self.args.mode == 'both':
-        #
-        #     h_p1 = h_e3
-        #     # h_p1 = torch.zeros((batch_size, 512)).to(device)
-        #     c_p1 = torch.zeros((batch_size, self.hidden)).to(device)
-        #     h_p2 = torch.zeros((batch_size, self.hidden)).to(device)
-        #     c_p2 = torch.zeros((batch_size, self.hidden)).to(device)
-        #     h_p3 = torch.zeros((batch_size, 4096)).to(device)
-        #     c_p3 = torch.zeros((batch_size, 4096)).to(device)
-        #
-        #     pre_outputs = []
-        #     for seq in range(future_step):
-        #         h_p1, c_p1 = self.pre1(zero_input, (h_p1, c_p1))
-        #         h_p2, c_p2 = self.pre2(h_p1, (h_p2, c_p2))
-        #         h_p3, c_p3 = self.pre3(h_p2, (h_p3, c_p3))
-        #         z = h_p3
-        #         # z = torch.tanh(z)
-        #         z = torch.reshape(z, (batch_size, 64, 64))
-        #         # print(x_.shape)
-        #         pre_outputs.append(z)
-        #     pre_outputs = torch.stack(pre_outputs)
-        #
-        #     return recon_outputs, pre_outputs
+        # return recon_outputs
+        if self.args.mode == 'both':
+            h_p1 = h_e3
+            # h_p1 = torch.zeros((batch_size, 512)).to(device)
+            c_p1 = torch.zeros((batch_size, self.hidden)).to(device)
+            h_p2 = torch.zeros((batch_size, self.hidden)).to(device)
+            c_p2 = torch.zeros((batch_size, self.hidden)).to(device)
+            h_p3 = torch.zeros((batch_size, 4096)).to(device)
+            c_p3 = torch.zeros((batch_size, 4096)).to(device)
+
+            pre_outputs = []
+            for seq in range(future_step):
+                h_p1, c_p1 = self.pre1(zero_input, (h_p1, c_p1))
+                h_p2, c_p2 = self.pre2(h_p1, (h_p2, c_p2))
+                h_p3, c_p3 = self.pre3(h_p2, (h_p3, c_p3))
+                z = h_p3
+                if self.args.last_activation == 'tanh':
+                    z = torch.tanh(z)
+                elif self.args.last_activation == 'sigmoid':
+                    z = torch.sigmoid(z)
+                else:
+                    pass
+                if not self.args.zero_input:
+                    zero_input = z
+                z = torch.reshape(z, (batch_size, 64, 64))
+                # print(x_.shape)
+                pre_outputs.append(z)
+            pre_outputs = torch.stack(pre_outputs)
+
+            return recon_outputs, pre_outputs
+        else:
+            return recon_outputs, 0
 
 
 if __name__ == "__main__":
     from argparse import Namespace
     args = Namespace()
-    args.mode = 'recon'  # 'recon' / 'pred' / 'both'
+    args.mode = 'both'  # 'recon' / 'pred' / 'both'
     args.zero_input = True
-    args.last_activation = 'tanh'  # tanh / sigmoid
+    args.last_activation = 'non'  # tanh / sigmoid / 'non'
     args.hidden = 2048
     # model = lstm_v0001(args)
     model = lstm_copy(args)
     x = torch.randn((10, 100, 64, 64))
-    x = model(x)
-    print(x.shape)
+    x1, x2 = model(x)
+    print(x1.shape)
+    if type(x2)==int:
+        print(x2)
+    else:
+        print(x2.shape)

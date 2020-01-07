@@ -125,4 +125,4 @@ schedulers.
 ### All fail to train the model
 - looks like without last layer activation function is way to go
 - and also add both losses tracking, and use one of them to train
-- make a all working EDP network, get rid of all one
+- make a all working EDP network and runner

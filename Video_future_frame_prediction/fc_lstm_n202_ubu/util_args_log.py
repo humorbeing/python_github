@@ -15,7 +15,7 @@ def appendDFToCSV_void(df, csvFilePath, sep=","):
         df.to_csv(csvFilePath, mode='a', index=False, sep=sep)
     elif len(df.columns) != len(pd.read_csv(csvFilePath, nrows=1, sep=sep).columns):
         df1 = pd.read_csv(csvFilePath, sep=sep)
-        n = pd.concat([df, df1], axis=0, ignore_index=True)
+        n = pd.concat([df, df1], axis=0, ignore_index=True, sort=True)
         n.to_csv(csvFilePath, mode='w', index=False, sep=sep)
         # raise Exception("Columns do not match!! Dataframe has " + str(len(df.columns)) + " columns. CSV file has " + str(len(pd.read_csv(csvFilePath, nrows=1, sep=sep).columns)) + " columns.")
     elif not (df.columns == pd.read_csv(csvFilePath, nrows=1, sep=sep).columns).all():
