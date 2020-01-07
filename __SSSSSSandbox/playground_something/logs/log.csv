@@ -1,0 +1,14 @@
+batch_size,epoch,input_zero,is_cuda,log_path,log_time,loss_function,mode,model,seed,work_path
+200,200.0,False,True,./logs/20200106-031707-model_name-recon.txt,20200106031707,mse,recon,model_name,6.0,./
+200,200.0,False,True,./logs/20200106-031548-model_name-recon.txt,,mse,recon,model_name,6.0,./
+200,,,,./logs/20200106-031209-model_name-recon.txt,,,recon,model_name,,./
+200,,,,./logs/20200106-031208-model_name-recon.txt,,,recon,model_name,,./
+200,,,,./logs/20200106-031205-model_name-recon.txt,,,recon,model_name,,./
+200,200.0,,,./logs/20200106-031130-model_name-recon.txt,,,recon,model_name,6.0,./
+200,200.0,,,./logs/20200106-03-09-07-model_name-recon.txt,,,recon,model_name,,./
+200,200.0,,,./logs/20200106-03-09-11-model_name-recon.txt,,,recon,model_name,,./
+200,200.0,,,./logs/20200106-03-09-13-model_name-recon.txt,,,recon,model_name,,./
+200,200.0,,,./logs/20200106-031132-model_name-recon.txt,,,recon,model_name,6.0,./
+200,200.0,,,./logs/20200106-031134-model_name-recon.txt,,,recon,model_name,6.0,./
+200,200,False,True,./logs/20200106-031709-model_name-recon.txt,20200106031709,mse,recon,model_name,6,./
+200,200,False,True,./logs/20200106-031711-model_name-recon.txt,20200106031711,mse,recon,model_name,6,./

@@ -28,51 +28,51 @@ plt.figure(figsize=(6.4, 4.8), dpi=100)
 plt.title('Reconstruction, Zero input, No args')
 train_mark = '-'
 val_mark = ':'
-name = '20191228-12-52-23-lstm_encoder_decoder.txt'
-title = 'LSTM'
+name = '20200107-07-26-29-Adam_copy_de_AO_ori_recon.txt'
+title = 'adam'
 c = 'r'
 a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[2], c+val_mark, label=title+' Va')
 
-name = '20191228-19-59-29-lstmcell_encoder_decoder.txt'
-title = 'LSTMCell'
+name = '20200107-08-23-37-Adadelta_copy_de_AO_ori_recon.txt'
+title = 'adadelta'
 c = 'g'
 a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[2], c+val_mark, label=title+' Va')
 
-name = '20200102-01-48-30-copy_de_ori_recon.txt'
+name = '20200107-09-24-11-Adagrad_copy_de_AO_ori_recon.txt'
 # name = '20191229-03-29-43-cnn_lstmcell_encoder_decoder.txt'
-title = 'CNN seed1'
+title = 'adagrad'
 c = 'b'
 a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[2], c+val_mark, label=title+' Va')
 
-name = '20191229-08-27-41-cnn_lstmcell_encoder_decoder.txt'
-title = 'CNN seed2'
+name = '20200107-10-18-56-Adamax_copy_de_AO_ori_recon.txt'
+title = 'adamax'
 c = 'y'
 a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[2], c+val_mark, label=title+' Va')
 
-name = '20191231-07-15-21-cnn_lstmcell_v0002_encoder_decoder.txt'
-title = 'CNN v2'
+name = '20200107-11-18-50-ASGD_copy_de_AO_ori_recon.txt'
+title = 'asgd'
 c = 'c'
 a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[2], c+val_mark, label=title+' Va')
 
-name = '20200101-13-20-07-lstmcell_colab_en_de_recon.txt'
-title = 'colab'
+name = '20200107-12-12-42-RMSprop_copy_de_AO_ori_recon.txt'
+title = 'rmsprop'
 c = 'm'
 a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[2], c+val_mark, label=title+' Va')
 
-name = '20200101-19-39-19-cnn_v0003_en_de_recon.txt'
-title = 'CNN v3'
+name = '20200107-13-07-57-Rprop_copy_de_AO_ori_recon.txt'
+title = 'rprop'
 c = 'k'
 a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')

@@ -25,58 +25,60 @@ def xy(name):
     return np.array(all_num).T
 # plt.plot(y, 'ro', label='This is y')
 plt.figure(figsize=(6.4, 4.8), dpi=100)
-plt.title('Reconstruction, Zero input, No args')
+plt.title('Prediction, Zero input, No args')
 train_mark = '-'
 val_mark = ':'
-name = '20191228-12-52-23-lstm_encoder_decoder.txt'
-title = 'LSTM'
+
+
+
+name = '20200101-06-47-19-lstmcell_en_de_pred.txt'
+title = 'lstm'
 c = 'r'
 a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[2], c+val_mark, label=title+' Va')
 
-name = '20191228-19-59-29-lstmcell_encoder_decoder.txt'
-title = 'LSTMCell'
+name = '20200101-13-12-19-lstmcell_v0002_colab_en_de_pred.txt'
+title = 'LSTM v2'
 c = 'g'
 a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[2], c+val_mark, label=title+' Va')
 
-name = '20200102-01-48-30-copy_de_ori_recon.txt'
-# name = '20191229-03-29-43-cnn_lstmcell_encoder_decoder.txt'
-title = 'CNN seed1'
+name = '20200103-00-59-54-cnn_flatten_lstmcell_en_de_pred.txt'
+title = 'CNN fl'
 c = 'b'
 a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[2], c+val_mark, label=title+' Va')
 
-name = '20191229-08-27-41-cnn_lstmcell_encoder_decoder.txt'
-title = 'CNN seed2'
-c = 'y'
-a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
-
-name = '20191231-07-15-21-cnn_lstmcell_v0002_encoder_decoder.txt'
-title = 'CNN v2'
-c = 'c'
-a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
-
-name = '20200101-13-20-07-lstmcell_colab_en_de_recon.txt'
-title = 'colab'
-c = 'm'
-a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
-
-name = '20200101-19-39-19-cnn_v0003_en_de_recon.txt'
-title = 'CNN v3'
-c = 'k'
-a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
+# name = '20191229-08-27-41-cnn_lstmcell_encoder_decoder.txt'
+# title = 'CNN seed2'
+# c = 'y'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[2], c+val_mark, label=title+' Va')
+#
+# name = '20191231-07-15-21-cnn_lstmcell_v0002_encoder_decoder.txt'
+# title = 'CNN v2'
+# c = 'c'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[2], c+val_mark, label=title+' Va')
+#
+# name = '20200101-13-20-07-lstmcell_colab_en_de_recon.txt'
+# title = 'colab'
+# c = 'm'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[2], c+val_mark, label=title+' Va')
+#
+# name = '20200101-19-39-19-cnn_v0003_en_de_recon.txt'
+# title = 'CNN v3'
+# c = 'k'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[2], c+val_mark, label=title+' Va')
 
 ''' legend location
 center left
