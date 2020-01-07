@@ -1,0 +1,2 @@
+batch_size,epoch,log_path,mode,model,work_path
+200,200,./logs/20200106-03-05-38-model_name-recon.txt,recon,model_name,./

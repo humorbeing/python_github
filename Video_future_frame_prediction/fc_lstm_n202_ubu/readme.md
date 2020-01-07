@@ -49,7 +49,7 @@ decoder is zero input
     - cnn-lstmcell-v0001 pred
     - [x] cnn-lstmcell-v0002 recon
     - cnn-lstmcell-v0002 order-recon
-    - [pnu2] cnn-lstmcell-v0002 pred
+    - [x] cnn-lstmcell-v0002 pred
     - [x] cnn-flatten-lstmcell recon
     - cnn-flatten-lstmcell order-recon
     - [x] cnn-flatten-lstmcell pred
@@ -62,8 +62,8 @@ decoder is zero input
     - lstmcell-v0002 recon
     - lstmcell-v0002 recon (55)
     - lstmcell-v0002 order-recon
-    - [colab?] lstmcell-v0002 pred
-    - [colab?] lstmcell recon
+    - [x] [colab?] lstmcell-v0002 pred
+    - [x] [colab?] lstmcell recon
     - lstmcell-v0001 EDP
 
 ### after read the original paper code
@@ -76,8 +76,8 @@ decoder is zero input
 - loss function is cross entropy Bernoulli
 - input is 0-1
 - experiments
-    - [pnumy] recon
-    - pred
+    - [x] recon
+    - [x] pred
 
 ### it's not learning at all
 with all these hustle, right number of inputs and outputs
@@ -87,7 +87,42 @@ it's not learning at all.
 - I think it's a good opportunity explore optimizers and learning rate
 schedulers. 
 - Let's do "out of the box performance"
-    -[ ] all optimizer
+    - [pnu2] all optimizer
 - how about some loss change on original model?
-    -[ ] 
-    
+    - options are: (-1,1) (0,1), tanh, sigmoid, bce, mse
+        - (-1,1), tanh, mse
+        - (-1,1), non, mse
+        - (0,1), sigmoid, bce
+        - (0,1), sigmoid, mse
+        - (0,1), non, mse            
+    - [pnumy] 01, mse loss, with sigmoid, recon
+    - (-1,1), tanh, mse
+    - (-1,1), non, mse
+    - (0,1), sigmoid, bce
+    - (0,1), non, mse  
+         
+- recon as input of lstm
+    - [colab] bce loss, with sigmoid, recon, recon_in
+
+### Make a args lead experiment system
+- done
+    - made a 4096 4096 lstmcell
+    - combos
+        - zero in, output in
+        - recon, pred
+        - last active
+            - (-1,1), tanh, mse
+            - (-1,1), non, mse
+            - (0,1), sigmoid, bce
+            - (0,1), sigmoid, mse
+            - (0,1), non, mse
+- experiments schedule
+    - [x] zero in, recon, (-1,1), tanh, mse
+    - output in, recon, (-1,1), tanh, mse
+    - [x] zero in, pred, (-1,1), tanh, mse
+    - output in, pred, (-1,1), tanh, mse
+
+### All fail to train the model
+- looks like without last layer activation function is way to go
+- and also add both losses tracking, and use one of them to train
+- make a all working EDP network, get rid of all one

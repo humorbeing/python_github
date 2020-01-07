@@ -1,0 +1,8 @@
+batch_size,epoch,input_zero,is_cuda,log_path,log_time,loss_function,mode,model,seed,work_path
+200,200,False,True,./logs/20200106-032920-model_name-recon.txt,20200106032920,mse,recon,model_name,6,./
+200,200,False,True,./logs/20200106-032939-model_name-recon.txt,20200106032939,mse,recon,model_name,6,./
+200,200,False,True,./logs/20200106-032940-model_name-recon.txt,20200106032940,mse,recon,model_name,6,./
+200,200,False,True,./logs/20200106-032942-model_name-recon.txt,20200106032942,mse,recon,model_name,6,./
+200,200,False,True,./logs/20200106-032943-model_name-recon.txt,20200106032943,mse,recon,model_name,6,./
+200,200,False,True,./logs/20200106-032944-model_name-recon.txt,20200106032944,mse,recon,model_name,6,./
+200,200,False,True,./logs/20200106-032945-model_name-recon.txt,20200106032945,mse,recon,model_name,6,./
