@@ -133,7 +133,31 @@ schedulers.
         - (0,1), sigmoid, bce
         - (0,1), sigmoid, mse
         - (0,1), non, mse
-    - [colab1] on lstm copy model, both, loss combo
+    - [colab apollo] on lstm copy model, both, loss combo
+        - (-1,1), tanh, mse
+        - (-1,1), non, mse
+        - (0,1), sigmoid, bce
+        - (0,1), sigmoid, mse
+        - (0,1), non, mse
+    - [pnumy] on lstm copy model, pred, loss combo
+        - (-1,1), tanh, mse
+        - (-1,1), non, mse
+        - (0,1), sigmoid, bce
+        - (0,1), sigmoid, mse
+        - (0,1), non, mse
+    - [pnu2] on lstm copy model, recon, loss combo, zero_input false
+        - (-1,1), tanh, mse
+        - (-1,1), non, mse
+        - (0,1), sigmoid, bce
+        - (0,1), sigmoid, mse
+        - (0,1), non, mse
+    - [colab humor] on lstm copy model, pred, loss combo, zero_input false
+        - (-1,1), tanh, mse
+        - (-1,1), non, mse
+        - (0,1), sigmoid, bce
+        - (0,1), sigmoid, mse
+        - (0,1), non, mse
+    - [colab ray] on lstm copy model, both, loss combo, zero_input false
         - (-1,1), tanh, mse
         - (-1,1), non, mse
         - (0,1), sigmoid, bce
