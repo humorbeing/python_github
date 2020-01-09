@@ -234,7 +234,7 @@ schedulers.
 - tanh output is (-1,1), then sigmoid. it will constraint sigmoid
 output to (0.269,0.731)
 - to implement
-    - model with 2 linear layers each side
-    - adam with rl
-    - all fancy stuff
-    - fix sigmoid bce
+    - [x] model with 2 linear layers each side
+    - [x] adam with rl
+    - [x] all fancy stuff
+    - [x] fix sigmoid bce
