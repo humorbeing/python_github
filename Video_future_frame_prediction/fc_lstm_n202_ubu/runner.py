@@ -507,7 +507,7 @@ def runner(arg, path):
         arg.is_standardization = False
         arg.last_activation = 'sigmoid'  # 'tanh' / 'sigmoid' / 'non'
         arg.loss_function = 'bce'  # 'mse' / 'bce'
-        arg.mode = 'pred'  # 'recon' / 'pred' / 'both'
+        # arg.mode = 'pred'  # 'recon' / 'pred' / 'both'
         arg.zero_input = False
 
         runner_rmsprop(arg, path)

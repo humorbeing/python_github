@@ -34,7 +34,7 @@ args = get_args()
 args.is_cuda = False
 args.is_quickrun = True
 args.is_save = False
-
+args.mode = 'both'
 runner(args, path)
 
 

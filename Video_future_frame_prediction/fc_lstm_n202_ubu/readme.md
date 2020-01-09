@@ -228,5 +228,5 @@ schedulers.
     - [x] gradient clip
     - [x] init
 - experiment
-    - 1000 epoch rmsprop
-    - 1000 epoch adam
+    - [ ] [pnumy] 1000 epoch rmsprop
+    - [ ] []1000 epoch adam
