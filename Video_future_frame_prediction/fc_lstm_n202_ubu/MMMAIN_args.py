@@ -16,21 +16,26 @@ def get_args():
     # default combos
     args.is_standardization = False
     args.last_activation = 'sigmoid'  # 'tanh' / 'sigmoid' / 'non'
-    args.loss_function = 'mse'  # 'mse' / 'bce'
+    args.loss_function = 'bce'  # 'mse' / 'bce'
     # NOTE: 'bce' must coupled with sigmoid and is_standardization=False
     args.hidden = 2048
-    args.mode = 'recon'  # 'recon' / 'pred' / 'both'
-    args.zero_input = True
+    args.mode = 'pred'  # 'recon' / 'pred' / 'both'
+    args.zero_input = False
     args.seed = 6
     args.recon_loss_lambda = 0.8
+    args.optimizer = 'rmsprop'  # 'rmsprop' / 'adam'
+    args.learning_rate = 0.0001
+
     return args
 
 #///////////////////////////////////////////////////////
 
 args = get_args()
+args.is_cuda = False
+args.is_quickrun = True
+args.is_save = False
 
-
-# runner(args, path)
+runner(args, path)
 
 
 

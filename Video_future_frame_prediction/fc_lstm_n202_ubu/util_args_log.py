@@ -31,6 +31,9 @@ def save_args(args, f_name):
     df = pd.DataFrame([vars(args)])
     appendDFToCSV_void(df, f_name)
 
+# need a better naming policy
+# def naming(args):
+#     return 'name'
 
 class Log():
     def __init__(self, args, csv_name='log.csv'):
@@ -39,7 +42,7 @@ class Log():
         t = datetime.now()
         surfix = t.strftime('%Y%m%d-%H%M%S')
         args.log_time = surfix
-        args.this_name = args.model + '-' + args.mode
+        args.this_name = self.naming(args)
         args.model_save_file = args.save_path + args.this_name + '.save'
         args.log_path = args.work_path + 'logs/' + surfix + '-' + args.this_name + '.txt'
         save_args(args, args.work_path + 'logs/' + csv_name)
@@ -55,23 +58,71 @@ class Log():
     def end(self):
         print('log is saved in: {}'.format(self.log_file))
 
+    def naming(self, args):
+        name = ''
+        # if args.model == 'model_name':
+        #     name += 'M1_'
+        name += 'M1-'
+        #
+        if args.is_standardization:
+            name += '1'
+        else:
+            name += '0'
+        if args.last_activation == 'sigmoid':
+            name += 'S'
+        elif args.last_activation == 'tanh':
+            name += 'T'
+        else:
+            name += 'N'
+        if args.loss_function == 'mse':
+            name += 'M'
+        else:
+            name += 'B'
+        name += '-'
+        if args.zero_input:
+            name += 'Zt'
+        else:
+            name += 'Zf'
+        name += '-'
+        if args.mode == 'recon':
+            name += 'R'
+        elif args.mode == 'pred':
+            name += 'P'
+        else:
+            name += 'B'
+        return name
+
 
 if __name__ == '__main__':
     # from argparse import Namespace
+    # def get_args():
+    #     args = Namespace()
+    #     args.batch_size = 100
+    #     args.epoch = 200
+    #     args.model = 'ED_R_01'  # 'ED_R_01' /
+    #     args.is_cuda = True
+    #     args.work_path = './testing_log/'
+    #     args.save_path = './' + 'fc_lstm_model_save/model_save/'
+    #     args.is_save = True
+    #     args.is_quickrun = False
+    #     # default combos
+    #     args.is_standardization = False
+    #     args.last_activation = 'sigmoid'  # 'tanh' / 'sigmoid' / 'non'
+    #     args.loss_function = 'mse'  # 'mse' / 'bce'
+    #     # NOTE: 'bce' must coupled with sigmoid and is_standardization=False
+    #     args.hidden = 2048
+    #     args.mode = 'recon'  # 'recon' / 'pred' / 'both'
+    #     args.zero_input = True
+    #     args.seed = 6
+    #     args.recon_loss_lambda = 0.8
+    #     return args
     #
-    # args = Namespace()
-    # args.model = 'a'
-    # args.batch_size = 200
-    # args.epoch = 200
-    # args.model = 'model_name'
-    # args.mode = 'recon'
-    # args.seed = 6
-    # args.input_zero = False
-    # args.loss_function = 'mse'
-    # args.is_cuda = True
-    # args.work_path = './'
     #
-    # log = Log(args)
+    # # ///////////////////////////////////////////////////////
+    #
+    # args = get_args()
+    #
+    # log = Log(args, 'test.csv')
     #
     # s1 = 'Epoch: 0, train loss: 0.038667300964395204, eval loss: 0.037765941893061004'
     # s2 = 'Epoch: 1, train loss: 0.03659273808201154, eval loss: 0.035389104237159096'
@@ -80,11 +131,11 @@ if __name__ == '__main__':
     # log.log(s1)
     # log.log(s2)
     # log.log(s3)
-    #
+    # #
     # log.end()
-    p1 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSSSandbox/playground_something/a.csv'
-    p2 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSSSandbox/playground_something/logs/log.csv'
-    p3 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSSSandbox/playground_something/logs/log1.csv'
-    combine_two(p1,p2,p3)
+    # p3 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/Video_future_frame_prediction/fc_lstm_n202_ubu/gather_logs_here/all_logs/fc_lstm_logs.csv'
+    # p1 = p3
+    # p2 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/Video_future_frame_prediction/fc_lstm_n202_ubu/gather_logs_here/recieved_logs/logs_colab_r/log.csv'
+    # combine_two(p1,p2,p3)
 
     pass

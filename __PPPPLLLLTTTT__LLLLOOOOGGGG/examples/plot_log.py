@@ -25,8 +25,11 @@ def xy(name):
     return np.array(all_num).T
 # plt.plot(y, 'ro', label='This is y')
 plt.figure(figsize=(6.4, 4.8), dpi=100)
+plt.title('Reconstruction, Zero input, No args')
 train_mark = '-'
 val_mark = ':'
+
+
 name = '1.txt'
 title = 'LSTM'
 c = 'r'
@@ -34,15 +37,62 @@ a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[2], c+val_mark, label=title+' Va')
 
+# name = '2.txt'
+# title = 'LSTMCell'
+# c = 'g'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[2], c+val_mark, label=title+' Va')
+
+# name = '20200102-01-48-30-copy_de_ori_recon.txt'
+# # name = '20191229-03-29-43-cnn_lstmcell_encoder_decoder.txt'
+# title = 'CNN seed1'
+# c = 'b'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[2], c+val_mark, label=title+' Va')
+#
+# name = '20191229-08-27-41-cnn_lstmcell_encoder_decoder.txt'
+# title = 'CNN seed2'
+# c = 'y'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[2], c+val_mark, label=title+' Va')
+#
+# name = '20191231-07-15-21-cnn_lstmcell_v0002_encoder_decoder.txt'
+# title = 'CNN v2'
+# c = 'c'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[2], c+val_mark, label=title+' Va')
+#
+# name = '20200101-13-20-07-lstmcell_colab_en_de_recon.txt'
+# title = 'colab'
+# c = 'm'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[2], c+val_mark, label=title+' Va')
+#
+# name = '20200101-19-39-19-cnn_v0003_en_de_recon.txt'
+# title = 'CNN v3'
+# c = 'k'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[2], c+val_mark, label=title+' Va')
+
 name = '2.txt'
-title = 'CNN'
-c = 'g'
+title = 'B Z P'
+c = 'darkred'
 a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
+plt.plot(a[1], color=c, linestyle=train_mark, label=title+' Tr')
+plt.plot(a[2], color=c, linestyle=val_mark, label=title+' Va')
 
-
-
+# name = '20200109-092304-0sb-zf-recon.txt'
+# title = 'B Zf R'
+# c = '#641E16'
+# a = xy(name)
+# plt.plot(a[1], color=c, linestyle=train_mark, label=title+' Tr')
+# plt.plot(a[5], color=c, linestyle=val_mark, label=title+' Va')
 
 ''' legend location
 center left
@@ -65,7 +115,6 @@ plt.legend(bbox_to_anchor=(1.01, 1), loc='upper left', borderaxespad=0.)
 # plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 # plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.05), ncol=3, fancybox=True, shadow=True)
 # plt.legend(bbox_to_anchor=(0.9, 0.6))
-
 plt.xlabel('Frame')
 plt.ylabel('Episodic Reward')
 # plt.xlim(left=0, right=50000000*0.4)

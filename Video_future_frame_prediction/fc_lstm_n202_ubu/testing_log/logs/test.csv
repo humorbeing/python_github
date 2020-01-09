@@ -1,0 +1,4 @@
+batch_size,epoch,hidden,input_zero,is_cuda,is_quickrun,is_save,is_standardization,last_activation,log_path,log_time,loss_function,mode,model,model_save_file,recon_loss_lambda,save_path,seed,this_name,work_path,zero_input
+100,200,2048.0,,True,False,True,False,sigmoid,./testing_log/logs/20200108-232413-M1-0SM-Zt-R.txt,20200108-232413,mse,recon,ED_R_01,./fc_lstm_model_save/model_save/M1-0SM-Zt-R.save,0.8,./fc_lstm_model_save/model_save/,6,M1-0SM-Zt-R,./testing_log/,True
+100,200,2048.0,,True,False,True,False,sigmoid,./testing_log/logs/20200108-232334-M1_0SM_Zt_R.txt,20200108-232334,mse,recon,ED_R_01,./fc_lstm_model_save/model_save/M1_0SM_Zt_R.save,0.8,./fc_lstm_model_save/model_save/,6,M1_0SM_Zt_R,./testing_log/,True
+200,200,,False,True,,,,,./testing_log/logs/20200108-231224-M1RZf.txt,20200108-231224,mse,recon,model_name,./M1RZf.save,,./,6,M1RZf,./testing_log/,

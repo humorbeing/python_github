@@ -25,59 +25,73 @@ def xy(name):
     return np.array(all_num).T
 # plt.plot(y, 'ro', label='This is y')
 plt.figure(figsize=(6.4, 4.8), dpi=100)
-plt.title('Reconstruction, Zero input, No args')
+plt.title('Prediction, sigmoid, Train with MSE vs BCE, Show BCE loss')
 train_mark = '-'
 val_mark = ':'
-name = '20191228-12-52-23-lstm_encoder_decoder.txt'
-title = 'LSTM'
+
+
+name = '20200107-091001-0sm-z-both.txt'
+title = 'M Z B'
 c = 'r'
 a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
-
-name = '20191228-19-59-29-lstmcell_encoder_decoder.txt'
-title = 'LSTMCell'
+plt.plot(a[4], c+train_mark, label=title+' Tr')
+plt.plot(a[8], c+val_mark, label=title+' Va')
+#
+name = '20200107-101912-0sm-zf-pred.txt'
+title = 'M Zf P'
 c = 'g'
 a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
+plt.plot(a[4], c+train_mark, label=title+' Tr')
+plt.plot(a[8], c+val_mark, label=title+' Va')
 
-name = '20200102-01-48-30-copy_de_ori_recon.txt'
-# name = '20191229-03-29-43-cnn_lstmcell_encoder_decoder.txt'
-title = 'CNN seed1'
+name = '20200107-102800-0sm-zf-both.txt'
+title = 'M Zf B'
 c = 'b'
 a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
-
-name = '20191229-08-27-41-cnn_lstmcell_encoder_decoder.txt'
-title = 'CNN seed2'
+plt.plot(a[4], c+train_mark, label=title+' Tr')
+plt.plot(a[8], c+val_mark, label=title+' Va')
+#
+name = '20200107-123705-0sb-zf-pred.txt'
+title = 'B Zf P'
 c = 'y'
 a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
-
-name = '20191231-07-15-21-cnn_lstmcell_v0002_encoder_decoder.txt'
-title = 'CNN v2'
+plt.plot(a[4], c+train_mark, label=title+' Tr')
+plt.plot(a[8], c+val_mark, label=title+' Va')
+#
+name = '20200107-130237-0sb-z-both.txt'
+title = 'B Z B'
 c = 'c'
 a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
-
-name = '20200101-13-20-07-lstmcell_colab_en_de_recon.txt'
-title = 'colab'
+plt.plot(a[4], c+train_mark, label=title+' Tr')
+plt.plot(a[8], c+val_mark, label=title+' Va')
+#
+name = '20200107-144718-0sb-zf-both.txt'
+title = 'B Zf B'
 c = 'm'
 a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
-
-name = '20200101-19-39-19-cnn_v0003_en_de_recon.txt'
-title = 'CNN v3'
+plt.plot(a[4], c+train_mark, label=title+' Tr')
+plt.plot(a[8], c+val_mark, label=title+' Va')
+#
+name = '20200107-193346-0sm-z-pred.txt'
+title = 'M Z P'
 c = 'k'
 a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[2], c+val_mark, label=title+' Va')
+plt.plot(a[4], c+train_mark, label=title+' Tr')
+plt.plot(a[8], c+val_mark, label=title+' Va')
 
+name = '20200107-220737-0sb-z-pred.txt'
+title = 'B Z P'
+c = 'darkred'
+a = xy(name)
+plt.plot(a[4], color=c, linestyle=train_mark, label=title+' Tr')
+plt.plot(a[8], color=c, linestyle=val_mark, label=title+' Va')
+
+# name = '20200109-092304-0sb-zf-recon.txt'
+# title = 'B Zf R'
+# c = '#641E16'
+# a = xy(name)
+# plt.plot(a[1], color=c, linestyle=train_mark, label=title+' Tr')
+# plt.plot(a[5], color=c, linestyle=val_mark, label=title+' Va')
 ''' legend location
 center left
 center right

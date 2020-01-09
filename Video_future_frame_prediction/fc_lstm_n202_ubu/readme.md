@@ -127,39 +127,106 @@ schedulers.
 - and also add both losses tracking, and use one of them to train
 - make a all working EDP network and runner
 - experiments schedule
-    - [colab] on lstm copy model, recon, loss combo
+    - [x] [colab Geem] on lstm copy model, recon, loss combo
         - (-1,1), tanh, mse
         - (-1,1), non, mse
         - (0,1), sigmoid, bce
         - (0,1), sigmoid, mse
         - (0,1), non, mse
     - [colab apollo] on lstm copy model, both, loss combo
+        - [x] (-1,1), tanh, mse
+        - [x] (-1,1), non, mse
+        - [x] (0,1), sigmoid, bce
+        - [ ] (0,1), sigmoid, mse
+        - [x] [colab Geem] (0,1), non, mse
+    - [x] [pnumy] on lstm copy model, pred, loss combo
         - (-1,1), tanh, mse
         - (-1,1), non, mse
         - (0,1), sigmoid, bce
         - (0,1), sigmoid, mse
         - (0,1), non, mse
-    - [pnumy] on lstm copy model, pred, loss combo
+    - [x] [pnu2] on lstm copy model, recon, loss combo, zero_input false
         - (-1,1), tanh, mse
         - (-1,1), non, mse
         - (0,1), sigmoid, bce
         - (0,1), sigmoid, mse
         - (0,1), non, mse
-    - [pnu2] on lstm copy model, recon, loss combo, zero_input false
-        - (-1,1), tanh, mse
-        - (-1,1), non, mse
-        - (0,1), sigmoid, bce
-        - (0,1), sigmoid, mse
-        - (0,1), non, mse
-    - [colab humor] on lstm copy model, pred, loss combo, zero_input false
-        - (-1,1), tanh, mse
-        - (-1,1), non, mse
-        - (0,1), sigmoid, bce
-        - (0,1), sigmoid, mse
-        - (0,1), non, mse
+    - [x] [colab humor] on lstm copy model, pred, loss combo, zero_input false
+        - [x] (-1,1), tanh, mse
+        - [x] (-1,1), non, mse
+        - [x] (0,1), sigmoid, bce
+        - [x] (0,1), sigmoid, mse
+        - [x] (0,1), non, mse
     - [colab ray] on lstm copy model, both, loss combo, zero_input false
-        - (-1,1), tanh, mse
-        - (-1,1), non, mse
-        - (0,1), sigmoid, bce
-        - (0,1), sigmoid, mse
-        - (0,1), non, mse
+        - [x] (-1,1), tanh, mse
+        - [x] (-1,1), non, mse
+        - [x] (0,1), sigmoid, bce
+        - [ ] (0,1), sigmoid, mse
+        - [x] [colab humor] (0,1), non, mse
+
+
+### CNN with flatten, without flatten
+
+### mixed precision training
+- use api
+- use torch.float16
+    - problems: in float16, you can perform certain math operations
+        - so, you can't just set default tensor type or dtype to float16
+    and everything runs in float16
+    - there is GPU support angle, looks like some gpu can't run in float16
+    - this way need more experiment
+        - like float16 + float16, to what extend
+    - go back to API, looks like Nvidia has one
+
+
+### logging system need better naming
+- [x] naming is too similar, or exactly same.
+    - I can only differentiate by the SN.
+
+### plots
+- [x] 5losses in 6 ways
+    - recon, with zero input
+    - recon, with new output as input
+    - pred, with zero input
+    - pred, with new output as input
+    - both, with zero input
+    - both, with new output as input
+- [x] all recons and all pred
+    - which metric? hmm, 0 n m
+        - recon, with zero input
+        - recon, with new output as input
+        - recon from both, with zero input
+        - recon from both, with new output as input
+    - preds
+        - pred, with zero input
+        - pred, with new output as input
+        - pred from both, with zero input
+        - pred from both, with new output as input
+
+- [x] sigmoid mse train vs bce train
+    - mse metric
+        - all recons
+        - all preds
+    - bce metric
+        - all recons
+        - all preds
+
+### copy paper setups
+- Try to train model with sigmoid and bce loss.
+    - pre setups: 
+        - no standardization
+        - no mse loss, only bce
+        - optimizer: rmsprop is trigger
+        - what model?: pred
+        - zero_input: false
+        - change naming
+- implement
+    - [x] optimizer: rmsprop
+    - [x] learning rate:
+    - [x] regu L2 and decay
+    - [x] learning rate decay
+    - [x] gradient clip
+    - [x] init
+- experiment
+    - 1000 epoch rmsprop
+    - 1000 epoch adam
