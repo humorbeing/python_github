@@ -60,6 +60,10 @@ class Log():
 
     def naming(self, args):
         name = ''
+        if args.optimizer == 'rmsprop':
+            name += 'O_RMS-'
+        else:
+            name += 'O_Adm-'
         # if args.model == 'model_name':
         #     name += 'M1_'
         name += 'M1-'
