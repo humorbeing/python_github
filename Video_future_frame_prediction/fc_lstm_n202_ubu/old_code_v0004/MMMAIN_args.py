@@ -14,11 +14,11 @@ def get_args():
     args.is_save = True
     args.is_quickrun = False
     # default combos
-    # args.is_standardization = False
-    # args.last_activation = 'sigmoid'  # 'tanh' / 'sigmoid' / 'non'
-    # args.loss_function = 'bce'  # 'mse' / 'bce'
+    args.is_standardization = False
+    args.last_activation = 'sigmoid'  # 'tanh' / 'sigmoid' / 'non'
+    args.loss_function = 'bce'  # 'mse' / 'bce'
     # NOTE: 'bce' must coupled with sigmoid and is_standardization=False
-    args.hidden = 512
+    args.hidden = 2048
     args.mode = 'pred'  # 'recon' / 'pred' / 'both'
     args.zero_input = False
     args.seed = 6

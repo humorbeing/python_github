@@ -66,8 +66,23 @@ class Log():
             name += 'O_Adm-'
         # if args.model == 'model_name':
         #     name += 'M1_'
-        name += 'M2-'
-
+        name += 'M1-'
+        #
+        if args.is_standardization:
+            name += '1'
+        else:
+            name += '0'
+        if args.last_activation == 'sigmoid':
+            name += 'S'
+        elif args.last_activation == 'tanh':
+            name += 'T'
+        else:
+            name += 'N'
+        if args.loss_function == 'mse':
+            name += 'M'
+        else:
+            name += 'B'
+        name += '-'
         if args.zero_input:
             name += 'Zt'
         else:

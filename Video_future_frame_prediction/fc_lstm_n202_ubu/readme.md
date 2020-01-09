@@ -229,4 +229,12 @@ schedulers.
     - [x] init
 - experiment
     - [ ] [pnumy] 1000 epoch rmsprop
-    - [ ] []1000 epoch adam
+
+### Why won't train? IDEA: tanh sigmoid is bad idea
+- tanh output is (-1,1), then sigmoid. it will constraint sigmoid
+output to (0.269,0.731)
+- to implement
+    - model with 2 linear layers each side
+    - adam with rl
+    - all fancy stuff
+    - fix sigmoid bce

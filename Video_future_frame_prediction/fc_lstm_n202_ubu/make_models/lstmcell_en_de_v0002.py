@@ -7,16 +7,15 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-class fc_lstm_v0001(nn.Module):
+class FC_LSTM(nn.Module):
     def __init__(self, args):
-        super(fc_lstm_v0001, self).__init__()
+        super(FC_LSTM, self).__init__()
         self.args = args
         self.fc_en1 = nn.Linear(4096, 1024)
         self.fc_en2 = nn.Linear(1024, self.args.hidden)
         self.en1 = nn.LSTMCell(self.args.hidden, self.args.hidden)
         self.en2 = nn.LSTMCell(self.args.hidden, self.args.hidden)
         self.en3 = nn.LSTMCell(self.args.hidden, self.args.hidden)
-
         self.de1 = nn.LSTMCell(self.args.hidden, self.args.hidden)
         self.de2 = nn.LSTMCell(self.args.hidden, self.args.hidden)
         self.de3 = nn.LSTMCell(self.args.hidden, self.args.hidden)
@@ -66,7 +65,7 @@ class fc_lstm_v0001(nn.Module):
             h_d1, c_d1 = self.de1(zero_input, (h_d1, c_d1))
             h_d2, c_d2 = self.de2(h_d1, (h_d2, c_d2))
             h_d3, c_d3 = self.de3(h_d2, (h_d3, c_d3))
-            if not self.args.zero_input:
+            if not args.zero_input:
                 zero_input = h_d3
 
             z = self.fc_de1(h_d3)
@@ -94,7 +93,7 @@ class fc_lstm_v0001(nn.Module):
                 h_p1, c_p1 = self.pre1(zero_input, (h_p1, c_p1))
                 h_p2, c_p2 = self.pre2(h_p1, (h_p2, c_p2))
                 h_p3, c_p3 = self.pre3(h_p2, (h_p3, c_p3))
-                if not self.args.zero_input:
+                if not args.zero_input:
                     zero_input = h_p3
                 z = self.fc_pre1(h_p3)
                 z = F.relu(z)
@@ -118,7 +117,7 @@ if __name__ == "__main__":
     # args.last_activation = 'non'  # tanh / sigmoid / 'non'
     args.hidden = 256
     # model = lstm_v0001(args)
-    model = fc_lstm_v0001(args)
+    model = FC_LSTM(args)
     x = torch.randn((10, 100, 64, 64))
     x1, x2 = model(x)
     print(x1.shape)
