@@ -1,51 +1,11 @@
+
 # encoder decoder, only 1 layer, flatten style
 # lstmcell
 # v0004
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import numpy as np
-
-class lstm_v0001(nn.Module):
-    def __init__(self, args):
-        super(lstm_v0001, self).__init__()
-        self.args = args
-        self.encoder_lstmcell = nn.LSTMCell(4096, 4096)
-        self.decoder_lstmcell = nn.LSTMCell(4096, 4096)
-
-
-    def forward(self, x, future_step=10):
-        # x in is [seq=10, batch, 64, 64]
-        device = next(self.parameters()).device
-        seq_size = x.shape[0]
-        batch_size = x.shape[1]
-        h_e = torch.zeros((batch_size, 4096)).to(device)
-        c_e = torch.zeros((batch_size, 4096)).to(device)
-        x = x.reshape((seq_size, batch_size, -1))
-        # print(x.shape)
-        for seq in range(seq_size):
-            h_e, c_e = self.encoder_lstmcell(x[seq], (h_e, c_e))
-        # print(h_e.shape)
-        h_d = h_e
-        c_d = torch.zeros((batch_size, 4096)).to(device)
-
-        zero_input = torch.zeros((batch_size, 4096)).to(device)
-        outputs = []
-        for seq in range(future_step):
-            h_d, c_d = self.decoder_lstmcell(zero_input, (h_d, c_d))
-            # if self.args.last_activation == 'tanh':
-            #     h_d = torch.tanh(h_d)
-            # elif self.args.last_activation == 'sigmoid':  # Wrong implementation
-            #     h_d = torch.sigmoid(h_d)                  # this will change h_d as input
-            # else:                                         # maybe that is bad
-            #     pass
-            # if not self.args.zero_input:
-            #     zero_input = h_d
-            outputs.append(h_d)
-        outputs = torch.stack(outputs)
-        outputs = torch.reshape(outputs, (seq_size, batch_size, 64, 64))
-
-        return outputs
-
 
 class lstm_copy(nn.Module):
     def __init__(self, args):
@@ -101,11 +61,13 @@ class lstm_copy(nn.Module):
             h_d2, c_d2 = self.de2(h_d1, (h_d2, c_d2))
             h_d3, c_d3 = self.de3(h_d2, (h_d3, c_d3))
             z = h_d3
-            if self.args.last_activation == 'tanh':
-                z = torch.tanh(z)
-            elif self.args.last_activation == 'sigmoid':
+            if self.args.last_activation == 'sigmoid':
+                z = torch.sigmoid(z)
+            elif self.args.last_activation == '100s':
+                z = z * 100
                 z = torch.sigmoid(z)
             else:
+                # print('non1')
                 pass
             if not self.args.zero_input:
                 zero_input = z
@@ -129,11 +91,13 @@ class lstm_copy(nn.Module):
                 h_p2, c_p2 = self.pre2(h_p1, (h_p2, c_p2))
                 h_p3, c_p3 = self.pre3(h_p2, (h_p3, c_p3))
                 z = h_p3
-                if self.args.last_activation == 'tanh':
-                    z = torch.tanh(z)
-                elif self.args.last_activation == 'sigmoid':
+                if self.args.last_activation == 'sigmoid':
+                    z = torch.sigmoid(z)
+                elif self.args.last_activation == '100s':
+                    z = z * 100
                     z = torch.sigmoid(z)
                 else:
+                    # print('non2')
                     pass
                 if not self.args.zero_input:
                     zero_input = z
@@ -146,20 +110,26 @@ class lstm_copy(nn.Module):
         else:
             return recon_outputs, 0
 
-
 if __name__ == "__main__":
     from argparse import Namespace
+
     args = Namespace()
     args.mode = 'both'  # 'recon' / 'pred' / 'both'
-    args.zero_input = True
-    args.last_activation = 'non'  # tanh / sigmoid / 'non'
+    args.zero_input = False
+    args.last_activation = 'non'  # 100s / sigmoid / 'non'
     args.hidden = 2048
     # model = lstm_v0001(args)
     model = lstm_copy(args)
     x = torch.randn((10, 100, 64, 64))
     x1, x2 = model(x)
     print(x1.shape)
-    if type(x2)==int:
+    if type(x2) == int:
         print(x2)
     else:
         print(x2.shape)
+    # model = FC_LSTM(256)
+    # x = torch.randn((10, 100, 64, 64))
+    # x1, x2 = model(x)
+    #
+    # print(x1.shape)
+    # print(x2.shape)
