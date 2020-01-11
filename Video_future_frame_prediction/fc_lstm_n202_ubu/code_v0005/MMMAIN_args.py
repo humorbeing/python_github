@@ -1,7 +1,7 @@
 from argparse import Namespace
 from runner import runner
 
-path = '../../__SSSSTTTTOOOORRRREEEE/Data_save_here/'
+path = '../../../__SSSSTTTTOOOORRRREEEE/Data_save_here/'
 
 def get_args():
     args = Namespace()
@@ -9,6 +9,7 @@ def get_args():
     args.epoch = 200
     args.model = 'ED_R_01'  # 'ED_R_01' /
     args.is_cuda = True
+    args.data_path = path
     args.work_path = './'
     args.save_path = path+'fc_lstm_model_save/model_save/'
     args.is_save = True
@@ -36,8 +37,9 @@ args.is_quickrun = True
 args.is_save = False
 args.mode = 'recon'
 args.optimizer = 'adam'
-runner(args, path)
-
+runner(args)
+# for i in vars(args):
+#     print('ARGS >>> ' + i + ' :{}'.format(vars(args)[i]))
 
 
 

@@ -28,6 +28,8 @@ def appendDFToCSV_void(df, csvFilePath, sep=","):
 
 
 def save_args(args, f_name):
+    for i in vars(args):
+        print('ARGS >>> ' + i + ' :{}'.format(vars(args)[i]))
     df = pd.DataFrame([vars(args)])
     appendDFToCSV_void(df, f_name)
 
@@ -37,16 +39,16 @@ def save_args(args, f_name):
 
 class Log():
     def __init__(self, args, csv_name='log.csv'):
-        if not os.path.exists(args.work_path + 'logs'):
-            os.makedirs(args.work_path + 'logs')
+        if not os.path.exists(args.log_path + 'logs'):
+            os.makedirs(args.log_path + 'logs')
         t = datetime.now()
         surfix = t.strftime('%Y%m%d-%H%M%S')
         args.log_time = surfix
         args.this_name = self.naming(args)
         args.model_save_file = args.save_path + args.this_name + '.save'
-        args.log_path = args.work_path + 'logs/' + surfix + '-' + args.this_name + '.txt'
-        save_args(args, args.work_path + 'logs/' + csv_name)
-        self.log_file = args.log_path
+        args.log_file = args.log_path + 'logs/' + surfix + '-' + args.this_name + '.txt'
+        save_args(args, args.log_path + 'logs/' + csv_name)
+        self.log_file = args.log_file
         with open(self.log_file, 'w'):
             print('opening log file:', self.log_file)
 
@@ -60,10 +62,10 @@ class Log():
 
     def naming(self, args):
         name = ''
-        if args.optimizer == 'rmsprop':
-            name += 'O_RMS-'
-        else:
-            name += 'O_Adm-'
+        # if args.optimizer == 'rmsprop':
+        #     name += 'O_RMS-'
+        # else:
+        #     name += 'O_Adm-'
         # if args.model == 'model_name':
         #     name += 'M1_'
         name += 'M2-'
@@ -83,48 +85,51 @@ class Log():
 
 
 if __name__ == '__main__':
-    # from argparse import Namespace
-    # def get_args():
-    #     args = Namespace()
-    #     args.batch_size = 100
-    #     args.epoch = 200
-    #     args.model = 'ED_R_01'  # 'ED_R_01' /
-    #     args.is_cuda = True
-    #     args.work_path = './testing_log/'
-    #     args.save_path = './' + 'fc_lstm_model_save/model_save/'
-    #     args.is_save = True
-    #     args.is_quickrun = False
-    #     # default combos
-    #     args.is_standardization = False
-    #     args.last_activation = 'sigmoid'  # 'tanh' / 'sigmoid' / 'non'
-    #     args.loss_function = 'mse'  # 'mse' / 'bce'
-    #     # NOTE: 'bce' must coupled with sigmoid and is_standardization=False
-    #     args.hidden = 2048
-    #     args.mode = 'recon'  # 'recon' / 'pred' / 'both'
-    #     args.zero_input = True
-    #     args.seed = 6
-    #     args.recon_loss_lambda = 0.8
-    #     return args
+    from argparse import Namespace
+    def get_args():
+        args = Namespace()
+        args.batch_size = 100
+        args.epoch = 200
+        args.model = 'ED_R_01'  # 'ED_R_01' /
+        args.is_cuda = True
+        args.log_path = './testing_log/'
+        args.save_path = './' + 'fc_lstm_model_save/model_save/'
+        args.is_save = True
+        args.is_quickrun = False
+        # default combos
+        args.is_standardization = False
+        args.last_activation = 'sigmoid'  # 'tanh' / 'sigmoid' / 'non'
+        args.loss_function = 'mse'  # 'mse' / 'bce'
+        # NOTE: 'bce' must coupled with sigmoid and is_standardization=False
+        args.hidden = 2048
+        args.mode = 'recon'  # 'recon' / 'pred' / 'both'
+        args.zero_input = True
+        args.seed = 6
+        args.recon_loss_lambda = 0.8
+        return args
+
+
+    # ///////////////////////////////////////////////////////
+
+    args = get_args()
+
+    log = Log(args, 'test.csv')
+
+    s1 = 'Epoch: 0, train loss: 0.038667300964395204, eval loss: 0.037765941893061004'
+    s2 = 'Epoch: 1, train loss: 0.03659273808201154, eval loss: 0.035389104237159096'
+    s3 = 'Epoch: 2, train loss: 0.034583510582645735, eval loss: 0.03329953116675218'
+
+    log.log(s1)
+    log.log(s2)
+    log.log(s3)
     #
-    #
-    # # ///////////////////////////////////////////////////////
-    #
-    # args = get_args()
-    #
-    # log = Log(args, 'test.csv')
-    #
-    # s1 = 'Epoch: 0, train loss: 0.038667300964395204, eval loss: 0.037765941893061004'
-    # s2 = 'Epoch: 1, train loss: 0.03659273808201154, eval loss: 0.035389104237159096'
-    # s3 = 'Epoch: 2, train loss: 0.034583510582645735, eval loss: 0.03329953116675218'
-    #
-    # log.log(s1)
-    # log.log(s2)
-    # log.log(s3)
-    # #
-    # log.end()
+    log.end()
     # p3 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/Video_future_frame_prediction/fc_lstm_n202_ubu/gather_logs_here/all_logs/fc_lstm_logs.csv'
     # p1 = p3
     # p2 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/Video_future_frame_prediction/fc_lstm_n202_ubu/gather_logs_here/recieved_logs/logs_colab_r/log.csv'
     # combine_two(p1,p2,p3)
-
+    # from datetime import datetime
+    #
+    # print(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3])
+    # print(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S-%f'))
     pass

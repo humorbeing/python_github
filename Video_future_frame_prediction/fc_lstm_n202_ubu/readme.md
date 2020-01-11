@@ -228,7 +228,7 @@ schedulers.
     - [x] gradient clip
     - [x] init
 - experiment
-    - [ ] [pnumy] 1000 epoch rmsprop
+    - [x] [pnumy] 1000 epoch rmsprop
 
 ### Why won't train? IDEA: tanh sigmoid is bad idea
 - tanh output is (-1,1), then sigmoid. it will constraint sigmoid
@@ -238,3 +238,25 @@ output to (0.269,0.731)
     - [x] adam with rl
     - [x] all fancy stuff
     - [x] fix sigmoid bce
+- experiment
+    - [x] [pnu2] rmsprop, both, zf
+    - [x] [pnu2] adam, both, zf
+    
+### investigate output of last layer of LSTM
+- is it only between -1, 1.
+- to fix it, how about multiply with 10?
+- alright, as it turns out, max of and min of lstm is (-0.1, 0.1)
+- bright out old guns, lets give a 100x of last layer, then sigmoid
+
+### to be able to run old code
+- program with code version.
+- code_v0001 folder, so that i can visit anytime.
+- make a check list for next project.
+
+### demo maker
+- clear all models so far
+- use dict to save
+- use check point style
+- make cross device code
+- save as torch.save(model, path) is practice
+    - loading part is too tricky

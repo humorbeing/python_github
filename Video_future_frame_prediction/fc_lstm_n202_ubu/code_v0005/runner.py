@@ -7,7 +7,7 @@ from util_args_log import Log
 from utility import weight_init
 
 
-def runner(args, path):
+def runner(args):
     if args.seed is not None:
         np.random.seed(args.seed)
         torch.manual_seed(args.seed)
@@ -17,7 +17,7 @@ def runner(args, path):
         print('CUDA is set to DO NOT USE')
         device = torch.device("cpu")
 
-    data_set = np.load(path + 'mnist_test_seq.npy')
+    data_set = np.load(args.data_path + 'mnist_test_seq.npy')
     # test_set = data_set[:, :1000]
     # train_set = data_set[:, 1000:7000]
     # valid_set = data_set[:, 7000:]
@@ -184,7 +184,8 @@ if __name__ == '__main__':
     #     args.epoch = 200
     #     args.model = 'ED_R_01'  # 'ED_R_01' /
     #     args.is_cuda = True
-    #     args.work_path = './'
+    #     args.data_path = path
+    #     args.log_path = './'
     #     args.save_path = path + 'fc_lstm_model_save/model_save/'
     #     args.is_save = True
     #     args.is_quickrun = False
