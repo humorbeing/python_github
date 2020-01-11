@@ -28,22 +28,27 @@ def appendDFToCSV_void(df, csvFilePath, sep=","):
 
 
 def save_args(args, f_name):
+    for i in vars(args):
+        print('ARGS >>> ' + i + ' :{}'.format(vars(args)[i]))
     df = pd.DataFrame([vars(args)])
     appendDFToCSV_void(df, f_name)
 
+# need a better naming policy
+# def naming(args):
+#     return 'name'
 
 class Log():
     def __init__(self, args, csv_name='log.csv'):
-        if not os.path.exists(args.work_path + 'logs'):
-            os.makedirs(args.work_path + 'logs')
+        if not os.path.exists(args.log_path + 'logs'):
+            os.makedirs(args.log_path + 'logs')
         t = datetime.now()
         surfix = t.strftime('%Y%m%d-%H%M%S')
         args.log_time = surfix
-        args.this_name = args.model + '-' + args.mode
+        args.this_name = surfix + '-' + naming(args)
         args.model_save_file = args.save_path + args.this_name + '.save'
-        args.log_path = args.work_path + 'logs/' + surfix + '-' + args.this_name + '.txt'
-        save_args(args, args.work_path + 'logs/' + csv_name)
-        self.log_file = args.log_path
+        args.log_file = args.log_path + 'logs/' + args.this_name + '.txt'
+        save_args(args, args.log_path + 'logs/' + csv_name)
+        self.log_file = args.log_file
         with open(self.log_file, 'w'):
             print('opening log file:', self.log_file)
 
@@ -56,22 +61,51 @@ class Log():
         print('log is saved in: {}'.format(self.log_file))
 
 
+def naming(args):
+    name = ''
+    if args.optimizer == 'rmsprop':
+        name += 'O_RMS-'
+    else:
+        name += 'O_Adm-'
+    # if args.model == 'model_name':
+    #     name += 'M1_'
+    name += 'M1.1-'
+
+    # args.last_activation = 'non'  # '100s' / 'sigmoid' / 'non'
+    # args.loss_function = 'mse'  # 'mse' / 'bce'
+    if args.last_activation == 'non':
+        name += 'N'
+    elif args.last_activation == 'sigmoid':
+        name += 'S'
+    else:
+        name += '100'
+    if (not (args.last_activation != 'non')) and (args.loss_function == 'bce'):
+        name += 'B'
+    else:
+        name += 'M'
+    name += '-'
+    if args.zero_input:
+        name += 'Zt'
+    else:
+        name += 'Zf'
+    name += '-'
+    if args.mode == 'recon':
+        name += 'R'
+    elif args.mode == 'pred':
+        name += 'P'
+    else:
+        name += 'B'
+    return name
+
 if __name__ == '__main__':
     # from argparse import Namespace
     #
-    # args = Namespace()
-    # args.model = 'a'
-    # args.batch_size = 200
-    # args.epoch = 200
-    # args.model = 'model_name'
-    # args.mode = 'recon'
-    # args.seed = 6
-    # args.input_zero = False
-    # args.loss_function = 'mse'
-    # args.is_cuda = True
-    # args.work_path = './'
     #
-    # log = Log(args)
+    # # ///////////////////////////////////////////////////////
+    #
+    # args = get_args()
+    #
+    # log = Log(args, 'test.csv')
     #
     # s1 = 'Epoch: 0, train loss: 0.038667300964395204, eval loss: 0.037765941893061004'
     # s2 = 'Epoch: 1, train loss: 0.03659273808201154, eval loss: 0.035389104237159096'
@@ -80,11 +114,10 @@ if __name__ == '__main__':
     # log.log(s1)
     # log.log(s2)
     # log.log(s3)
-    #
+    # #
     # log.end()
-    p1 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSSSandbox/playground_something/a.csv'
-    p2 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSSSandbox/playground_something/logs/log.csv'
-    p3 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSSSandbox/playground_something/logs/log1.csv'
-    combine_two(p1,p2,p3)
-
+    # p3 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/Video_future_frame_prediction/fc_lstm_n202_ubu/gather_logs_here/all_logs/fc_lstm_logs.csv'
+    # p1 = p3
+    # p2 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/Video_future_frame_prediction/fc_lstm_n202_ubu/gather_logs_here/recieved_logs/logs_colab_r/log.csv'
+    # combine_two(p1,p2,p3)
     pass
