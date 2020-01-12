@@ -67,34 +67,39 @@ def naming(args):
         name += 'O_RMS-'
     else:
         name += 'O_Adm-'
-    # if args.model == 'model_name':
-    #     name += 'M1_'
-    name += 'M1.1-'
+    if args.model == 'lstm_copy':
+        name += 'M_lstmC'
+    elif args.model == 'lstm_v0001':
+        name += 'M_lstm1'
+    elif args.model == 'cnn':
+        name += 'M_CNN'
+    else:
+        raise Exception('Update Naming Policy')
 
     # args.last_activation = 'non'  # '100s' / 'sigmoid' / 'non'
     # args.loss_function = 'mse'  # 'mse' / 'bce'
-    if args.last_activation == 'non':
-        name += 'N'
-    elif args.last_activation == 'sigmoid':
-        name += 'S'
-    else:
-        name += '100'
-    if (args.last_activation != 'non') and (args.loss_function == 'bce'):
-        name += 'B'
-    else:
-        name += 'M'
+    # if args.last_activation == 'non':
+    #     name += 'N'
+    # elif args.last_activation == 'sigmoid':
+    #     name += 'S'
+    # else:
+    #     name += '100'
+    # if (args.last_activation != 'non') and (args.loss_function == 'bce'):
+    #     name += 'B'
+    # else:
+    #     name += 'M'
     name += '-'
-    if args.zero_input:
-        name += 'Zt'
-    else:
-        name += 'Zf'
-    name += '-'
-    if args.mode == 'recon':
-        name += 'R'
-    elif args.mode == 'pred':
-        name += 'P'
-    else:
-        name += 'B'
+    # if args.zero_input:
+    #     name += 'Zt'
+    # else:
+    #     name += 'Zf'
+    # name += '-'
+    # if args.mode == 'recon':
+    #     name += 'R'
+    # elif args.mode == 'pred':
+    #     name += 'P'
+    # else:
+    #     name += 'B'
     return name
 
 if __name__ == '__main__':

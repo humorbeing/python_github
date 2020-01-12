@@ -35,7 +35,12 @@
     - one args at a time and test it
         - test it separately if local
         - test it fully if global
-
+- [ ] experiment record
+    - [x] [collected] [running PC] experiment info
+    - idea: `experiment info`
+    - deployed: `[running PC] experiment info`
+    - log collected: `[collected] [running PC] experiment info`
+    - end: `[x] [collected] [running PC] experiment info`
 - Example of folders
     - Main PC:
         - `/project`
@@ -62,3 +67,11 @@
                 - `/logs`
                 - `/sent_logs`
 
+### version
+- version is upgrade of running structure.
+adding more args, fixing bugs.
+- adding more models is not one of them.
+as long as I can control with existing args,
+that is not a change of versions.
+- once the version is saturated to certain
+stable program, burst out experiments.

@@ -300,7 +300,11 @@ output to (0.269,0.731)
 - all model is `Non MSE`
 - all model is `both`
 - all model is `zero input = False`
-- lstm models
-    - lstm_v0001
+- new models
+    - [x] lstm_v0001
+    - cnn
+    - cnn flatten
 - experiment
-    - lstm_v0001
+    - [x] [colab R] lstm_v0001 hidden 256
+    - [x] [colab R] lstm_v0001 hidden 512
+- is epoch too many? this model is almost saturated at epoch 50.

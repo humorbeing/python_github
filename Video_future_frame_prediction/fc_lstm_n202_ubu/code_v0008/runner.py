@@ -54,8 +54,8 @@ def runner(args):
         from models import lstm_copy as m
     elif args.model == 'lstm_v0001':
         from models import lstm_v0001 as m
-    elif args.model == 'c':
-        from models.ED_lstmcell_v0001 import FC_LSTM as m
+    elif args.model == 'cnn':
+        from models import cnn as m
     elif args.model == 'd':
         from models.ED_lstmcell_v0001 import FC_LSTM as m
     else:

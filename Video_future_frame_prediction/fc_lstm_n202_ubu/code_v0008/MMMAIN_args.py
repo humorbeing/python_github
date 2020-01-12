@@ -7,7 +7,7 @@ def get_args():
     args = Namespace()
     args.batch_size = 100
     args.epoch = 200
-    args.model = 'lstm_v0001'  # 'lstm_copy' / 'lstm_v0001'
+    args.model = 'cnn'  # 'lstm_copy' / 'lstm_v0001' / 'cnn'
     args.is_cuda = True
     args.data_path = path
     args.log_path = './'
