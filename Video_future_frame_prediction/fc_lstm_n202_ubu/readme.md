@@ -282,8 +282,25 @@ output to (0.269,0.731)
 - [ ] fix ax[0].axis('off')
 - experiment
     - default settings
-        - [colab A] 100s m
-        - [pnu2] 100s b
-        - s m
-        - s b
-        - [pnumy] n m
+        - [x] [colab A] 100s m
+        - [x] ~~[pnu2] 100s b~~
+            - bugged to 100 M
+        - [ ] [pnu2] 100s b
+        - ~~s m~~
+        - ~~s b~~
+        - [x] [pnumy] n m
+    - 0 N M looks good
+        - [colab H]no clip
+        - [colab A] rmsprop
+        - [pnumy] no init
+### v0008
+- bug
+    - [x] nameing: bce loss -> B
+    - [x] fix train with bce loss
+- all model is `Non MSE`
+- all model is `both`
+- all model is `zero input = False`
+- lstm models
+    - lstm_v0001
+- experiment
+    - lstm_v0001

@@ -35,14 +35,15 @@ def get_args():
 #///////////////////////////////////////////////////////
 
 args = get_args()
-# args.is_cuda = False
+args.is_cuda = False
 args.is_quickrun = True
-args.is_save = True
+args.is_save = False
 
 
-# args.last_activation = 'non'  # '100s' / 'sigmoid' / 'non'
-# args.loss_function = 'mse'  # 'mse' / 'bce'
-# runner(args)
+
+args.last_activation = '100s'  # '100s' / 'sigmoid' / 'non'
+args.loss_function = 'bce'  # 'mse' / 'bce'
+runner(args)
 #
 # args.last_activation = 'sigmoid'  # '100s' / 'sigmoid' / 'non'
 # # args.loss_function = 'mse'  # 'mse' / 'bce'

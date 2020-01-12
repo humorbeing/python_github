@@ -71,7 +71,6 @@ class FC_LSTM(nn.Module):
             z = self.fc_de1(h_d3)
             z = F.relu(z)
             z = self.fc_de2(z)
-            z = torch.sigmoid(z)
 
             z = torch.reshape(z, (batch_size, 64, 64))
 
@@ -98,7 +97,6 @@ class FC_LSTM(nn.Module):
                 z = self.fc_pre1(h_p3)
                 z = F.relu(z)
                 z = self.fc_pre2(z)
-                z = torch.sigmoid(z)
 
                 z = torch.reshape(z, (batch_size, 64, 64))
                 pre_outputs.append(z)
@@ -112,8 +110,8 @@ if __name__ == "__main__":
     from argparse import Namespace
 
     args = Namespace()
-    args.mode = 'pred'  # 'recon' / 'pred' / 'both'
-    args.zero_input = True
+    args.mode = 'both'  # 'recon' / 'pred' / 'both'
+    args.zero_input = False
     # args.last_activation = 'non'  # tanh / sigmoid / 'non'
     args.hidden = 256
     # model = lstm_v0001(args)

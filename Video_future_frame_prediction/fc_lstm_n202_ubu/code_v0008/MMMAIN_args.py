@@ -7,7 +7,7 @@ def get_args():
     args = Namespace()
     args.batch_size = 100
     args.epoch = 200
-    args.model = 'lstm_copy'  # 'lstm_copy' /
+    args.model = 'lstm_v0001'  # 'lstm_copy' / 'lstm_v0001'
     args.is_cuda = True
     args.data_path = path
     args.log_path = './'
@@ -17,7 +17,7 @@ def get_args():
     # default combos
     args.last_activation = 'non'  # '100s' / 'sigmoid' / 'non'
     args.loss_function = 'mse'  # 'mse' / 'bce'
-    args.hidden = 2048
+    args.hidden = 256
     args.mode = 'both'  # 'recon' / 'pred' / 'both'
     args.zero_input = False
     args.seed = 6

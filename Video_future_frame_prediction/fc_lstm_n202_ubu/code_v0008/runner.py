@@ -52,8 +52,8 @@ def runner(args):
 
     if args.model == 'lstm_copy':
         from models import lstm_copy as m
-    elif args.model == 'b':
-        from models.ED_lstmcell_v0001 import FC_LSTM as m
+    elif args.model == 'lstm_v0001':
+        from models import lstm_v0001 as m
     elif args.model == 'c':
         from models.ED_lstmcell_v0001 import FC_LSTM as m
     elif args.model == 'd':
@@ -118,9 +118,11 @@ def runner(args):
                 bce_train_loss = args.recon_loss_lambda * bce_train_recon_loss + bce_train_pred_loss
                 mse_train_loss = args.recon_loss_lambda * mse_train_recon_loss + mse_train_pred_loss
 
-            if (not (args.last_activation != 'non')) and (args.loss_function == 'bce'):
+            if (args.last_activation != 'non') and (args.loss_function == 'bce'):
+                # print('should be here')
                 loss = bce_train_loss
             else:
+                # print('not here')
                 loss = mse_train_loss
             loss.backward()
             if args.gradiant_clip is not None:
