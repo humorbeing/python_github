@@ -30,6 +30,12 @@
         1. logA is in `received_logs`
         1. logA is merged into `all_logs`
         1. logA is moved into `saved_logs`
+- [ ] program one args at a time
+    - full project structure, have quickrun
+    - one args at a time and test it
+        - test it separately if local
+        - test it fully if global
+
 - Example of folders
     - Main PC:
         - `/project`
@@ -55,3 +61,4 @@
             - `/code_v0002`
                 - `/logs`
                 - `/sent_logs`
+

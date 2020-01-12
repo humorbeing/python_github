@@ -260,3 +260,28 @@ output to (0.269,0.731)
 - make cross device code
 - save as torch.save(model, path) is practice
     - loading part is too tricky
+
+
+### v0007
+- [x] model with multiply args
+- [x] args with top 3 losses
+    - 0 s m
+    - 0 s b
+    - 0 n m
+- all fancy optimization into args
+    - [x] optimizer
+    - [x] learning rate:
+    - [x] regu L2 and decay
+    - [x] learning rate decay
+    - [x] gradient clip
+    - [x] init
+- [x] model save protocol
+- [x] trained model demo and save
+- [x] naming
+- experiment
+    - default settings
+        - 100s m
+        - 100s b
+        - s m
+        - s b
+        - n m

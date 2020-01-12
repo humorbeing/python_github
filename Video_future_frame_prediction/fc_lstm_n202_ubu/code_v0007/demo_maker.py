@@ -6,28 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import numpy as np
 import os
-device = torch.device("cpu")
-model_path = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/Data_save_here/fc_lstm_model_save/model_save/ED_R_01-both.save'
 
-model = torch.load(model_path)
-model.cpu()
-# x = torch.randn((10, 100, 64, 64))
-# x1, x2 = model(x)
-# print(x1.shape)
-# if type(x2) == int:
-#     print(x2)
-# else:
-#     print(x2.shape)
-
-data_path = '../../../__SSSSTTTTOOOORRRREEEE/Data_save_here/'
-data_set = np.load(data_path + 'mnist_test_seq.npy')
-# test_set = data_set[:, :1000]
-# train_set = data_set[:, 1000:7000]
-# valid_set = data_set[:, 7000:]
-# test_set = data_set[:, :1000]
-train_set = data_set[:, :9000]
-valid_set = data_set[:, 9000:]
-del data_set
 
 def make_gif(imgs, save_name='make',path='./imgs/'):
     plt.gray()
@@ -45,6 +24,24 @@ def make_gif(imgs, save_name='make',path='./imgs/'):
         os.makedirs(path)
     anim.save(path+save_name+'.gif', dpi=80, writer='imagemagick')
     plt.show()
+
+def make_gif2(img1, img2, save_name='make',path='./imgs/'):
+    plt.gray()
+    fig, ax = plt.subplots(
+        1, 2,
+        gridspec_kw={'hspace': 0, 'wspace': 0})
+    fig.set_tight_layout(True)
+    def images(i):
+        ax[0].imshow(img1[i])
+        ax[1].imshow(img2[i])
+        return ax
+    anim = FuncAnimation(
+        fig, images,
+        frames=np.arange(len(img1)), interval=500)
+    if not os.path.exists(path):
+        os.makedirs(path)
+    anim.save(path+save_name+'.gif', dpi=80, writer='imagemagick')
+    # plt.show()
 
 # make a tensor to img interface
 
@@ -74,24 +71,31 @@ def input_target_maker(batch, device):
     rec_target = torch.Tensor(rec_target).to(device)
     return input_x, rec_target, pred_target
 
-one_x = train_set[:, 0:1]
-one_x = valid_set[:, 0:1]
-
-# ground truth
-make_gif(one_x[:, 0], 'ground_truth')
-show_images(one_x[:, 0], 'ground_truth')
-
-x, r, p = input_target_maker(one_x, device=device)
-r, p = model(x)
-
-r = r.detach().numpy()
-r = np.flip(r, axis=0)
-p = p.detach().numpy()
-y = np.concatenate((r, p), axis=0)
-print(y.shape)
-# y = r
-y = y[:, 0]
-show_images(y, 'pred')
-make_gif(y, 'pred')
 
 
+
+def show_result(args, model, data, device=torch.device("cpu")):
+    if args.mode == 'both':
+        one_x = data[:, 0:1]
+        x, _, _ = input_target_maker(one_x, device=device)
+        model.to(device)
+        model.eval()
+        r, p = model(x)
+        r = r.detach().numpy()
+        r = np.flip(r, axis=0)
+        p = p.detach().numpy()
+        y = np.concatenate((r, p), axis=0)
+        # show_images(y, 'pred')
+        # make_gif(y, 'pred')
+        # make_gif(one_x[:, 0], args.this_name+'ground_truth')
+        # show_images(one_x[:, 0], args.this_name+'ground_truth')
+        make_gif2(one_x[:, 0], y[:, 0], args.this_name)
+
+
+if __name__ == '__main__':
+    a = np.random.random((20, 64, 64))
+    b = np.random.random((20, 64, 64))
+    # print(a.shape)
+    # print(b)
+    # show_images(a)
+    make_gif2(a, b)
