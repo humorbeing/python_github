@@ -278,10 +278,33 @@ output to (0.269,0.731)
 - [x] model save protocol
 - [x] trained model demo and save
 - [x] naming
+- [ ] merge demo and uti
+- [ ] fix ax[0].axis('off')
 - experiment
     - default settings
-        - 100s m
-        - 100s b
-        - s m
-        - s b
-        - n m
+        - [x] [colab A] 100s m
+        - [x] ~~[pnu2] 100s b~~
+            - bugged to 100 M
+        - [ ] [pnu2] 100s b
+        - ~~s m~~
+        - ~~s b~~
+        - [x] [pnumy] n m
+    - 0 N M looks good
+        - [colab H]no clip
+        - [colab A] rmsprop
+        - [pnumy] no init
+### v0008
+- bug
+    - [x] nameing: bce loss -> B
+    - [x] fix train with bce loss
+- all model is `Non MSE`
+- all model is `both`
+- all model is `zero input = False`
+- new models
+    - [x] lstm_v0001
+    - cnn
+    - cnn flatten
+- experiment
+    - [x] [colab R] lstm_v0001 hidden 256
+    - [x] [colab R] lstm_v0001 hidden 512
+- is epoch too many? this model is almost saturated at epoch 50.

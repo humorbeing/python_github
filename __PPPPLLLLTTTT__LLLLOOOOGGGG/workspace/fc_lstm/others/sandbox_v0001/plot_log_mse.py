@@ -30,19 +30,19 @@ train_mark = '-'
 val_mark = ':'
 
 
-name = '20200107-144718-0sb-zf-both.txt'
-title = '0 S B Zf B M1'
-c = 'r'
-a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[5], c+val_mark, label=title+' Va')
-#
-name = '20200108-011332-0nm-zf-both.txt'
-title = '0 N M Zf B M1'
-c = 'g'
-a = xy(name)
-plt.plot(a[1], c+train_mark, label=title+' Tr')
-plt.plot(a[5], c+val_mark, label=title+' Va')
+# name = '20200107-144718-0sb-zf-both.txt'
+# title = '0 S B Zf B M1'
+# c = 'r'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[5], c+val_mark, label=title+' Va')
+# #
+# name = '20200108-011332-0nm-zf-both.txt'
+# title = '0 N M Zf B M1'
+# c = 'g'
+# a = xy(name)
+# plt.plot(a[1], c+train_mark, label=title+' Tr')
+# plt.plot(a[5], c+val_mark, label=title+' Va')
 
 name = '20200108-183736-O_Adm-M2-Zf-B.txt'
 title = '0 S B Zf B M2'
@@ -58,26 +58,26 @@ a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[5], c+val_mark, label=title+' Va')
 # #
-# name = '20200107-130237-0sb-z-both.txt'
-# title = 'B Z B'
-# c = 'c'
-# a = xy(name)
-# plt.plot(a[1], c+train_mark, label=title+' Tr')
-# plt.plot(a[5], c+val_mark, label=title+' Va')
+name = '20200111-140858-O_Adm-M1.1-100M-Zf-B.txt'
+title = '100 M Zf B M1.1 1'
+c = 'c'
+a = xy(name)
+plt.plot(a[1], c+train_mark, label=title+' Tr')
+plt.plot(a[5], c+val_mark, label=title+' Va')
 # #
-# name = '20200107-144718-0sb-zf-both.txt'
-# title = 'B Zf B'
-# c = 'm'
-# a = xy(name)
-# plt.plot(a[1], c+train_mark, label=title+' Tr')
-# plt.plot(a[5], c+val_mark, label=title+' Va')
+name = '20200111-212001-O_Adm-M1.1-NM-Zf-B.txt'
+title = 'N M Zf B M1.1'
+c = 'm'
+a = xy(name)
+plt.plot(a[1], c+train_mark, label=title+' Tr')
+plt.plot(a[5], c+val_mark, label=title+' Va')
 # #
-# name = '20200109-063944-0sm-zf-recon.txt'
-# title = 'M Zf R'
-# c = 'k'
-# a = xy(name)
-# plt.plot(a[1], c+train_mark, label=title+' Tr')
-# plt.plot(a[5], c+val_mark, label=title+' Va')
+name = '20200113-081629-O_Adm-M1.1-100M-Zf-B.txt'
+title = '100 M Zf B M1.1'
+c = 'k'
+a = xy(name)
+plt.plot(a[1], c+train_mark, label=title+' Tr')
+plt.plot(a[5], c+val_mark, label=title+' Va')
 #
 # name = '20200109-092304-0sb-zf-recon.txt'
 # title = 'B Zf R'

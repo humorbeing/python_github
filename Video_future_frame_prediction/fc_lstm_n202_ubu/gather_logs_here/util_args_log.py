@@ -6,7 +6,7 @@ import pandas as pd
 def combine_two(from1,from2,comb_to, sep=","):
     df1 = pd.read_csv(from1, sep=sep)
     df2 = pd.read_csv(from2, sep=sep)
-    n = pd.concat([df1, df2], axis=0, ignore_index=True)
+    n = pd.concat([df1, df2], axis=0, ignore_index=True, sort=True)
     n.to_csv(comb_to, mode='w', index=False, sep=sep)
 
 def appendDFToCSV_void(df, csvFilePath, sep=","):
@@ -79,7 +79,7 @@ def naming(args):
         name += 'S'
     else:
         name += '100'
-    if (args.last_activation != 'non') and (args.loss_function == 'bce'):
+    if (not (args.last_activation != 'non')) and (args.loss_function == 'bce'):
         name += 'B'
     else:
         name += 'M'
@@ -116,8 +116,8 @@ if __name__ == '__main__':
     # log.log(s3)
     # #
     # log.end()
-    # p3 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/Video_future_frame_prediction/fc_lstm_n202_ubu/gather_logs_here/all_logs/fc_lstm_logs.csv'
-    # p1 = p3
-    # p2 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/Video_future_frame_prediction/fc_lstm_n202_ubu/gather_logs_here/recieved_logs/logs_colab_r/log.csv'
-    # combine_two(p1,p2,p3)
+    p3 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/Video_future_frame_prediction/fc_lstm_n202_ubu/gather_logs_here/all_logs/fc_lstm_logs.csv'
+    p1 = p3
+    p2 = '/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/Video_future_frame_prediction/fc_lstm_n202_ubu/gather_logs_here/received_logs/logs/log.csv'
+    combine_two(p1,p2,p3)
     pass

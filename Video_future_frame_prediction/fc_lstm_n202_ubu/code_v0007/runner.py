@@ -4,8 +4,8 @@ import torch.nn.functional as F
 import torch.optim as optim
 import os
 from util_args_log import Log
-from utility import weight_init
-from demo_maker import show_result
+from utility import weight_init, show_result
+
 
 def runner(args):
     if args.seed is not None:
