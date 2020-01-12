@@ -278,10 +278,12 @@ output to (0.269,0.731)
 - [x] model save protocol
 - [x] trained model demo and save
 - [x] naming
+- [ ] merge demo and uti
+- [ ] fix ax[0].axis('off')
 - experiment
     - default settings
-        - 100s m
-        - 100s b
+        - [colab A] 100s m
+        - [pnu2] 100s b
         - s m
         - s b
-        - n m
+        - [pnumy] n m
