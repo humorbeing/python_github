@@ -42,6 +42,7 @@
     - log collected: `[collected] [running PC] experiment info`
     - end: `[x] [collected] [running PC] experiment info`
 - Example of folders
+    - readme.md
     - Main PC:
         - `/project`
             - `/code_v0001`
