@@ -1,0 +1,64 @@
+2020-01-12 23:58:42,522 DEBUG   MainThread:12631 [wandb_config.py:_load_defaults():111] no defaults not found in config-defaults.yaml
+2020-01-12 23:58:42,527 DEBUG   MainThread:12631 [cmd.py:execute():728] Popen(['git', 'cat-file', '--batch-check'], cwd=/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github, universal_newlines=False, shell=None, istream=<valid stream>)
+2020-01-12 23:58:42,531 DEBUG   MainThread:12631 [cmd.py:execute():728] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github, universal_newlines=False, shell=None, istream=None)
+2020-01-12 23:58:42,534 DEBUG   MainThread:12631 [cmd.py:execute():728] Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github, universal_newlines=False, shell=None, istream=None)
+2020-01-12 23:58:42,880 DEBUG   MainThread:12631 [run_manager.py:__init__():535] Initialized sync for python_github-weightsandbias_name/1xa75svr
+2020-01-12 23:58:42,883 INFO    MainThread:12631 [run_manager.py:wrap_existing_process():1133] wrapping existing process 12610
+2020-01-12 23:58:42,885 DEBUG   MainThread:12631 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): pypi.org:443
+2020-01-12 23:58:43,149 DEBUG   MainThread:12631 [connectionpool.py:_make_request():393] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 39060
+2020-01-12 23:58:43,205 INFO    MainThread:12631 [run_manager.py:init_run():918] system metrics and metadata threads started
+2020-01-12 23:58:43,206 INFO    MainThread:12631 [run_manager.py:init_run():952] upserting run before process can begin, waiting at most 10 seconds
+2020-01-12 23:58:43,230 DEBUG   Thread-14 :12631 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-01-12 23:58:43,532 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/wandb-metadata.json
+2020-01-12 23:58:43,796 DEBUG   Thread-14 :12631 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 610
+2020-01-12 23:58:43,810 INFO    Thread-14 :12631 [run_manager.py:_upsert_run():1037] saving patches
+2020-01-12 23:58:43,810 DEBUG   Thread-14 :12631 [cmd.py:execute():728] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github, universal_newlines=False, shell=None, istream=None)
+2020-01-12 23:58:43,814 DEBUG   Thread-14 :12631 [cmd.py:execute():728] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github, universal_newlines=False, shell=None, istream=None)
+2020-01-12 23:58:43,820 DEBUG   Thread-14 :12631 [cmd.py:execute():728] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github, universal_newlines=False, shell=None, istream=None)
+2020-01-12 23:58:44,086 DEBUG   Thread-14 :12631 [cmd.py:execute():728] Popen(['git', 'version'], cwd=/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github, universal_newlines=False, shell=None, istream=None)
+2020-01-12 23:58:44,255 DEBUG   Thread-14 :12631 [cmd.py:execute():728] Popen(['git', 'merge-base', 'HEAD', '132fbaaeaf0c8284eafc3acaf94242a345727f2f'], cwd=/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github, universal_newlines=False, shell=None, istream=None)
+2020-01-12 23:58:44,260 INFO    Thread-14 :12631 [run_manager.py:_upsert_run():1041] saving pip packages
+2020-01-12 23:58:44,260 INFO    Thread-14 :12631 [run_manager.py:_upsert_run():1043] initializing streaming files api
+2020-01-12 23:58:44,261 INFO    Thread-14 :12631 [run_manager.py:_upsert_run():1050] unblocking file change observer, beginning sync with W&B servers
+2020-01-12 23:58:44,261 INFO    MainThread:12631 [run_manager.py:wrap_existing_process():1150] informing user process we are ready to proceed
+2020-01-12 23:58:44,263 INFO    MainThread:12631 [run_manager.py:_sync_etc():1257] entering loop for messages from user process
+2020-01-12 23:58:44,263 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/output.log
+2020-01-12 23:58:44,264 DEBUG   Thread-15 :12631 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-01-12 23:58:44,488 INFO    MainThread:12631 [run_manager.py:_sync_etc():1280] received message from user process: {"exitcode": 0}
+2020-01-12 23:58:44,489 INFO    MainThread:12631 [run_manager.py:_sync_etc():1366] closing log streams and sending exitcode to W&B
+2020-01-12 23:58:44,489 INFO    MainThread:12631 [run_manager.py:shutdown():1057] shutting down system stats and metadata service
+2020-01-12 23:58:44,530 INFO    Thread-3  :12631 [run_manager.py:_on_file_modified():682] file/dir modified: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/config.yaml
+2020-01-12 23:58:44,555 DEBUG   Thread-3  :12631 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-01-12 23:58:44,821 DEBUG   Thread-15 :12631 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2020-01-12 23:58:45,158 DEBUG   Thread-3  :12631 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 677
+2020-01-12 23:58:45,167 INFO    Thread-3  :12631 [run_manager.py:_on_file_modified():682] file/dir modified: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/wandb-history.jsonl
+2020-01-12 23:58:45,169 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/wandb.h5
+2020-01-12 23:58:45,171 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/diff.patch
+2020-01-12 23:58:45,172 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/media/images/wandb_image2_0_d4eaf6bf.png
+2020-01-12 23:58:45,174 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/media/images/wandb_image3_0_b2052a90.png
+2020-01-12 23:58:45,175 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/wandb-events.jsonl
+2020-01-12 23:58:45,177 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/requirements.txt
+2020-01-12 23:58:45,179 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/wandb-summary.json
+2020-01-12 23:58:45,183 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/media/images/wandb_image1_0_6afd11d4.png
+2020-01-12 23:58:45,185 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/media/images/list of w i_0.png
+2020-01-12 23:58:45,187 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/media/images
+2020-01-12 23:58:45,188 INFO    Thread-3  :12631 [run_manager.py:_on_file_created():671] file/dir created: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/media
+2020-01-12 23:58:45,208 INFO    MainThread:12631 [run_manager.py:shutdown():1069] stopping streaming files and file change observer
+2020-01-12 23:58:45,535 INFO    Thread-3  :12631 [run_manager.py:_on_file_modified():682] file/dir modified: /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/wandb/run-20200113_045842-1xa75svr/wandb-metadata.json
+2020-01-12 23:58:45,545 DEBUG   Thread-18 :12631 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-01-12 23:58:46,099 DEBUG   Thread-18 :12631 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 838
+2020-01-12 23:58:46,104 DEBUG   Thread-18 :12631 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-01-12 23:58:46,203 DEBUG   MainThread:12631 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-01-12 23:58:46,799 DEBUG   MainThread:12631 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 677
+2020-01-12 23:58:46,815 DEBUG   Thread-7  :12631 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-01-12 23:58:46,883 DEBUG   Thread-18 :12631 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/humorbeing/python_github-weightsandbias_name/1xa75svr/___batch_archive_1.tgz?Expires=1578841188&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=FwgvdOlqZVABnbxDuuunofn21H2qBADN5byndvIK1lKk5ynbqhd%2BlDDcpGDvyvwaPmJSrE1K8LLvtDqV%2FG%2Bbd4o%2BRF2k%2BZSXfcfpRUedKqam3l2sG3bkUMpF9muczDkrW22diZn%2FcxpmQOz96UCup6bTg3ZG%2FlLzj1wnLzAE8TvA3O9xKA6UWSe2sh50LtS%2Fp%2BIPZ0I7JcF2oEkQpnlxXJ46NyunfSliuP%2BRTvQkpsW7DrC0HsGQZiJNT2m0CnRo29tbpRBmm35JcCH%2B5gJgqXNUWVP%2BywVvc9BOniO09lS%2FNM994ykBNHJViOA7rFiBoOYkuEGhYDbYfrCwGWEcyw%3D%3D HTTP/1.1" 200 0
+2020-01-12 23:58:47,192 DEBUG   Thread-19 :12631 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-01-12 23:58:47,398 DEBUG   Thread-7  :12631 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/humorbeing/python_github-weightsandbias_name/1xa75svr/file_stream HTTP/1.1" 200 311
+2020-01-12 23:58:47,661 DEBUG   Thread-7  :12631 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/humorbeing/python_github-weightsandbias_name/1xa75svr/file_stream HTTP/1.1" 200 308
+2020-01-12 23:58:47,665 INFO    MainThread:12631 [run_manager.py:_sync_etc():1385] rendering summary
+2020-01-12 23:58:47,668 INFO    MainThread:12631 [run_manager.py:_sync_etc():1418] syncing files to cloud storage
+2020-01-12 23:58:47,792 DEBUG   Thread-19 :12631 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 832
+2020-01-12 23:58:47,803 DEBUG   Thread-19 :12631 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-01-12 23:58:48,551 DEBUG   Thread-19 :12631 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/humorbeing/python_github-weightsandbias_name/1xa75svr/___batch_archive_2.tgz?Expires=1578841190&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=P5wbignOpfco8eyuBTVCDeR9OfgYo0E9Ld%2FZv1ar7gb6DaJetFILo2cbuLDbgPVIvyPO2YMwAeKV%2FHfwPDkJVPOn%2F7v9ZYrgYp1ORvGiHNavlG1iqzJMgfYkNbJ7Yneha%2FXLyJZtTkRdNMEL1EXziXyr5YOXl%2BxaUnf5NjG1cHbtJ1gaDIBSwVvIDH751RQecYDiAKzQjFUwCNRf%2BMtmaoPY%2BaPAfHHVYr0nKTVwQfTuuQjtQwUjln0CTr8gcsroR%2BDcLgzxPGhKabgwCxTp4UgKDwWI3%2Blay%2FyFWyIGawMmodDPFZtZtgvVvIQyV1FJDNc1dY5fNEp0yUUHCZlEwg%3D%3D HTTP/1.1" 200 0
+2020-01-12 23:58:49,678 INFO    MainThread:12631 [run_manager.py:_sync_etc():1433] syncing complete: https://app.wandb.ai/humorbeing/python_github-weightsandbias_name/runs/1xa75svr
+2020-01-12 23:58:49,678 INFO    MainThread:12631 [1xa75svr:run_manager.py:_sync_etc():1433] syncing complete: https://app.wandb.ai/humorbeing/python_github-weightsandbias_name/runs/1xa75svr

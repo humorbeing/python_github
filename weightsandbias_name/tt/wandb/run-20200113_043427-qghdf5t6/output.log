@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/lib/python3.5/site-packages/PIL/Image.py", line 2490, in fromarray
+    mode, rawmode = _fromarray_typemap[typekey]
+KeyError: ((1, 1, 64), '|u1')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/asdf.py", line 36, in <module>
+    wandb_image3 = wandb.Image(image3, caption="2")
+  File "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/lib/python3.5/site-packages/wandb/data_types.py", line 731, in __init__
+    0, 255).byte().permute(1, 2, 0).cpu().numpy())
+  File "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/lib/python3.5/site-packages/PIL/Image.py", line 2492, in fromarray
+    raise TypeError("Cannot handle this data type")
+TypeError: Cannot handle this data type
