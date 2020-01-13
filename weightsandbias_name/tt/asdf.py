@@ -45,3 +45,5 @@ wandb.log({
         "list of w i": example_images,
         "Some Number": 99,
         "trigger no loss": 5})
+
+print('check output logs')

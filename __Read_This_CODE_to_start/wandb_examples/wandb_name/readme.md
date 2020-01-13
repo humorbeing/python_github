@@ -22,3 +22,12 @@
     - \wandb\settings
     - change the `project = xxxx`
     - into wanted prject (get it from website)
+
+- `print('anything')` is being recorded and can check at website
+
+- specify project to upload
+```
+import wandb
+wandb.init(project="xxxx")
+```
+    - xxxx is the project name

@@ -100,7 +100,7 @@ schedulers.
     - (-1,1), non, mse
     - (0,1), sigmoid, bce
     - (0,1), non, mse  
-         
+    
 - recon as input of lstm
     - [colab] bce loss, with sigmoid, recon, recon_in
 
@@ -320,5 +320,7 @@ the merged one get a name change too.
 - result analyze system
     - add best loss into names?
     - log when its done?
+- early stop, to save time.
 
 ### v0009 migrate to wandb
+
