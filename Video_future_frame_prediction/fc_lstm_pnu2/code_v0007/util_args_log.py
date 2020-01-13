@@ -79,7 +79,7 @@ def naming(args):
         name += 'S'
     else:
         name += '100'
-    if (not (args.last_activation != 'non')) and (args.loss_function == 'bce'):
+    if (args.last_activation != 'non') and (args.loss_function == 'bce'):
         name += 'B'
     else:
         name += 'M'

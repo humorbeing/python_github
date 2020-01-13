@@ -118,7 +118,7 @@ def runner(args):
                 bce_train_loss = args.recon_loss_lambda * bce_train_recon_loss + bce_train_pred_loss
                 mse_train_loss = args.recon_loss_lambda * mse_train_recon_loss + mse_train_pred_loss
 
-            if (not (args.last_activation != 'non')) and (args.loss_function == 'bce'):
+            if (args.last_activation != 'non') and (args.loss_function == 'bce'):
                 loss = bce_train_loss
             else:
                 loss = mse_train_loss
