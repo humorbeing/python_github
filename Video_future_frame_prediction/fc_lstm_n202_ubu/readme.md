@@ -285,14 +285,14 @@ output to (0.269,0.731)
         - [x] [colab A] 100s m
         - [x] ~~[pnu2] 100s b~~
             - bugged to 100 M
-        - [ ] [pnu2] 100s b
+        - [x] [collected] [pnu2] 100s b
         - ~~s m~~
         - ~~s b~~
         - [x] [pnumy] n m
     - 0 N M looks good
-        - [colab H]no clip
-        - [colab A] rmsprop
-        - [pnumy] no init
+        - [x] [collected] [colab H] no clip
+        - [x] [collected] [colab A] rmsprop
+        - [x] [collected] [pnumy] no init
 ### v0008
 - bug
     - [x] nameing: bce loss -> B
@@ -305,6 +305,20 @@ output to (0.269,0.731)
     - cnn
     - cnn flatten
 - experiment
-    - [x] [colab R] lstm_v0001 hidden 256
-    - [x] [colab R] lstm_v0001 hidden 512
+    - [x] [collected] [colab R] lstm_v0001 hidden 256
+    - [x] [collected] [colab R] lstm_v0001 hidden 512
 - is epoch too many? this model is almost saturated at epoch 50.
+- when collecting logs. when merging logs into `all_logs`, change the log.cvs to
+`merged_log.cvs`, and following this idea, when make log, add date, maybe when merged log,
+the merged one get a name change too.
+    - [x] new log name change to merged_log
+    - ~~all log have time stamp on its name~~
+    - ~~merged into logs have time stamp as well~~
+
+### need
+- experiment combo explosion system
+- result analyze system
+    - add best loss into names?
+    - log when its done?
+
+### v0009 migrate to wandb

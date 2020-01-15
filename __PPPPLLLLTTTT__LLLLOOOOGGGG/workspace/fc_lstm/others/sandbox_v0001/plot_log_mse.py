@@ -79,12 +79,12 @@ a = xy(name)
 plt.plot(a[1], c+train_mark, label=title+' Tr')
 plt.plot(a[5], c+val_mark, label=title+' Va')
 #
-# name = '20200109-092304-0sb-zf-recon.txt'
-# title = 'B Zf R'
-# c = '#641E16'
-# a = xy(name)
-# plt.plot(a[1], color=c, linestyle=train_mark, label=title+' Tr')
-# plt.plot(a[5], color=c, linestyle=val_mark, label=title+' Va')
+name = '20200113-154939-O_Adm-M1.1-100B-Zf-B.txt'
+title = '100s B'
+c = '#641E16'
+a = xy(name)
+plt.plot(a[1], color=c, linestyle=train_mark, label=title+' Tr')
+plt.plot(a[5], color=c, linestyle=val_mark, label=title+' Va')
 ''' legend location
 center left
 center right

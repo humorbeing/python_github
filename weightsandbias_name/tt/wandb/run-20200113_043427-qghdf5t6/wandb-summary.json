@@ -1,0 +1,1 @@
+{"graph_0": {"format": "torch", "_type": "graph", "edges": [], "nodes": [{"id": 139920790018816, "output_shape": [[1, 1, 28, 28]], "class_name": "Conv2d(1, 1, kernel_size=(1, 1), stride=(1, 1))", "parameters": [["weight", [1, 1, 1, 1]], ["bias", [1]]], "name": "conv1", "num_parameters": [1, 1]}]}}

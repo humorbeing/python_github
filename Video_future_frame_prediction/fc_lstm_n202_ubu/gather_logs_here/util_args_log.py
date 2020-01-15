@@ -8,6 +8,11 @@ def combine_two(from1,from2,comb_to, sep=","):
     df2 = pd.read_csv(from2, sep=sep)
     n = pd.concat([df1, df2], axis=0, ignore_index=True, sort=True)
     n.to_csv(comb_to, mode='w', index=False, sep=sep)
+    t = datetime.now()
+    surfix = t.strftime('%Y%m%d-%H%M%S')
+    new_name = from2[:-4]
+    new_name = new_name + '_merged_'+surfix+'.txt'
+    os.rename(from2, new_name)
 
 def appendDFToCSV_void(df, csvFilePath, sep=","):
     import os

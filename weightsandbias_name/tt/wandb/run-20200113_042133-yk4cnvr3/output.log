@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/mm.py", line 39, in <module>
+    z.backward()
+  File "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/lib/python3.5/site-packages/torch/tensor.py", line 102, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/lib/python3.5/site-packages/torch/autograd/__init__.py", line 84, in backward
+    grad_tensors = _make_grads(tensors, grad_tensors)
+  File "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/lib/python3.5/site-packages/torch/autograd/__init__.py", line 28, in _make_grads
+    raise RuntimeError("grad can be implicitly created only for scalar outputs")
+RuntimeError: grad can be implicitly created only for scalar outputs

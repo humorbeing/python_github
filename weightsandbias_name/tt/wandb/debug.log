@@ -1,0 +1,17 @@
+2020-01-13 00:58:09,441 DEBUG   MainThread:29397 [wandb_config.py:_load_defaults():111] no defaults not found in config-defaults.yaml
+2020-01-13 00:58:09,449 DEBUG   MainThread:29397 [cmd.py:execute():728] Popen(['git', 'cat-file', '--batch-check'], cwd=/mnt/36D4F815D4F7D559/workspace/python_github, universal_newlines=False, shell=None, istream=<valid stream>)
+2020-01-13 00:58:09,456 DEBUG   MainThread:29397 [cmd.py:execute():728] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/mnt/36D4F815D4F7D559/workspace/python_github, universal_newlines=False, shell=None, istream=None)
+2020-01-13 00:58:09,462 DEBUG   MainThread:29397 [cmd.py:execute():728] Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=/mnt/36D4F815D4F7D559/workspace/python_github, universal_newlines=False, shell=None, istream=None)
+2020-01-13 00:58:09,884 DEBUG   MainThread:29397 [run_manager.py:__init__():535] Initialized sync for python_github-weightsandbias_name/i53f7art
+2020-01-13 00:58:09,886 INFO    MainThread:29397 [run_manager.py:wrap_existing_process():1133] wrapping existing process 29379
+2020-01-13 00:58:09,889 DEBUG   MainThread:29397 [connectionpool.py:_new_conn():823] Starting new HTTPS connection (1): pypi.org:443
+2020-01-13 00:58:10,449 INFO    Thread-3  :29397 [run_manager.py:_on_file_created():671] file/dir created: /mnt/36D4F815D4F7D559/workspace/python_github/weightsandbias_name/tt/wandb/run-20200112_155808-i53f7art/output.log
+2020-01-13 00:58:10,475 DEBUG   MainThread:29397 [connectionpool.py:_make_request():393] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 39060
+2020-01-13 00:58:10,762 INFO    MainThread:29397 [run_manager.py:init_run():918] system metrics and metadata threads started
+2020-01-13 00:58:10,763 INFO    MainThread:29397 [run_manager.py:wrap_existing_process():1150] informing user process we are ready to proceed
+2020-01-13 00:58:10,764 INFO    MainThread:29397 [run_manager.py:_sync_etc():1257] entering loop for messages from user process
+2020-01-13 00:58:11,245 INFO    MainThread:29397 [run_manager.py:_sync_etc():1280] received message from user process: {"exitcode": 0}
+2020-01-13 00:58:11,247 INFO    MainThread:29397 [run_manager.py:_sync_etc():1366] closing log streams and sending exitcode to W&B
+2020-01-13 00:58:11,247 INFO    MainThread:29397 [run_manager.py:shutdown():1057] shutting down system stats and metadata service
+closing log streams and sending exitcode to W&B
+2020-01-13 00:58:11,247 INFO    MainThread:29397 [i53f7art:run_manager.py:shutdown():1057] shutting down system stats and metadata service

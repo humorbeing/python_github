@@ -40,6 +40,7 @@ args = get_args()
 # args.is_save = True
 # args.mode = 'recon'
 # args.optimizer = 'adam'
+args.is_init = False
 args.batch_size = 50
 runner(args)
 # for i in vars(args):
