@@ -57,7 +57,7 @@ feature_names = [
     'PetalLength',
     'PetalWidth']
 
-# Create an input function reading a file using the Dataset API
+# Create an input function _Read----ingggggggggg a file using the Dataset API
 # Then provide the results to the Estimator API
 def my_input_fn(file_path, repeat_count=1, shuffle_count=1):
     def decode_csv(line):

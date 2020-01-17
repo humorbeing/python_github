@@ -42,7 +42,7 @@ Two things to note in the pipeline:
 2. Shuffling
 
    While training, the dataset is shuffled in two places in the code. The first
-   is the list of training files. Second, while reading records using
+   is the list of training files. Second, while _Read----ingggggggggg records using
    `parallel_interleave`, the `sloppy` argument is used to generate randomness
    in the order of the examples.
 """
@@ -58,7 +58,7 @@ import tensorflow as tf
 
 from official.utils.misc import model_helpers
 
-# Buffer size for reading records from a TFRecord file. Each training file is
+# Buffer size for _Read----ingggggggggg records from a TFRecord file. Each training file is
 # 7.2 MB, so 8 MB allows an entire file to be kept in memory.
 _READ_RECORD_BUFFER = 8 * 1000 * 1000
 

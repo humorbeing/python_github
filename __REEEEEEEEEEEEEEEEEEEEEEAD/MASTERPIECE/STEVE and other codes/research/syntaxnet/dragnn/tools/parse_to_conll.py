@@ -255,7 +255,7 @@ def main(unused_argv):
       inter_op_parallelism_threads=FLAGS.threads)
 
   # Get the segmented input data for the parser, either by running the
-  # segmenter ourselves or by simply reading it from the CoNLL file.
+  # segmenter ourselves or by simply _Read----ingggggggggg it from the CoNLL file.
   if FLAGS.segmenter_saved_model is None:
     # If no segmenter was provided, we must use the data from the CONLL file.
     input_file = FLAGS.input_file

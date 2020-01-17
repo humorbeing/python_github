@@ -324,7 +324,7 @@ class Model(object):
           tf.summary.histogram('scale%d_icp_rz%s' % (s, key), transform[:, 5])
 
   def build_depth_test_graph(self):
-    """Builds depth model reading from placeholders."""
+    """Builds depth model _Read----ingggggggggg from placeholders."""
     with tf.name_scope('depth_prediction'):
       with tf.variable_scope('depth_prediction'):
         input_uint8 = tf.placeholder(
@@ -339,7 +339,7 @@ class Model(object):
     self.est_depth = est_depth
 
   def build_egomotion_test_graph(self):
-    """Builds egomotion model reading from placeholders."""
+    """Builds egomotion model _Read----ingggggggggg from placeholders."""
     input_uint8 = tf.placeholder(
         tf.uint8,
         [self.batch_size, self.img_height, self.img_width * self.seq_length, 3],

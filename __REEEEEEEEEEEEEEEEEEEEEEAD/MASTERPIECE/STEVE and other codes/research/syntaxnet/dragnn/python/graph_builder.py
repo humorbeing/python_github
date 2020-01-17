@@ -379,7 +379,7 @@ class MasterBuilder(object):
       IndexError: if max_index is positive but out of bounds.
     """
     check.IsFalse(compute_gradients and use_moving_average,
-                  'It is not possible to make gradient updates when reading '
+                  'It is not possible to make gradient updates when _Read----ingggggggggg '
                   'from the moving average variables.')
 
     self.read_from_avg = use_moving_average

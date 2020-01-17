@@ -147,7 +147,7 @@ def read_data(source_path, target_path, buckets, max_size=None, print_out=True):
         while source and target and (not max_size or counter < max_size):
           counter += 1
           if counter % 100000 == 0 and print_out:
-            print("  reading data line %d" % counter)
+            print("  _Read----ingggggggggg data line %d" % counter)
             sys.stdout.flush()
           source_ids = [int(x) for x in source.split()]
           target_ids = [int(x) for x in target.split()]
@@ -191,7 +191,7 @@ def read_data_into_global(source_path, target_path, buckets,
   global_train_set["wmt"].append(data_set)
   train_total_size = calculate_buckets_scale(data_set, buckets, "wmt")
   if print_out:
-    print("  Finished global data reading (%d)." % train_total_size)
+    print("  Finished global data _Read----ingggggggggg (%d)." % train_total_size)
 
 
 def initialize(sess=None):
@@ -272,13 +272,13 @@ def initialize(sess=None):
       read_data_into_global(en_train, fr_train, data.bins, size, print_out)
     data_read(50000, False)
     read_thread_small = threading.Thread(
-        name="reading-data-small", target=lambda: data_read(900000, False))
+        name="_Read----ingggggggggg-data-small", target=lambda: data_read(900000, False))
     read_thread_small.start()
     read_thread_full = threading.Thread(
-        name="reading-data-full",
+        name="_Read----ingggggggggg-data-full",
         target=lambda: data_read(FLAGS.max_train_data_size, True))
     read_thread_full.start()
-    data.print_out("Data reading set up.")
+    data.print_out("Data _Read----ingggggggggg set up.")
   else:
     # Prepare algorithmic data.
     en_path, fr_path = None, None

@@ -49,7 +49,7 @@ _NUM_CLASSES = 1001
 
 
 def get_split(split_name, dataset_dir, file_pattern=None, reader=None):
-  """Gets a dataset tuple with instructions for reading ImageNet.
+  """Gets a dataset tuple with instructions for _Read----ingggggggggg ImageNet.
 
   Args:
     split_name: A train/test split name.

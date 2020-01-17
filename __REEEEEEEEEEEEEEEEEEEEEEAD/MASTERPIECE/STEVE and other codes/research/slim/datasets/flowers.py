@@ -42,7 +42,7 @@ _ITEMS_TO_DESCRIPTIONS = {
 
 
 def get_split(split_name, dataset_dir, file_pattern=None, reader=None):
-  """Gets a dataset tuple with instructions for reading flowers.
+  """Gets a dataset tuple with instructions for _Read----ingggggggggg flowers.
 
   Args:
     split_name: A train/validation split name.

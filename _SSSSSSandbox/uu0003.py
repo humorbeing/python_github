@@ -1,20 +1,9 @@
-from argparse import ArgumentParser
-from argparse import Namespace
+a = [3,2,4,5]
 
-hi = Namespace()
-print(hi)
-hi.hi = 1
-print(hi.hi)
-def get_args():
-    parser = ArgumentParser(description='PyTorch/torchtext SNLI example')
-#    parser.add_argument('--epochs', type=int, default=50)
-    args = parser.parse_args()
-    return args
+for i, x in enumerate(a, 100):
+    print(i)
+    print(x)
+    print()
 
-args = get_args()
-print(args)
-#print(args.epochs)
-
-args.hi = 10
-
-print(args.hi)
+print([0,1][0])
+print([0,1].__getitem__(0))

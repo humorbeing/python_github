@@ -52,7 +52,7 @@ def evaluate_checkpoint_repeatedly(checkpoint_dir,
       except tf.errors.DataLossError as e:
         logging.warn(
             'Encountered a DataLossError while evaluating a checkpoint. This '
-            'can happen when reading a checkpoint before it is fully written. '
+            'can happen when _Read----ingggggggggg a checkpoint before it is fully written. '
             'Retrying...'
         )
         time.sleep(2.0)

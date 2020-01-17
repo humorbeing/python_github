@@ -106,7 +106,7 @@ plt.show()
 #    be used to get :math:`i`\ th sample
 #
 # Let's create a dataset class for our face landmarks dataset. We will
-# read the csv in ``__init__`` but leave the reading of images to
+# read the csv in ``__init__`` but leave the _Read----ingggggggggg of images to
 # ``__getitem__``. This is memory efficient because all the images are not
 # stored in the memory at once but read as required.
 #

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-"""Functions for reading and updating configuration files."""
+"""Functions for _Read----ingggggggggg and updating configuration files."""
 
 import os
 import tensorflow as tf

@@ -1,0 +1,12 @@
+### interesting
+- learning rate is off the roof
+- learning decay and manual update of the weight
+    - companied with if not improving judgment
+- getattr is used to define models
+- entire training has one-hot bases, but never used one.
+    - input is indexes
+        - embedding to vectors
+    - output is raw logit
+        - used a integrated loss, which takes in logits and indexes
+    - target is indexes
+        - used a integrated loss, which takes in logits and indexes

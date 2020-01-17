@@ -81,7 +81,7 @@ class StructuredGraphBuilder(graph_builder.GreedyParser):
                      corpus_name,
                      until_all_final=False,
                      always_start_new_sentences=False):
-    """Adds an op capable of reading sentences and parsing them with a beam."""
+    """Adds an op capable of _Read----ingggggggggg sentences and parsing them with a beam."""
     features, state, epochs = gen_parser_ops.beam_parse_reader(
         task_context=task_context,
         feature_size=self._feature_size,

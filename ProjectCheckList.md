@@ -76,3 +76,14 @@ as long as I can control with existing args,
 that is not a change of versions.
 - once the version is saturated to certain
 stable program, burst out experiments.
+
+### work directory / folder
+- where project load data, save models, save demos
+- work directory as root
+    - /data has datasets
+    - /save_xxx to save somethings
+- path should have root come in, assemble children path in the project
+- this root is outside of github monitoring.
+    - it should be un-limited by github upload, download speed.
+    - github updates should've free from this burden.
+    - logs-like small text is ok with github monitoring.

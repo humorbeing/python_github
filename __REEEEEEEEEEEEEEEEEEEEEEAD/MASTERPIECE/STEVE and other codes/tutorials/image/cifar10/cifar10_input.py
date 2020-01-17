@@ -39,7 +39,7 @@ def read_cifar10(filename_queue):
   """Reads and parses examples from CIFAR10 data files.
 
   Recommendation: if you want N-way read parallelism, call this function
-  N times.  This will give you N independent Readers reading different
+  N times.  This will give you N independent Readers _Read----ingggggggggg different
   files & positions within those files, which will give better mixing of
   examples.
 

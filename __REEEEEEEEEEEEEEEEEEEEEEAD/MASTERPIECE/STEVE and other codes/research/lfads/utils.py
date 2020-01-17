@@ -218,7 +218,7 @@ def read_data(data_fname):
       data_dict = {k: np.array(v) for k, v in hf.items()}
       return data_dict
   except IOError:
-    print("Cannot open %s for reading." % data_fname)
+    print("Cannot open %s for _Read----ingggggggggg." % data_fname)
     raise
 
 

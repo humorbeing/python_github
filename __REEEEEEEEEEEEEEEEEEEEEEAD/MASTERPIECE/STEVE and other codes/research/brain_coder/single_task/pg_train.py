@@ -598,7 +598,7 @@ def train(config, is_chief, tuner=None, run_dir=None, run_number=0,
               do_training = False
 
         except tf.errors.NotFoundError:
-          # Catch "Error while reading resource variable".
+          # Catch "Error while _Read----ingggggggggg resource variable".
           # The chief worker likely destroyed the container, so do not retry.
           logging.info('Caught NotFoundError. Quitting.')
           do_training = False
