@@ -5,9 +5,9 @@ path = '../../../__SSSSTTTTOOOORRRREEEE/Data_save_here/'
 
 def get_args():
     args = Namespace()
-    args.batch_size = 100
+    args.batch_size = 50
     args.epoch = 200
-    args.model = 'cnn'  # 'lstm_copy' / 'lstm_v0001' / 'cnn'
+    args.model = 'lstm_copy'  # 'lstm_copy' / 'lstm_v0001' / 'cnn'
     args.is_cuda = True
     args.data_path = path
     args.log_path = './'
@@ -17,7 +17,7 @@ def get_args():
     # default combos
     args.last_activation = 'non'  # '100s' / 'sigmoid' / 'non'
     args.loss_function = 'mse'  # 'mse' / 'bce'
-    args.hidden = 256
+    args.hidden = 2048
     args.mode = 'both'  # 'recon' / 'pred' / 'both'
     args.zero_input = False
     args.seed = 6
@@ -35,9 +35,9 @@ def get_args():
 #///////////////////////////////////////////////////////
 
 args = get_args()
-args.is_cuda = False
-args.is_quickrun = True
-args.is_save = True
+# args.is_cuda = False
+# args.is_quickrun = True
+# args.is_save = True
 # args.mode = 'recon'
 # args.optimizer = 'adam'
 runner(args)

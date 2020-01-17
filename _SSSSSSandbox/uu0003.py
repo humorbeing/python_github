@@ -1,9 +1,5 @@
-a = [3,2,4,5]
+import torch
 
-for i, x in enumerate(a, 100):
-    print(i)
-    print(x)
-    print()
 
-print([0,1][0])
-print([0,1].__getitem__(0))
+print(torch.cuda.is_available())
+print(torch.nn.Transformer)
