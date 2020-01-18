@@ -41,7 +41,7 @@ args = get_args()
 # args.mode = 'recon'
 # args.optimizer = 'adam'
 args.is_init = False
-args.batch_size = 50
+args.batch_size = 100
 runner(args)
 # for i in vars(args):
 #     print('ARGS >>> ' + i + ' :{}'.format(vars(args)[i]))
