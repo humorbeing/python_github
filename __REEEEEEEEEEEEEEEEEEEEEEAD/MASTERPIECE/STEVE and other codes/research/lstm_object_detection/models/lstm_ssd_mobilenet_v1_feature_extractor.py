@@ -162,7 +162,7 @@ class LSTMMobileNetV1FeatureExtractor(lstm_meta_arch.LSTMFeatureExtractor):
           with tf_ops.control_dependencies(batcher_ops):
             image_features['Conv2d_13_pointwise_lstm'] = tf.concat(net_seq, 0)
 
-          # Identities added for reading output states, to be reused externally.
+          # Identities added for _Read----ingggggggggg output states, to be reused externally.
           tf.identity(states_out[-1][0], name='lstm_state_out_c')
           tf.identity(states_out[-1][1], name='lstm_state_out_h')
 

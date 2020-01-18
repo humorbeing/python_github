@@ -1,4 +1,4 @@
-"""Functions for downloading and reading MNIST data."""
+"""Functions for downloading and _Read----ingggggggggg MNIST data."""
 import gzip
 import os
 import urllib

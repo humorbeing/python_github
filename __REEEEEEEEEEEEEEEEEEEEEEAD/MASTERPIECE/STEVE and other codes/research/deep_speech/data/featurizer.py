@@ -110,7 +110,7 @@ class TextFeaturizer(object):
     for line in lines:
       line = line[:-1]  # Strip the '\n' char.
       if line.startswith("#"):
-        # Skip from reading comment line.
+        # Skip from _Read----ingggggggggg comment line.
         continue
       self.token_to_index[line] = index
       self.index_to_token[index] = line

@@ -25,7 +25,7 @@ def _binary_to_text():
   while True:
     len_bytes = reader.read(8)
     if not len_bytes:
-      sys.stderr.write('Done reading\n')
+      sys.stderr.write('Done _Read----ingggggggggg\n')
       return
     str_len = struct.unpack('q', len_bytes)[0]
     tf_example_str = struct.unpack('%ds' % str_len, reader.read(str_len))[0]

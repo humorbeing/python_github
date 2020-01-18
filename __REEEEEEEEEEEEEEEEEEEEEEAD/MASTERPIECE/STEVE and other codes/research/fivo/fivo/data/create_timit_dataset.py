@@ -44,7 +44,7 @@ NUM_TRAIN_FILES = 4620
 NUM_TEST_FILES = 1680
 SAMPLES_PER_TIMESTEP = 200
 
-# Regexes for reading SPHERE header files.
+# Regexes for _Read----ingggggggggg SPHERE header files.
 SAMPLE_COUNT_REGEX = re.compile(r"sample_count -i (\d+)")
 SAMPLE_MIN_REGEX = re.compile(r"sample_min -i (-?\d+)")
 SAMPLE_MAX_REGEX = re.compile(r"sample_max -i (-?\d+)")

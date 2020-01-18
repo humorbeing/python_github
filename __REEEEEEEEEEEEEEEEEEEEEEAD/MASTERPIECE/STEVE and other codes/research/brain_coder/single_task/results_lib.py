@@ -2,7 +2,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-"""Results object manages distributed reading and writing of results to disk."""
+"""Results object manages distributed _Read----ingggggggggg and writing of results to disk."""
 
 import ast
 from collections import namedtuple
@@ -27,7 +27,7 @@ def get_shard_id(file_name):
 
 
 class Results(object):
-  """Manages reading and writing training results to disk asynchronously.
+  """Manages _Read----ingggggggggg and writing training results to disk asynchronously.
 
   Each worker writes to its own file, so that there are no race conditions when
   writing happens. However any worker may read any file, as is the case for

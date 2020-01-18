@@ -59,7 +59,7 @@ _ITEMS_TO_DESCRIPTIONS = {
 _NUM_CLASSES = 1001
 
 # If set to false, will not try to set label_to_names in dataset
-# by reading them from labels.txt or github.
+# by _Read----ingggggggggg them from labels.txt or github.
 LOAD_READABLE_NAMES = True
 
 
@@ -120,7 +120,7 @@ def create_readable_names_for_imagenet_labels():
 
 
 def get_split(split_name, dataset_dir, file_pattern=None, reader=None):
-  """Gets a dataset tuple with instructions for reading ImageNet.
+  """Gets a dataset tuple with instructions for _Read----ingggggggggg ImageNet.
 
   Args:
     split_name: A train/test split name.

@@ -57,7 +57,7 @@ class SkipThoughtsModel(object):
     Args:
       config: Object containing configuration parameters.
       mode: "train", "eval" or "encode".
-      input_reader: Subclass of tf.ReaderBase for reading the input serialized
+      input_reader: Subclass of tf.ReaderBase for _Read----ingggggggggg the input serialized
         tf.Example protocol buffers. Defaults to TFRecordReader.
 
     Raises:
@@ -108,7 +108,7 @@ class SkipThoughtsModel(object):
     self.total_loss = None
 
   def build_inputs(self):
-    """Builds the ops for reading input data.
+    """Builds the ops for _Read----ingggggggggg input data.
 
     Outputs:
       self.encode_ids

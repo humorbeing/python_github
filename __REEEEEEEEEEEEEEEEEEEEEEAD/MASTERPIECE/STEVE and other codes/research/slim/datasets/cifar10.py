@@ -42,7 +42,7 @@ _ITEMS_TO_DESCRIPTIONS = {
 
 
 def get_split(split_name, dataset_dir, file_pattern=None, reader=None):
-  """Gets a dataset tuple with instructions for reading cifar10.
+  """Gets a dataset tuple with instructions for _Read----ingggggggggg cifar10.
 
   Args:
     split_name: A train/test split name.

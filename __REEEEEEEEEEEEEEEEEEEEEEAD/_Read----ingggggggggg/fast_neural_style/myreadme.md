@@ -1,0 +1,3 @@
+### interesting
+- input and output is [0,255]
+- loss weight is 10000....

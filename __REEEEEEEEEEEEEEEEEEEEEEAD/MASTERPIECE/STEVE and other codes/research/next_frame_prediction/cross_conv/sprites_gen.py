@@ -61,7 +61,7 @@ def _images_to_example(image, image2):
 def generate_input():
   """Generate tfrecords."""
   sprites = _read_images()
-  sys.stderr.write('Finish reading images.\n')
+  sys.stderr.write('Finish _Read----ingggggggggg images.\n')
   train_writer = tf.python_io.TFRecordWriter(
       tf.flags.FLAGS.out_file.replace('sprites', 'sprites_train'))
   test_writer = tf.python_io.TFRecordWriter(

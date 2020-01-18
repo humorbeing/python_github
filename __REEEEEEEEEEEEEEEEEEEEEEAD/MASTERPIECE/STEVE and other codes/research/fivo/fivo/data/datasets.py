@@ -258,7 +258,7 @@ def create_speech_dataset(path,
       number of samples per timestep.
     num_parallel_calls: The number of threads to use for parallel processing of
       the data.
-    prefetch_buffer_size: The size of the prefetch queues to use after reading
+    prefetch_buffer_size: The size of the prefetch queues to use after _Read----ingggggggggg
       and processing the raw data.
     shuffle: If true, shuffles the order of the dataset.
     repeat: If true, repeats the dataset endlessly.
@@ -379,7 +379,7 @@ def create_chain_graph_dataset(
       latent state.
     fixed_observation: If not None, fixes all observations to be a constant.
       Must be a scalar.
-    prefetch_buffer_size: The size of the prefetch queues to use after reading
+    prefetch_buffer_size: The size of the prefetch queues to use after _Read----ingggggggggg
       and processing the raw data.
     dtype: A string convertible to a tensorflow datatype. The datatype used
       to represent the states and observations.

@@ -69,7 +69,7 @@ class Shape():
   def __init__(self, obj_file, material_file=None, load_materials=True,
                name_prefix='', name_suffix=''):
     if material_file is not None:
-      logging.error('Ignoring material file input, reading them off obj file.')
+      logging.error('Ignoring material file input, _Read----ingggggggggg them off obj file.')
     load_flags = self.get_pyassimp_load_options()
     scene = assimp.load(obj_file, processing=load_flags)
     filter_ind = self._filter_triangles(scene.meshes)

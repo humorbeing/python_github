@@ -42,7 +42,7 @@ net_arg.add_argument('--num_layers', type=int, default=1)
 net_arg.add_argument('--embed_dim_txt', type=int, default=128)
 net_arg.add_argument('--embed_dim_nmn', type=int, default=128)
 net_arg.add_argument(
-  '--T_encoder', type=int, default=0)  # will be updated when reading data
+  '--T_encoder', type=int, default=0)  # will be updated when _Read----ingggggggggg data
 net_arg.add_argument('--T_decoder', type=int, default=5)
 
 train_arg = add_argument_group('Training')
