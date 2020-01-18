@@ -17,20 +17,18 @@ from transformer_net import TransformerNet
 from vgg import Vgg16
 
 
-def check_paths(args):
-    try:
-        if not os.path.exists(args.save_model_dir):
-            os.makedirs(args.save_model_dir)
-        if args.checkpoint_model_dir is not None and not (os.path.exists(args.checkpoint_model_dir)):
-            os.makedirs(args.checkpoint_model_dir)
-    except OSError as e:
-        print(e)
-        sys.exit(1)
-
 def ss(s):
-    raise Exception(s)
+    import sys
+    print(s)
+    sys.exit(1)
+
+
 
 def train(args):
+    if not os.path.exists(args.save_model_dir):
+        os.makedirs(args.save_model_dir)
+
+
     device = torch.device("cuda" if args.is_cuda else "cpu")
 
     np.random.seed(args.seed)
@@ -42,10 +40,10 @@ def train(args):
         transforms.ToTensor(),
         transforms.Lambda(lambda x: x.mul(255))
     ])
-    # raise
+
     train_dataset = datasets.ImageFolder(args.dataset, transform)
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size)
-    # ss______________ss()
+
     transformer = TransformerNet().to(device)
     optimizer = Adam(transformer.parameters(), args.lr)
     mse_loss = torch.nn.MSELoss()
@@ -59,8 +57,6 @@ def train(args):
     # print(style.size)
     # ss('yo')
     style = style_transform(style)  # it's not transform
-    # print(style.shape)
-    # ss('out style')
     style = style.repeat(args.batch_size, 1, 1, 1).to(device)
     # style = style.repeat(2,1,1,1).to(device)
     # print(style.shape)
@@ -82,6 +78,8 @@ def train(args):
         count = 0
         for batch_id, (x, _) in enumerate(train_loader):
             n_batch = len(x)
+            # print(n_batch)
+            # ss('hi')
             count += n_batch
             optimizer.zero_grad()
 
@@ -121,22 +119,27 @@ def train(args):
                                   (agg_content_loss + agg_style_loss) / (batch_id + 1)
                 )
                 print(mesg)
-
+            if args.is_quickrun:
+                if count > 10:
+                    break
             # if args.checkpoint_model_dir is not None and (batch_id + 1) % args.checkpoint_interval == 0:
             #     transformer.eval().cpu()
             #     ckpt_model_filename = "ckpt_epoch_" + str(e) + "_batch_id_" + str(batch_id + 1) + ".pth"
             #     ckpt_model_path = os.path.join(args.checkpoint_model_dir, ckpt_model_filename)
             #     torch.save(transformer.state_dict(), ckpt_model_path)
             #     transformer.to(device).train()
-            if (e+1) % 50 == 0:
-                pp = '/home/ray/Desktop/Link to Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/neural-style/s/imgs'
+            if e % 50 == 0:
                 # utils.save_image(args.save_model_dir+'/imgs/npepoch_{}.png'.format(e), y[0].detach().cpu())
-                torchvision.utils.save_image(y[0], pp+'/epoch_{}.png'.format(e), normalize=True)
-
+                torchvision.utils.save_image(y[0], './imgs/before/epoch_{}.png'.format(e), normalize=True)
+                # torchvision.utils.save_image(y, './imgs/before/epoch_{}.png'.format(e), normalize=True)
+                # y = y.clamp(0, 255)
+                # torchvision.utils.save_image(y, './imgs/non/epoch_{}.png'.format(e))
+                # torchvision.utils.save_image(y, './imgs/after/epoch_{}.png'.format(e), normalize=True)
             # ss('yo')
     # save model
     transformer.eval().cpu()
-    save_model_filename = "epoch_" + str(args.epochs) + "_" + str(time.ctime()).replace(' ', '_') + "_" + str(
+
+    save_model_filename = "style_"+args.style_name+"_epoch_" + str(args.epochs) + "_" + str(time.ctime()).replace(' ', '_') + "_" + str(
         args.content_weight) + "_" + str(args.style_weight) + ".model"
     save_model_path = os.path.join(args.save_model_dir, save_model_filename)
     torch.save(transformer.state_dict(), save_model_path)
@@ -145,32 +148,5 @@ def train(args):
 
 
 
-
-
-def main():
-    from argparse import Namespace
-    args = Namespace()
-    args.epochs = 2000
-    args.batch_size = 1
-    args.dataset = '/home/ray/Desktop/Link to Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/neural-style/family image outter folder'
-    args.save_model_dir = '/home/ray/Desktop/Link to Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/neural-style/saved-family-model-here'
-    args.style_image = '/home/ray/Desktop/Link to Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/neural-style/s/s.jpg'
-    args.checkpoint_model_dir = ''
-    args.image_size = 256
-    args.style_size = None
-    args.is_cuda = True
-    args.seed = 42
-    args.content_weight = 1e5
-    args.style_weight = 1e10
-    args.lr = 1e-3
-    args.log_interval = 500
-    args.checkpoint_interval = 2000
-
-
-
-    # check_paths(args)
-    train(args)
-
-
 if __name__ == "__main__":
-    main()
+    pass
