@@ -1,2 +1,0 @@
-https://github.com/mratsim/Amazon_Forest_Computer_Vision
-https://discuss.pytorch.org/t/feedback-on-pytorch-for-kaggle-competitions/2252/4

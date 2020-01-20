@@ -1,1 +1,0 @@
-ok, the code is wrong. on loss funciton, I made a mistake.
