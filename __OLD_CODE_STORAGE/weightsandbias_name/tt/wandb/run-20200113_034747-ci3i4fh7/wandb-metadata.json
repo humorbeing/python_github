@@ -1,0 +1,26 @@
+{
+    "gpu_count": 1,
+    "executable": "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/bin/python3",
+    "heartbeatAt": "2020-01-13T03:47:50.685936",
+    "host": "u202",
+    "state": "finished",
+    "program": "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/mm.py",
+    "exitcode": 0,
+    "jobType": null,
+    "args": [],
+    "python": "3.5.2",
+    "username": "ray",
+    "root": "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github",
+    "mode": "run",
+    "startedAt": "2020-01-13T03:47:47.781626",
+    "email": "geemguang@gmail.com",
+    "cuda": "9.0.176",
+    "os": "Linux-4.15.0-74-generic-x86_64-with-Ubuntu-16.04-xenial",
+    "project": "python_github-weightsandbias_name_tt",
+    "git": {
+        "remote": "https://github.com/humorbeing/python_github.git",
+        "commit": "132fbaaeaf0c8284eafc3acaf94242a345727f2f"
+    },
+    "gpu": "GeForce GTX 1050 Ti",
+    "cpu_count": 12
+}

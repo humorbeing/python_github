@@ -1,0 +1,3 @@
+#typing practice
+#while:
+#destroyAllWindows()

@@ -82,10 +82,25 @@ def stylize(args):
     # torchvision.utils.save_image(output[0], args.output_image, normalize=True)
 
 
+def ta(model_name, image, model_root=''):
+    model_path = model_root + model_name + '.model'
+    img = stylize_one(model_path, image)
+    return img
 
 if __name__ == "__main__":
-    model_path = '/home/ray/Desktop/Link to Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/neural-style/saved-model-here/style_05.model'
+    # model_name = '01'
+
+    # model_path = '/home/ray/Desktop/Link to Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/neural-style/saved-model-here/style_05.model'
+    model_root = '/home/ray/Desktop/Link to Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/neural-style/saved-model-here/trained on colab/'
     target_image_path = '/home/ray/Desktop/Link to Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/neural-style/1/WeChat Image_20200118161228.jpg'
-    img = stylize_one(model_path, target_image_path)
-    print(img)
-    img.show()
+    target_image_path = '/home/ray/Desktop/Link to Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/neural-style/all content/content/20181007_131604.jpg'
+    save_path = './img/'
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+    # img = ta(model_name, target_image_path, model_root)
+    # img.show()
+    for i in range(1,11):
+        num = '{:02d}'.format(i)
+        img = ta(num, target_image_path, model_root)
+        # img.show()
+        img.save(save_path+num+'_.jpg')

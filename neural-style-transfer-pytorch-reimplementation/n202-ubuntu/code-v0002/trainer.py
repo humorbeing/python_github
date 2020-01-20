@@ -128,13 +128,13 @@ def train(args):
             #     ckpt_model_path = os.path.join(args.checkpoint_model_dir, ckpt_model_filename)
             #     torch.save(transformer.state_dict(), ckpt_model_path)
             #     transformer.to(device).train()
-            if e % 50 == 0:
+            if (e % 50 == 0) or (e>400 and e % 10 ==0):
                 # utils.save_image(args.save_model_dir+'/imgs/npepoch_{}.png'.format(e), y[0].detach().cpu())
-                torchvision.utils.save_image(y[0], './imgs/before/epoch_{}.png'.format(e), normalize=True)
-                # torchvision.utils.save_image(y, './imgs/before/epoch_{}.png'.format(e), normalize=True)
-                # y = y.clamp(0, 255)
-                # torchvision.utils.save_image(y, './imgs/non/epoch_{}.png'.format(e))
-                # torchvision.utils.save_image(y, './imgs/after/epoch_{}.png'.format(e), normalize=True)
+                # torchvision.utils.save_image(y, './imgs/epoch_{}.png'.format(e), normalize=True)
+                torchvision.utils.save_image(y, './imgs/before/epoch_{}.png'.format(e), normalize=True)
+                y = y.clamp(0, 255)
+                torchvision.utils.save_image(y, './imgs/non/epoch_{}.png'.format(e))
+                torchvision.utils.save_image(y, './imgs/after/epoch_{}.png'.format(e), normalize=True)
             # ss('yo')
     # save model
     transformer.eval().cpu()

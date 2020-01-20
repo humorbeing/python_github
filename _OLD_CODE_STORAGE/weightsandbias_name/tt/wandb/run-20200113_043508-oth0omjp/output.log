@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/weightsandbias_name/tt/asdf.py", line 37, in <module>
-    example_images = [wandb_image1, wandb_image2, wandb_image3]
-NameError: name 'wandb_image3' is not defined

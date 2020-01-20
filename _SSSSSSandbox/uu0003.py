@@ -1,5 +1,8 @@
-import torch
+# import torch
 
 
-print(torch.cuda.is_available())
-print(torch.nn.Transformer)
+# print(torch.cuda.is_available())
+# print(torch.nn.Transformer)
+def a(b):
+    print(b)
+c = a
