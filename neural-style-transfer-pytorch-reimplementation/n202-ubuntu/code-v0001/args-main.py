@@ -28,10 +28,15 @@ args.is_quickrun = True
 style_images_root = '../../style-images/style-images-here/'
 numbers = [
     '01','02','03','04','05',
-    '06','07','08','09','10'
+    '06','07','08','09','10',
 ]
 
-for num in numbers:
+from_num = 11
+to_num = 25
+for i in range(from_num, to_num+1):
+    num = '{:02d}'.format(i)
+    print(num)
+# for num in numbers:
     args.style_name = num
     args.style_image = style_images_root + num + '.jpg'
     train(args)
