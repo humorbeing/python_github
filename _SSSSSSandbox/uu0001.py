@@ -1,5 +1,8 @@
-import uu0003
 
 
-d = uu0003
-d('5')
+
+def a(b):
+    print(b)
+ha = '1'
+c = {'1':'abc','2':'eee'}[ha]
+

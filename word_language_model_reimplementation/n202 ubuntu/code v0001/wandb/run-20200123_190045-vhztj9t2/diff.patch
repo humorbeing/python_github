@@ -1,0 +1,642 @@
+diff --git a/ProjectCheckList.md b/ProjectCheckList.md
+index 40f6b88..489c2d3 100644
+--- a/ProjectCheckList.md
++++ b/ProjectCheckList.md
+@@ -86,4 +86,9 @@ stable program, burst out experiments.
+ - this root is outside of github monitoring.
+     - it should be un-limited by github upload, download speed.
+     - github updates should've free from this burden.
+-    - logs-like small text is ok with github monitoring.
+\ No newline at end of file
++    - logs-like small text is ok with github monitoring.
++- about using `space` in directory naming
++    - looks good
++    - cons:
++        - can't run terminal command with `space`s.
++        - e.g., wandb
+\ No newline at end of file
+diff --git a/_SSSSSSandbox/uu0001.py b/_SSSSSSandbox/uu0001.py
+index ce49060..1b0c9f8 100644
+--- a/_SSSSSSandbox/uu0001.py
++++ b/_SSSSSSandbox/uu0001.py
+@@ -1,5 +1,8 @@
+-import uu0003
+ 
+ 
+-d = uu0003
+-d('5')
+\ No newline at end of file
++
++def a(b):
++    print(b)
++ha = '1'
++c = {'1':'abc','2':'eee'}[ha]
++
+diff --git a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/__pycache__/data.cpython-35.pyc b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/__pycache__/data.cpython-35.pyc
+index b210e54..4c67fea 100644
+Binary files a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/__pycache__/data.cpython-35.pyc and b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/__pycache__/data.cpython-35.pyc differ
+diff --git a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/__pycache__/model.cpython-35.pyc b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/__pycache__/model.cpython-35.pyc
+index f232e01..5e1fa14 100644
+Binary files a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/__pycache__/model.cpython-35.pyc and b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/__pycache__/model.cpython-35.pyc differ
+diff --git a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/data.py b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/data.py
+index 2792b51..a2f2249 100644
+--- a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/data.py
++++ b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/data.py
+@@ -2,11 +2,6 @@ import os
+ from io import open
+ import torch
+ 
+-def ss(s):
+-    import sys
+-    print(s)
+-    sys.exit(1)
+-
+ class Dictionary(object):
+     def __init__(self):
+         self.word2idx = {}
+@@ -25,29 +20,19 @@ class Dictionary(object):
+ class Corpus(object):
+     def __init__(self, path):
+         self.dictionary = Dictionary()
+-        # self.train = self.tokenize(os.path.join(path, 'train.txt'))
+-        self.train = self.tokenize('/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/language-model-data/small.txt')
+-        # self.valid = self.tokenize(os.path.join(path, 'valid.txt'))
+-        # self.test = self.tokenize(os.path.join(path, 'test.txt'))
++        self.train = self.tokenize(os.path.join(path, 'train.txt'))
++        self.valid = self.tokenize(os.path.join(path, 'valid.txt'))
++        self.test = self.tokenize(os.path.join(path, 'test.txt'))
+ 
+     def tokenize(self, path):
+         """Tokenizes a text file."""
+         assert os.path.exists(path)
+-
+         # Add words to the dictionary
+         with open(path, 'r', encoding="utf8") as f:
+             for line in f:
+-
+-                # print(line)
+-                # print(line.split())
+                 words = line.split() + ['<eos>']
+-                # print(words)
+-                # print(self.dictionary)
+                 for word in words:
+                     self.dictionary.add_word(word)
+-                    # print(self.dictionary.idx2word)
+-                    # print(self.dictionary.word2idx)
+-
+ 
+         # Tokenize file content
+         with open(path, 'r', encoding="utf8") as f:
+@@ -57,12 +42,7 @@ class Corpus(object):
+                 ids = []
+                 for word in words:
+                     ids.append(self.dictionary.word2idx[word])
+-                    # print(ids)
+-                    # ss('in data.py')
+                 idss.append(torch.tensor(ids).type(torch.int64))
+-            # print(idss)
+-            # ss('in data.py')
+             ids = torch.cat(idss)
+-            # print(ids)
+ 
+         return ids
+diff --git a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/main.py b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/main.py
+index 016dd6f..85f06a3 100644
+--- a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/main.py
++++ b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/main.py
+@@ -11,41 +11,41 @@ import data
+ import model
+ 
+ def ss(s):
+-    import sys
+     print(s)
++    import sys
+     sys.exit(1)
+ 
+ parser = argparse.ArgumentParser(description='PyTorch Wikitext-2 RNN/LSTM Language Model')
+-parser.add_argument('--data', type=str, default='./data/wikitext-2',
+-                    help='location of the data corpus')
+-parser.add_argument('--model', type=str, default='Transformer',
+-                    help='type of recurrent net (RNN_TANH, RNN_RELU, LSTM, GRU, Transformer)')
+-parser.add_argument('--emsize', type=int, default=200,
+-                    help='size of word embeddings')
+-parser.add_argument('--nhid', type=int, default=200,
+-                    help='number of hidden units per layer')
+-parser.add_argument('--nlayers', type=int, default=2,
+-                    help='number of layers')
+-parser.add_argument('--lr', type=float, default=20,
+-                    help='initial learning rate')
+-parser.add_argument('--clip', type=float, default=0.25,
+-                    help='gradient clipping')
+-parser.add_argument('--epochs', type=int, default=40,
+-                    help='upper epoch limit')
+-parser.add_argument('--batch_size', type=int, default=20, metavar='N',
+-                    help='batch size')
+-parser.add_argument('--bptt', type=int, default=35,
+-                    help='sequence length')
+-parser.add_argument('--dropout', type=float, default=0.2,
+-                    help='dropout applied to layers (0 = no dropout)')
+-parser.add_argument('--tied', action='store_true',
+-                    help='tie the word embedding and softmax weights')
+-parser.add_argument('--seed', type=int, default=1111,
+-                    help='random seed')
+-parser.add_argument('--cuda', action='store_true',
+-                    help='use CUDA')
+-parser.add_argument('--log-interval', type=int, default=200, metavar='N',
+-                    help='report interval')
++# parser.add_argument('--data', type=str, default='./data/wikitext-2',
++#                     help='location of the data corpus')
++# parser.add_argument('--model', type=str, default='LSTM',
++#                     help='type of recurrent net (RNN_TANH, RNN_RELU, LSTM, GRU, Transformer)')
++# parser.add_argument('--emsize', type=int, default=200,
++#                     help='size of word embeddings')
++# parser.add_argument('--nhid', type=int, default=200,
++#                     help='number of hidden units per layer')
++# parser.add_argument('--nlayers', type=int, default=2,
++#                     help='number of layers')
++# parser.add_argument('--lr', type=float, default=20,
++#                     help='initial learning rate')
++# parser.add_argument('--clip', type=float, default=0.25,
++#                     help='gradient clipping')
++# parser.add_argument('--epochs', type=int, default=40,
++#                     help='upper epoch limit')
++# parser.add_argument('--batch_size', type=int, default=20, metavar='N',
++#                     help='batch size')
++# parser.add_argument('--bptt', type=int, default=35,
++#                     help='sequence length')
++# parser.add_argument('--dropout', type=float, default=0.2,
++#                     help='dropout applied to layers (0 = no dropout)')
++# parser.add_argument('--tied', action='store_true',
++#                     help='tie the word embedding and softmax weights')
++# parser.add_argument('--seed', type=int, default=1111,
++#                     help='random seed')
++# parser.add_argument('--cuda', action='store_true',
++#                     help='use CUDA')
++# parser.add_argument('--log-interval', type=int, default=200, metavar='N',
++#                     help='report interval')
+ parser.add_argument('--save', type=str, default='model.pt',
+                     help='path to save the final model')
+ parser.add_argument('--onnx-export', type=str, default='',
+@@ -54,23 +54,37 @@ parser.add_argument('--onnx-export', type=str, default='',
+ parser.add_argument('--nhead', type=int, default=2,
+                     help='the number of heads in the encoder/decoder of the transformer model')
+ 
+-args = parser.parse_args()
+-args.cuda = True
+-args.batch_size = 4
++# args = parser.parse_args()
++args = argparse.Namespace()
++args.seed = 1111
++args.is_cuda = True
++args.data_root = '/home/ray/Desktop/Link to Mystuff/Workspace/python_world/python_github/__SSSSTTTTOOOORRRREEEE/language-model-data'
++args.batch_size = 20
++args.model = 'LSTM'
++args.emsize = 200
++args.nhid = 200
++args.nlayers = 2
++args.lr = 20
++args.dropout = 0.2
++args.tied = False
++args.epoch = 40
++args.bptt = 35
++args.clip = 0.25
++args.log_interval = 200
+ # Set the random seed manually for reproducibility.
+ torch.manual_seed(args.seed)
+ # if torch.cuda.is_available():
+ #     if not args.cuda:
+ #         print("WARNING: You have a CUDA device, so you should probably run with --cuda")
+ 
+-device = torch.device("cuda" if args.cuda else "cpu")
++device = torch.device("cuda" if args.is_cuda else "cpu")
+ 
+ ###############################################################################
+ # Load data
+ ###############################################################################
+ 
+-corpus = data.Corpus(args.data)
+-# ss('in main')
++corpus = data.Corpus(args.data_root)
++
+ # Starting from sequential data, batchify arranges the dataset into columns.
+ # For instance, with the alphabet as the sequence and batch size 4, we'd get
+ # ┌ a g m s ┐
+@@ -82,29 +96,23 @@ corpus = data.Corpus(args.data)
+ # These columns are treated as independent by the model, which means that the
+ # dependence of e. g. 'g' on 'f' can not be learned, but allows more efficient
+ # batch processing.
+-# print(corpus.train)
+-# ss('in main')
+-def batchify(data, bsz):
+ 
++def batchify(data, bsz):
+     # Work out how cleanly we can divide the dataset into bsz parts.
+     nbatch = data.size(0) // bsz
+     # Trim off any extra elements that wouldn't cleanly fit (remainders).
+-    # print(len(data))
+     data = data.narrow(0, 0, nbatch * bsz)
+-    # print(data)
+     # Evenly divide the data across the bsz batches.
+-    # print(data.view(-1, bsz))
+     data = data.view(bsz, -1).t().contiguous()
+-    # print(data)
+-    # ss('in batchify')
+     return data.to(device)
+-# ss('in main')
+-eval_batch_size = args.batch_size
++
++eval_batch_size = 10
+ train_data = batchify(corpus.train, args.batch_size)
+-val_data = train_data
+-# val_data = batchify(corpus.valid, eval_batch_size)
+-# test_data = batchify(corpus.test, eval_batch_size)
+-# ss('in main')
++val_data = batchify(corpus.valid, eval_batch_size)
++test_data = batchify(corpus.test, eval_batch_size)
++
++
++#
+ ###############################################################################
+ # Build the model
+ ###############################################################################
+@@ -116,7 +124,7 @@ else:
+     model = model.RNNModel(args.model, ntokens, args.emsize, args.nhid, args.nlayers, args.dropout, args.tied).to(device)
+ 
+ criterion = nn.CrossEntropyLoss()
+-ss('in main')
++#
+ ###############################################################################
+ # Training code
+ ###############################################################################
+@@ -144,13 +152,8 @@ def get_batch(source, i):
+     seq_len = min(args.bptt, len(source) - 1 - i)
+     data = source[i:i+seq_len]
+     target = source[i+1:i+1+seq_len].view(-1)
+-    # print(source)
+-    # print(data)
+-    # print(target)
+     return data, target
+ 
+-args.bptt = 3
+-
+ 
+ def evaluate(data_source):
+     # Turn on evaluation mode which disables dropout.
+@@ -170,11 +173,10 @@ def evaluate(data_source):
+             output_flat = output.view(-1, ntokens)
+             total_loss += len(data) * criterion(output_flat, targets).item()
+     return total_loss / (len(data_source) - 1)
+-args.bptt = 3
++
+ 
+ def train():
+     # Turn on training mode which enables dropout.
+-    # ss('in main train')
+     model.train()
+     total_loss = 0.
+     start_time = time.time()
+@@ -182,33 +184,26 @@ def train():
+     if args.model != 'Transformer':
+         hidden = model.init_hidden(args.batch_size)
+     for batch, i in enumerate(range(0, train_data.size(0) - 1, args.bptt)):
+-        # print(batch)
+-        # print(i)
+-        # ss('in main train')
+         data, targets = get_batch(train_data, i)
+         # Starting each batch, we detach the hidden state from how it was previously produced.
+         # If we didn't, the model would try backpropagating all the way to start of the dataset.
+-        # ss('in main train')
+         model.zero_grad()
+         if args.model == 'Transformer':
+             output = model(data)
+         else:
+-            hidden = repackage_hidden(hidden)  # dont want to drag too long?
++            hidden = repackage_hidden(hidden)
+             output, hidden = model(data, hidden)
+-        # ss('in main train')
+         loss = criterion(output.view(-1, ntokens), targets)
+         loss.backward()
+ 
+         # `clip_grad_norm` helps prevent the exploding gradient problem in RNNs / LSTMs.
+         torch.nn.utils.clip_grad_norm_(model.parameters(), args.clip)
+-        for p in model.parameters():  # why
++        for p in model.parameters():
+             p.data.add_(-lr, p.grad.data)
+ 
+         total_loss += loss.item()
+ 
+-
+-        # if batch % args.log_interval == 0 and batch > 0:
+-        if True:
++        if batch % args.log_interval == 0 and batch > 0:
+             cur_loss = total_loss / args.log_interval
+             elapsed = time.time() - start_time
+             print('| epoch {:3d} | {:5d}/{:5d} batches | lr {:02.2f} | ms/batch {:5.2f} | '
+@@ -234,12 +229,11 @@ best_val_loss = None
+ 
+ # At any point you can hit Ctrl + C to break out of training early.
+ try:
+-    for epoch in range(1, args.epochs+1):
++    for epoch in range(1, args.epoch+1):
+         epoch_start_time = time.time()
+         train()
+-        # ss('in main')
++        # ss('-in main')
+         val_loss = evaluate(val_data)
+-        # ss('in main')
+         print('-' * 89)
+         print('| end of epoch {:3d} | time: {:5.2f}s | valid loss {:5.2f} | '
+                 'valid ppl {:8.2f}'.format(epoch, (time.time() - epoch_start_time),
+@@ -258,13 +252,13 @@ except KeyboardInterrupt:
+     print('Exiting from training early')
+ 
+ # Load the best saved model.
+-with open(args.save, 'rb') as f:
+-    model = torch.load(f)
+-    # after load the rnn params are not a continuous chunk of memory
+-    # this makes them a continuous chunk, and will speed up forward pass
+-    # Currently, only rnn model supports flatten_parameters function.
+-    if args.model in ['RNN_TANH', 'RNN_RELU', 'LSTM', 'GRU']:
+-        model.rnn.flatten_parameters()
++# with open(args.save, 'rb') as f:
++#     model = torch.load(f)
++#     # after load the rnn params are not a continuous chunk of memory
++#     # this makes them a continuous chunk, and will speed up forward pass
++#     # Currently, only rnn model supports flatten_parameters function.
++#     if args.model in ['RNN_TANH', 'RNN_RELU', 'LSTM', 'GRU']:
++#         model.rnn.flatten_parameters()
+ 
+ # Run on test data.
+ test_loss = evaluate(test_data)
+@@ -273,6 +267,6 @@ print('| End of training | test loss {:5.2f} | test ppl {:8.2f}'.format(
+     test_loss, math.exp(test_loss)))
+ print('=' * 89)
+ 
+-if len(args.onnx_export) > 0:
+-    # Export the model in ONNX format.
+-    export_onnx(args.onnx_export, batch_size=1, seq_len=args.bptt)
++# if len(args.onnx_export) > 0:
++#     # Export the model in ONNX format.
++#     export_onnx(args.onnx_export, batch_size=1, seq_len=args.bptt)
+diff --git a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/model.py b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/model.py
+index 2b63104..239bf68 100644
+--- a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/model.py
++++ b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/model.py
+@@ -3,30 +3,15 @@ import torch
+ import torch.nn as nn
+ import torch.nn.functional as F
+ 
+-def ss(s):
+-    import sys
+-    print(s)
+-    sys.exit(1)
+-
+ class RNNModel(nn.Module):
+     """Container module with an encoder, a recurrent module, and a decoder."""
+ 
+     def __init__(self, rnn_type, ntoken, ninp, nhid, nlayers, dropout=0.5, tie_weights=False):
+         super(RNNModel, self).__init__()
+-        print('ntoken',ntoken)
+-        print('ninp',ninp)
+-        print('nhid',nhid)
+-        print('nlayers',nlayers)
+-        print('dropout', dropout)
+-        print(tie_weights)
+-
+-        # ss('in rnnmodel')
+         self.drop = nn.Dropout(dropout)
+         self.encoder = nn.Embedding(ntoken, ninp)
+         if rnn_type in ['LSTM', 'GRU']:
+-            # print('1')
+             self.rnn = getattr(nn, rnn_type)(ninp, nhid, nlayers, dropout=dropout)
+-            # print(self.rnn)
+         else:
+             try:
+                 nonlinearity = {'RNN_TANH': 'tanh', 'RNN_RELU': 'relu'}[rnn_type]
+@@ -34,12 +19,8 @@ class RNNModel(nn.Module):
+                 raise ValueError( """An invalid option for `--model` was supplied,
+                                  options are ['LSTM', 'GRU', 'RNN_TANH' or 'RNN_RELU']""")
+             self.rnn = nn.RNN(ninp, nhid, nlayers, nonlinearity=nonlinearity, dropout=dropout)
+-        # ss('in rnnmodel')
+         self.decoder = nn.Linear(nhid, ntoken)
+-        # self.decoder = nn.Linear()
+-        # print(self.encoder.weight.shape)
+-        # print(self.decoder.weight.shape)
+-        # ss('in rnnmodel')
++
+         # Optionally tie weights as in:
+         # "Using the Output Embedding to Improve Language Models" (Press & Wolf 2016)
+         # https://arxiv.org/abs/1608.05859
+@@ -49,15 +30,7 @@ class RNNModel(nn.Module):
+         if tie_weights:
+             if nhid != ninp:
+                 raise ValueError('When using the tied flag, nhid must be equal to emsize')
+-                self.decoder.weight = self.encoder.weight
+-        # self.decoder.weight = self.encoder.weight
+-        # print(self.decoder.weight.data[0, 0])
+-        # print(self.encoder.weight.data[0, 0])
+-        # self.encoder.weight.data[0, 0].add_(5)
+-        # self.decoder.weight.data[0, 0].add_(5)
+-        # print()
+-        # print(self.decoder.weight.data[0, 0])
+-        # print(self.encoder.weight.data[0, 0])
++            self.decoder.weight = self.encoder.weight
+ 
+         self.init_weights()
+ 
+@@ -72,19 +45,10 @@ class RNNModel(nn.Module):
+         self.decoder.weight.data.uniform_(-initrange, initrange)
+ 
+     def forward(self, input, hidden):
+-        # print('in forward')
+-        # print(input.shape)
+-        # print(hidden[0].shape)
+-        # ss('in forward')
+         emb = self.drop(self.encoder(input))
+-        # print(emb.shape)
+         output, hidden = self.rnn(emb, hidden)
+-        # print(output.shape)
+         output = self.drop(output)
+         decoded = self.decoder(output)
+-        # print(decoded.shape)
+-        # ss('in forward')
+-
+         return decoded, hidden
+ 
+     def init_hidden(self, bsz):
+@@ -110,8 +74,7 @@ class PositionalEncoding(nn.Module):
+         dropout: the dropout value (default=0.1).
+         max_len: the max. length of the incoming sequence (default=5000).
+     Examples:
+-        # >>> pos_encoder = PositionalEncoding(d_model)
+-        # >>> print('hi')
++        >>> pos_encoder = PositionalEncoding(d_model)
+     """
+ 
+     def __init__(self, d_model, dropout=0.1, max_len=5000):
+@@ -134,7 +97,7 @@ class PositionalEncoding(nn.Module):
+             x: [sequence length, batch size, embed dim]
+             output: [sequence length, batch size, embed dim]
+         Examples:
+-            # >>> output = pos_encoder(x)
++            >>> output = pos_encoder(x)
+         """
+ 
+         x = x + self.pe[:x.size(0), :]
+@@ -145,16 +108,10 @@ class TransformerModel(nn.Module):
+ 
+     def __init__(self, ntoken, ninp, nhead, nhid, nlayers, dropout=0.5):
+         super(TransformerModel, self).__init__()
+-        print('in transformer init')
+-        print('ntoken {},nips {}, nhead {}, nhid {}, nlayers {}, dropout {}'.format(
+-            ntoken,ninp,nhead,nhid,nlayers, dropout
+-        ))
+-        # ss('in transformer init')
+         try:
+             from torch.nn import TransformerEncoder, TransformerEncoderLayer
+         except:
+             raise ImportError('TransformerEncoder module does not exist in PyTorch 1.1 or lower.')
+-        ss('in transformer init')
+         self.model_type = 'Transformer'
+         self.src_mask = None
+         self.pos_encoder = PositionalEncoding(ninp, dropout)
+diff --git a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/myReadme.md b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/myReadme.md
+deleted file mode 100644
+index 49ae11d..0000000
+--- a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/myReadme.md
++++ /dev/null
+@@ -1,12 +0,0 @@
+-### interesting
+-- learning rate is off the roof
+-- learning decay and manual update of the weight
+-    - companied with if not improving judgment
+-- getattr is used to define models
+-- entire training has one-hot bases, but never used one.
+-    - input is indexes
+-        - embedding to vectors
+-    - output is raw logit
+-        - used a integrated loss, which takes in logits and indexes
+-    - target is indexes
+-        - used a integrated loss, which takes in logits and indexes
+\ No newline at end of file
+diff --git a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/uu0001.py b/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/uu0001.py
+deleted file mode 100644
+index 6051e96..0000000
+--- a/__REEEEEEEEEEEEEEEEEEEEEEAD/_Read----ingggggggggg/word_language_model/uu0001.py
++++ /dev/null
+@@ -1,14 +0,0 @@
+-
+-
+-# a = Dictionary()
+-import argparse
+-a = argparse.Namespace()
+-a.b = 1
+-print(getattr(a, 'b'))
+-def c(d):
+-    print(d)
+-    return 'e'
+-a.b = c
+-print(getattr(a, 'b')(5))
+-'''
+-'''
+\ No newline at end of file
+diff --git a/__REEEEEEEEEEEEEEEEEEEEEEAD/wandb_examples/wandb_name/command_loc.txt b/__REEEEEEEEEEEEEEEEEEEEEEAD/wandb_examples/wandb_name/command_loc.txt
+index b761ece..9eb481c 100644
+--- a/__REEEEEEEEEEEEEEEEEEEEEEAD/wandb_examples/wandb_name/command_loc.txt
++++ b/__REEEEEEEEEEEEEEEEEEEEEEAD/wandb_examples/wandb_name/command_loc.txt
+@@ -1,2 +1,3 @@
+ # n202 ubuntu
+-/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/bin/wandb login a6f5079f5d5476735d22bac595bb76c5aa1cb369
++# /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/bin/wandb login a6f5079f5d5476735d22bac595bb76c5aa1cb369
++~/Desktop/Link to Mystuff/Workspace/python_world/Venv/3.5_pytorch1.3/bin/wandb login a6f5079f5d5476735d22bac595bb76c5aa1cb369
+\ No newline at end of file
+diff --git a/__REEEEEEEEEEEEEEEEEEEEEEAD/wandb_examples/wandb_name/readme.md b/__REEEEEEEEEEEEEEEEEEEEEEAD/wandb_examples/wandb_name/readme.md
+index b8b2df3..be20b6c 100644
+--- a/__REEEEEEEEEEEEEEEEEEEEEEAD/wandb_examples/wandb_name/readme.md
++++ b/__REEEEEEEEEEEEEEEEEEEEEEAD/wandb_examples/wandb_name/readme.md
+@@ -1,11 +1,14 @@
+ ### my exp
+ - command is in venv bin
+-    - `/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/bin/wandb`
++    - `~/Desktop/Link to Mystuff/Workspace/python_world/Venv/3.5_pytorch1.3/bin/wandb`
+ - login
+     - login key might be same everytime
+-    - `/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/bin/wandb login xxx`
+-    - `/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/bin/wandb login a6f5079f5d5476735d22bac595bb76c5aa1cb369`
++    - `~/Desktop/Link to Mystuff/Workspace/python_world/Venv/3.5_pytorch1.3/bin/wandb login xxx`
+     - key is `a6f5079f5d5476735d22bac595bb76c5aa1cb369`
++    - this will creat wandb folder inside this folder
++        - go to runner code folder, and execute the command
++        - will it designate a project? can i change it later in init?
++            - it DID NOT specify a project to upload
+ - recording model graph
+     - have tried various ways to trigger model saving
+     - only triggers when there is backward() to model
+diff --git a/neural-style-transfer-pytorch-reimplementation/n202-ubuntu/code-v0001/args-main.py b/neural-style-transfer-pytorch-reimplementation/n202-ubuntu/code-v0001/args-main.py
+index c1c5756..a9a0b42 100644
+--- a/neural-style-transfer-pytorch-reimplementation/n202-ubuntu/code-v0001/args-main.py
++++ b/neural-style-transfer-pytorch-reimplementation/n202-ubuntu/code-v0001/args-main.py
+@@ -6,7 +6,7 @@ work_root = '../../../__SSSSTTTTOOOORRRREEEE/neural-style/'
+ 
+ args = Namespace()
+ args.epochs = 2
+-args.batch_size = 4
++args.batch_size = 12
+ args.dataset = '../../../__SSSSTTTTOOOORRRREEEE/coco-dataset'
+ # args.dataset = '../../../__SSSSTTTTOOOORRRREEEE/coco-dataset/'
+ args.save_model_dir = work_root + 'saved-model-here/'
+@@ -18,25 +18,29 @@ args.is_cuda = True
+ args.seed = 42
+ args.content_weight = 1e5
+ args.style_weight = 1e10
+-args.lr = 1e-3
++args.lr = 1e-4
+ args.log_interval = 500
+ args.checkpoint_interval = 2000
+ args.style_name = 'mona'
+ args.is_quickrun = False
+ 
+-args.is_quickrun = True
++# args.is_quickrun = True
+ style_images_root = '../../style-images/style-images-here/'
+ numbers = [
+     '01','02','03','04','05',
+     '06','07','08','09','10',
+ ]
+-
++args.style_weight = 1e11
+ from_num = 11
+ to_num = 25
+-for i in range(from_num, to_num+1):
+-    num = '{:02d}'.format(i)
+-    print(num)
+-# for num in numbers:
+-    args.style_name = num
+-    args.style_image = style_images_root + num + '.jpg'
+-    train(args)
+\ No newline at end of file
++# for i in range(from_num, to_num+1):
++#     num = '{:02d}'.format(i)
++#     print(num)
++# # for num in numbers:
++#     args.style_name = num
++#     args.style_image = style_images_root + num + '.jpg'
++#     train(args)
++num = '01'
++args.style_name = num
++args.style_image = style_images_root + num + '.jpg'
++train(args)
+\ No newline at end of file
+diff --git a/neural-style-transfer-pytorch-reimplementation/n202-ubuntu/code-v0001/transform-and-show.py b/neural-style-transfer-pytorch-reimplementation/n202-ubuntu/code-v0001/transform-and-show.py
+index 0da81a8..8b34db0 100644
+--- a/neural-style-transfer-pytorch-reimplementation/n202-ubuntu/code-v0001/transform-and-show.py
++++ b/neural-style-transfer-pytorch-reimplementation/n202-ubuntu/code-v0001/transform-and-show.py
+@@ -99,7 +99,7 @@ if __name__ == "__main__":
+         os.makedirs(save_path)
+     # img = ta(model_name, target_image_path, model_root)
+     # img.show()
+-    for i in range(1,11):
++    for i in range(1,26):
+         num = '{:02d}'.format(i)
+         img = ta(num, target_image_path, model_root)
+         # img.show()

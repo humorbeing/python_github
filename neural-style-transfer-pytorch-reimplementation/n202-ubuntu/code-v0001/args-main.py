@@ -6,7 +6,7 @@ work_root = '../../../__SSSSTTTTOOOORRRREEEE/neural-style/'
 
 args = Namespace()
 args.epochs = 2
-args.batch_size = 4
+args.batch_size = 12
 args.dataset = '../../../__SSSSTTTTOOOORRRREEEE/coco-dataset'
 # args.dataset = '../../../__SSSSTTTTOOOORRRREEEE/coco-dataset/'
 args.save_model_dir = work_root + 'saved-model-here/'
@@ -18,25 +18,29 @@ args.is_cuda = True
 args.seed = 42
 args.content_weight = 1e5
 args.style_weight = 1e10
-args.lr = 1e-3
+args.lr = 1e-4
 args.log_interval = 500
 args.checkpoint_interval = 2000
 args.style_name = 'mona'
 args.is_quickrun = False
 
-args.is_quickrun = True
+# args.is_quickrun = True
 style_images_root = '../../style-images/style-images-here/'
 numbers = [
     '01','02','03','04','05',
     '06','07','08','09','10',
 ]
-
+args.style_weight = 1e11
 from_num = 11
 to_num = 25
-for i in range(from_num, to_num+1):
-    num = '{:02d}'.format(i)
-    print(num)
-# for num in numbers:
-    args.style_name = num
-    args.style_image = style_images_root + num + '.jpg'
-    train(args)
+# for i in range(from_num, to_num+1):
+#     num = '{:02d}'.format(i)
+#     print(num)
+# # for num in numbers:
+#     args.style_name = num
+#     args.style_image = style_images_root + num + '.jpg'
+#     train(args)
+num = '01'
+args.style_name = num
+args.style_image = style_images_root + num + '.jpg'
+train(args)

@@ -1,0 +1,26 @@
+{
+    "os": "Linux-4.15.0-74-generic-x86_64-with-Ubuntu-16.04-xenial",
+    "cpu_count": 8,
+    "git": {
+        "commit": "682ee2caa72337637c59dd5e846c23a1d12428ab",
+        "remote": "https://github.com/humorbeing/python_github.git"
+    },
+    "cuda": "10.1.105",
+    "executable": "/home/ray/Desktop/Link to Mystuff/Workspace/python_world/Venv/3.5_pytorch1.3/bin/python3",
+    "startedAt": "2020-01-23T20:46:43.132553",
+    "state": "failed",
+    "project": "sample-project",
+    "python": "3.5.2",
+    "program": "/home/ray/python_world/python_github/word_language_model_reimplementation/n202 ubuntu/code v0001/args main.py",
+    "heartbeatAt": "2020-01-23T20:47:23.886318",
+    "host": "n202",
+    "exitcode": 1,
+    "username": "ray",
+    "gpu_count": 1,
+    "root": "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github",
+    "email": "geemguang@gmail.com",
+    "jobType": null,
+    "mode": "run",
+    "args": [],
+    "gpu": "GeForce RTX 2080 Ti"
+}

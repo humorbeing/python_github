@@ -1,2 +1,3 @@
 # n202 ubuntu
-/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/bin/wandb login a6f5079f5d5476735d22bac595bb76c5aa1cb369
+# /mnt/D8442D91442D7382/Mystuff/Workspace/python_world/Venv/3.5/bin/wandb login a6f5079f5d5476735d22bac595bb76c5aa1cb369
+~/Desktop/Link to Mystuff/Workspace/python_world/Venv/3.5_pytorch1.3/bin/wandb login a6f5079f5d5476735d22bac595bb76c5aa1cb369

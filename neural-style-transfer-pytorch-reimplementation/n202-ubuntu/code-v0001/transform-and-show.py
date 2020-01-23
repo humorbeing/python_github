@@ -99,7 +99,7 @@ if __name__ == "__main__":
         os.makedirs(save_path)
     # img = ta(model_name, target_image_path, model_root)
     # img.show()
-    for i in range(1,11):
+    for i in range(1,26):
         num = '{:02d}'.format(i)
         img = ta(num, target_image_path, model_root)
         # img.show()

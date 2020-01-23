@@ -45,3 +45,16 @@ wandb.log({
         "list of w i": example_images,
         "Some Number": 99,
         "trigger no loss": 5})
+
+
+
+args.model = 'LSTM'
+wandb.init()
+wandb.config.update(args)
+# (doing experiment1)
+wandb.join()
+args.model = 'GRU'
+wandb.init(reinit=True)
+wandb.config.update(args)
+# (doing experiment2)
+wandb.join()

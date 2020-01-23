@@ -1,0 +1,26 @@
+{
+    "gpu": "GeForce RTX 2080 Ti",
+    "state": "finished",
+    "program": "/home/ray/python_world/python_github/word_language_model_reimplementation/n202 ubuntu/code v0001/args main.py",
+    "startedAt": "2020-01-23T21:19:24.499407",
+    "email": "geemguang@gmail.com",
+    "args": [],
+    "git": {
+        "commit": "682ee2caa72337637c59dd5e846c23a1d12428ab",
+        "remote": "https://github.com/humorbeing/python_github.git"
+    },
+    "gpu_count": 1,
+    "os": "Linux-4.15.0-74-generic-x86_64-with-Ubuntu-16.04-xenial",
+    "executable": "/home/ray/Desktop/Link to Mystuff/Workspace/python_world/Venv/3.5_pytorch1.3/bin/python3",
+    "python": "3.5.2",
+    "username": "ray",
+    "heartbeatAt": "2020-01-23T21:19:57.269379",
+    "exitcode": 0,
+    "jobType": null,
+    "project": "sample-project",
+    "cuda": "10.1.105",
+    "cpu_count": 8,
+    "host": "n202",
+    "mode": "run",
+    "root": "/mnt/D8442D91442D7382/Mystuff/Workspace/python_world/python_github"
+}

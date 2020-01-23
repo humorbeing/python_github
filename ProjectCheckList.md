@@ -87,3 +87,8 @@ stable program, burst out experiments.
     - it should be un-limited by github upload, download speed.
     - github updates should've free from this burden.
     - logs-like small text is ok with github monitoring.
+- about using `space` in directory naming
+    - looks good
+    - cons:
+        - can't run terminal command with `space`s.
+        - e.g., wandb

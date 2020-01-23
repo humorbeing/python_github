@@ -3,30 +3,15 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-def ss(s):
-    import sys
-    print(s)
-    sys.exit(1)
-
 class RNNModel(nn.Module):
     """Container module with an encoder, a recurrent module, and a decoder."""
 
     def __init__(self, rnn_type, ntoken, ninp, nhid, nlayers, dropout=0.5, tie_weights=False):
         super(RNNModel, self).__init__()
-        print('ntoken',ntoken)
-        print('ninp',ninp)
-        print('nhid',nhid)
-        print('nlayers',nlayers)
-        print('dropout', dropout)
-        print(tie_weights)
-
-        # ss('in rnnmodel')
         self.drop = nn.Dropout(dropout)
         self.encoder = nn.Embedding(ntoken, ninp)
         if rnn_type in ['LSTM', 'GRU']:
-            # print('1')
             self.rnn = getattr(nn, rnn_type)(ninp, nhid, nlayers, dropout=dropout)
-            # print(self.rnn)
         else:
             try:
                 nonlinearity = {'RNN_TANH': 'tanh', 'RNN_RELU': 'relu'}[rnn_type]
@@ -34,12 +19,8 @@ class RNNModel(nn.Module):
                 raise ValueError( """An invalid option for `--model` was supplied,
                                  options are ['LSTM', 'GRU', 'RNN_TANH' or 'RNN_RELU']""")
             self.rnn = nn.RNN(ninp, nhid, nlayers, nonlinearity=nonlinearity, dropout=dropout)
-        # ss('in rnnmodel')
         self.decoder = nn.Linear(nhid, ntoken)
-        # self.decoder = nn.Linear()
-        # print(self.encoder.weight.shape)
-        # print(self.decoder.weight.shape)
-        # ss('in rnnmodel')
+
         # Optionally tie weights as in:
         # "Using the Output Embedding to Improve Language Models" (Press & Wolf 2016)
         # https://arxiv.org/abs/1608.05859
@@ -49,15 +30,7 @@ class RNNModel(nn.Module):
         if tie_weights:
             if nhid != ninp:
                 raise ValueError('When using the tied flag, nhid must be equal to emsize')
-                self.decoder.weight = self.encoder.weight
-        # self.decoder.weight = self.encoder.weight
-        # print(self.decoder.weight.data[0, 0])
-        # print(self.encoder.weight.data[0, 0])
-        # self.encoder.weight.data[0, 0].add_(5)
-        # self.decoder.weight.data[0, 0].add_(5)
-        # print()
-        # print(self.decoder.weight.data[0, 0])
-        # print(self.encoder.weight.data[0, 0])
+            self.decoder.weight = self.encoder.weight
 
         self.init_weights()
 
@@ -72,19 +45,10 @@ class RNNModel(nn.Module):
         self.decoder.weight.data.uniform_(-initrange, initrange)
 
     def forward(self, input, hidden):
-        # print('in forward')
-        # print(input.shape)
-        # print(hidden[0].shape)
-        # ss('in forward')
         emb = self.drop(self.encoder(input))
-        # print(emb.shape)
         output, hidden = self.rnn(emb, hidden)
-        # print(output.shape)
         output = self.drop(output)
         decoded = self.decoder(output)
-        # print(decoded.shape)
-        # ss('in forward')
-
         return decoded, hidden
 
     def init_hidden(self, bsz):
@@ -110,8 +74,7 @@ class PositionalEncoding(nn.Module):
         dropout: the dropout value (default=0.1).
         max_len: the max. length of the incoming sequence (default=5000).
     Examples:
-        # >>> pos_encoder = PositionalEncoding(d_model)
-        # >>> print('hi')
+        >>> pos_encoder = PositionalEncoding(d_model)
     """
 
     def __init__(self, d_model, dropout=0.1, max_len=5000):
@@ -134,7 +97,7 @@ class PositionalEncoding(nn.Module):
             x: [sequence length, batch size, embed dim]
             output: [sequence length, batch size, embed dim]
         Examples:
-            # >>> output = pos_encoder(x)
+            >>> output = pos_encoder(x)
         """
 
         x = x + self.pe[:x.size(0), :]
@@ -145,16 +108,10 @@ class TransformerModel(nn.Module):
 
     def __init__(self, ntoken, ninp, nhead, nhid, nlayers, dropout=0.5):
         super(TransformerModel, self).__init__()
-        print('in transformer init')
-        print('ntoken {},nips {}, nhead {}, nhid {}, nlayers {}, dropout {}'.format(
-            ntoken,ninp,nhead,nhid,nlayers, dropout
-        ))
-        # ss('in transformer init')
         try:
             from torch.nn import TransformerEncoder, TransformerEncoderLayer
         except:
             raise ImportError('TransformerEncoder module does not exist in PyTorch 1.1 or lower.')
-        ss('in transformer init')
         self.model_type = 'Transformer'
         self.src_mask = None
         self.pos_encoder = PositionalEncoding(ninp, dropout)
