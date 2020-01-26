@@ -36,3 +36,15 @@
                 - works as intended
             - scheduler = optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lmbda)
                 - strange behavior
+
+### learning rate decay and early stop
+- so far, when to trigger this mechanism is decided
+by validation loss progress. Is it a correct way?
+- And it is called too often. as long as a validation loss is low
+enough, it will decay learning rate like crazy frequency.
+- How about training loss as the deciding measure? as long as training loss
+is improving, give the learning more time to stick with it's current setup.
+
+
+### code v0002
+- harvard annotated Transformer

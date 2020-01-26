@@ -92,3 +92,7 @@ stable program, burst out experiments.
     - cons:
         - can't run terminal command with `space`s.
         - e.g., wandb
+
+
+### wandb login
+- a6f5079f5d5476735d22bac595bb76c5aa1cb369

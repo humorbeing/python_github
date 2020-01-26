@@ -83,9 +83,10 @@ def main(args):
     # Training code
     ###############################################################################
     optimizer = optim.Adam(model.parameters(), lr=args.lr_adam)
-    lmbda = lambda epoch: 0.95
-    scheduler = optim.lr_scheduler.MultiplicativeLR(optimizer, lr_lambda=lmbda)
-    # scheduler = optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lmbda)
+    lmbda = lambda epoch: 0.95**epoch
+    # scheduler = optim.lr_scheduler.MultiplicativeLR(optimizer, lr_lambda=lmbda)
+    scheduler = optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=[lmbda])
+    # scheduler.step()
     # scheduler.step()
     # scheduler.step()
     # args.is_manual_update = True
@@ -97,12 +98,12 @@ def main(args):
             for p in optimizer.param_groups:
                 output = 'A{:02.5f}'.format(p['lr'])
         return output
-    # print(get_lr())
+    print(get_lr())
 
     # for p in optimizer.param_groups:
     #     print(p['lr'])
     #     # break
-    # ss('-in main')
+    ss('-in main')
     def repackage_hidden(h):
         """Wraps hidden states in new Tensors, to detach them from their history."""
 

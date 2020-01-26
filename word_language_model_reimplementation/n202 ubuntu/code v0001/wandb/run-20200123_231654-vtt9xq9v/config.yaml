@@ -1,0 +1,72 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.21
+    framework: torch
+    is_jupyter_run: false
+    python_version: 3.5.2
+batch_size:
+  desc: null
+  value: 20
+bptt:
+  desc: null
+  value: 35
+clip:
+  desc: null
+  value: 0.25
+data_root:
+  desc: null
+  value: ../../language-model-data
+dropout:
+  desc: null
+  value: 0.2
+early_stop:
+  desc: null
+  value: 10
+emsize:
+  desc: null
+  value: 200
+epoch:
+  desc: null
+  value: 40
+is_cuda:
+  desc: null
+  value: true
+is_manual_update:
+  desc: null
+  value: false
+is_quickrun:
+  desc: null
+  value: false
+log_interval:
+  desc: null
+  value: 200
+lr:
+  desc: null
+  value: 20
+lr_adam:
+  desc: null
+  value: 0.001
+model:
+  desc: null
+  value: GRU
+nhead:
+  desc: null
+  value: 2
+nhid:
+  desc: null
+  value: 200
+nlayers:
+  desc: null
+  value: 2
+seed:
+  desc: null
+  value: 1111
+tied:
+  desc: null
+  value: false
+wandb:
+  desc: null
+  value: world-language-model-pytorch-examples

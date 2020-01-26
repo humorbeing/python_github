@@ -75,29 +75,29 @@ args.early_stop = 10
 args.is_quickrun = False
 
 # ===========================================
-args.is_wandb = 'world-language-model-pytorch-examples'
-# args.is_quickrun = True
-# args.epoch = 5
-
-args.model = 'LSTM'
-main(args)
-args.model = 'GRU'
-main(args)
-args.model = 'RNN_TANH'
-main(args)
-args.model = 'RNN_RELU'
-main(args)
-args.model = 'Transformer'
-main(args)
-
+# args.wandb = 'world-language-model-pytorch-examples'
+args.is_quickrun = True
+args.epoch = 5
 args.is_manual_update = False
 args.model = 'LSTM'
 main(args)
-args.model = 'GRU'
-main(args)
-args.model = 'RNN_TANH'
-main(args)
-args.model = 'RNN_RELU'
-main(args)
-args.model = 'Transformer'
-main(args)
+# args.model = 'GRU'
+# main(args)
+# args.model = 'RNN_TANH'
+# main(args)
+# args.model = 'RNN_RELU'
+# main(args)
+# args.model = 'Transformer'
+# main(args)
+#
+# args.is_manual_update = False
+# args.model = 'LSTM'
+# main(args)
+# args.model = 'GRU'
+# main(args)
+# args.model = 'RNN_TANH'
+# main(args)
+# args.model = 'RNN_RELU'
+# main(args)
+# args.model = 'Transformer'
+# main(args)
