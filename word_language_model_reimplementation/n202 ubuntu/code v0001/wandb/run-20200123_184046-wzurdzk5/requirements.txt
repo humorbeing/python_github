@@ -23,7 +23,7 @@ psutil==5.6.7
 pyparsing==2.4.6
 python-dateutil==2.8.1
 pytz==2019.3
-pyyaml==5.3
+pyyaml==5.4
 requests==2.22.0
 sentry-sdk==0.14.1
 setuptools==45.0.0
