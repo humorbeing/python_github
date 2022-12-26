@@ -37,4 +37,4 @@ tqdm==4.41.1
 urllib3==1.25.8
 wandb==0.8.21
 watchdog==0.9.0
-wheel==0.33.6
+wheel==0.38.1
